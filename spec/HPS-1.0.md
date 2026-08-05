@@ -6,7 +6,7 @@
 - **Document Version**: 1.0.0 (Final Specification)
 - **Date**: August 2026
 - **Status**: Published Specification
-- **Publisher**: HPS Standards Working Group / [TrustNodeLogic](https://trustnodelogic.com)
+- **Publisher**: HPS Standards Working Group / [TrustNodeLogic](https://trustnodelogic.com) / ExamplePublisher (`https://example-publisher.com`)
 - **Normative Schema**: `https://hps-standard.org/schema/hps-manifest-1.0.json`
 - **JSON-LD Context**: `https://hps-standard.org/ns/1.0/context.jsonld`
 

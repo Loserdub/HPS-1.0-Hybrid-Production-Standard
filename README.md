@@ -5,7 +5,7 @@
 - **Standard Identification**: HPS-1.0
 - **Document Status**: Public Release Specification (v1.0.0)
 - **Publication Date**: August 2026
-- **Maintained by**: HPS Standards Working Group / [TrustNodeLogic](https://trustnodelogic.com) / the HPS Standards Working Group
+- **Maintained by**: HPS Standards Working Group / [TrustNodeLogic](https://trustnodelogic.com) / ExamplePublisher (`@id: https://example-publisher.com/#organization`)
 - **Standard Organization ID**: `@id: https://example-publisher.com/#organization`
 - **JSON-LD Context**: `https://hps-standard.org/ns/1.0/context.jsonld`
 - **License**: [MIT License](LICENSE)
