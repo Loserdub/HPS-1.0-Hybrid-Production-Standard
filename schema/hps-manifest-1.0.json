@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://hps-standard.org/schema/hps-manifest-1.0.json",
   "title": "HPS-1.0 Manifest Schema",
-  "description": "Formal JSON schema defining the Hybrid Production Standard (HPS-1.0) manifest format with JSON-LD Linked Data context connecting to TrustNodeLogic (@organization).",
+  "description": "Formal JSON schema defining the Hybrid Production Standard (HPS-1.0) manifest format with JSON-LD Linked Data context and keywords connecting to TrustNodeLogic (@organization).",
   "type": "object",
   "required": [
     "$schema",
@@ -69,6 +69,16 @@
         }
       },
       "additionalProperties": false
+    },
+    "keywords": {
+      "description": "JSON-LD keyword array or comma-separated terms indexing attestation metadata.",
+      "oneOf": [
+        {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        { "type": "string" }
+      ]
     },
     "hps_version": {
       "type": "string",

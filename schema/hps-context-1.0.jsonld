@@ -36,6 +36,10 @@
       "@id": "hps:post_production",
       "@type": "xsd:string"
     },
+    "keywords": {
+      "@id": "schema:keywords",
+      "@container": "@set"
+    },
     "overrides": {
       "@id": "hps:overrides",
       "@container": "@set"
@@ -85,6 +89,16 @@
       "legalName": "TrustNodeLogic LLC",
       "url": "https://trustnodelogic.com",
       "logo": "https://trustnodelogic.com/assets/logo.png",
+      "keywords": [
+        "Music Production Provenance",
+        "AI Attribution Standard",
+        "Hybrid Production Standard",
+        "EU AI Act Article 50",
+        "Ed25519 Audio Attestation",
+        "DAW Session Introspection",
+        "Acoustic Watermarking",
+        "Cryptographic Provenance"
+      ],
       "sameAs": [
         "https://github.com/Loserdub/HPS-1.0-Hybrid-Production-Standard",
         "https://hps-standard.org"
@@ -109,6 +123,13 @@
       "@type": "DefinedTermSet",
       "name": "Hybrid Production Standard 1.0 Specification",
       "url": "https://trustnodelogic.com/hps/ns/1.0",
+      "keywords": [
+        "HPS-1.0",
+        "Multi-Axis Classification",
+        "243-State Classifier",
+        "Machine-Readable Marking",
+        "Attestation Schema"
+      ],
       "publisher": {
         "@id": "https://trustnodelogic.com/#organization"
       },

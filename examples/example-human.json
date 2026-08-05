@@ -11,6 +11,14 @@
     "name": "TrustNodeLogic",
     "url": "https://trustnodelogic.com"
   },
+  "keywords": [
+    "Human Production",
+    "Acoustic Recording",
+    "100% Human",
+    "HPS-H",
+    "TrustNodeLogic",
+    "Ed25519 Signed"
+  ],
   "hps_version": "1.0",
   "tier": "H",
   "axes": {

@@ -11,6 +11,14 @@
     "name": "TrustNodeLogic",
     "url": "https://trustnodelogic.com"
   },
+  "keywords": [
+    "AI Production",
+    "Generative Synthetic Audio",
+    "HPS-A",
+    "EU AI Act Article 50",
+    "Machine-Readable Marking",
+    "TrustNodeLogic"
+  ],
   "hps_version": "1.0",
   "tier": "A",
   "axes": {
