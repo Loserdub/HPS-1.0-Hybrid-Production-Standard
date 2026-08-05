@@ -1,0 +1,67 @@
+{
+  "$schema": "https://hps-standard.org/schema/hps-manifest-1.0.json",
+  "@context": [
+    "https://schema.org",
+    "https://trustnodelogic.com/hps/ns/1.0/context.jsonld"
+  ],
+  "@id": "https://trustnodelogic.com/manifests/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "@type": ["HPSManifest", "CreativeWork"],
+  "publisher": {
+    "@id": "https://trustnodelogic.com/#organization",
+    "name": "TrustNodeLogic",
+    "url": "https://trustnodelogic.com"
+  },
+  "hps_version": "1.0",
+  "tier": "H",
+  "axes": {
+    "origination": "H",
+    "performance": "H",
+    "curation": "H",
+    "sound_source": "H",
+    "post_production": "H"
+  },
+  "tool_chain": [
+    {
+      "stage": "origination",
+      "tool": "Acoustic Piano & Notation",
+      "type": "human_daw"
+    },
+    {
+      "stage": "performance",
+      "tool": "Live Vocal Tracking & Microphone",
+      "type": "human_daw"
+    },
+    {
+      "stage": "curation",
+      "tool": "Ableton Live 12 Studio",
+      "type": "human_daw"
+    },
+    {
+      "stage": "sound_source",
+      "tool": "Analog Synthesizer & Microphones",
+      "type": "human_daw"
+    },
+    {
+      "stage": "post_production",
+      "tool": "Parametric Equalizer & Dynamic Compressor",
+      "type": "utility_dsp"
+    }
+  ],
+  "creator": {
+    "@id": "https://trustnodelogic.com/#justin-ray",
+    "name": "Justin Ray",
+    "hps_id": "ed25519:d3f4a18b92e70c54109823f6e147ab95c80123456789abcdef0123456789abcd"
+  },
+  "content_hash": {
+    "algorithm": "sha256",
+    "scope": "raw_audio_essence",
+    "value": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "attestation_method": "daw_analysis",
+  "timestamp": "2026-08-05T12:00:00Z",
+  "signature": {
+    "algorithm": "ed25519",
+    "public_key": "d3f4a18b92e70c54109823f6e147ab95c80123456789abcdef0123456789abcd",
+    "value": "7f8b9a0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c"
+  }
+}

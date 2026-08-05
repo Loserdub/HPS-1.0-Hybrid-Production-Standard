@@ -1,0 +1,77 @@
+{
+  "$schema": "https://hps-standard.org/schema/hps-manifest-1.0.json",
+  "@context": [
+    "https://schema.org",
+    "https://trustnodelogic.com/hps/ns/1.0/context.jsonld"
+  ],
+  "@id": "https://trustnodelogic.com/manifests/b94d27b9934d3e08a52e52d7da7dabfac484efe37a5380ee9088f7ace2efcde9",
+  "@type": ["HPSManifest", "CreativeWork"],
+  "publisher": {
+    "@id": "https://trustnodelogic.com/#organization",
+    "name": "TrustNodeLogic",
+    "url": "https://trustnodelogic.com"
+  },
+  "hps_version": "1.0",
+  "tier": "X2",
+  "axes": {
+    "origination": "H+A",
+    "performance": "H+A",
+    "curation": "H",
+    "sound_source": "H",
+    "post_production": "H"
+  },
+  "overrides": [
+    {
+      "axis": "origination",
+      "autoValue": "A",
+      "overriddenTo": "H+A",
+      "evidence": [
+        "User generated MIDI melody seed via AI assistant, manually re-harmonized and altered 60% of note pitches"
+      ]
+    }
+  ],
+  "tool_chain": [
+    {
+      "stage": "origination",
+      "tool": "AI Chord & Melody Generation Plugin",
+      "type": "ai_assistant"
+    },
+    {
+      "stage": "performance",
+      "tool": "Neural Vocal Intonation & Human Tracking",
+      "type": "ai_assistant"
+    },
+    {
+      "stage": "curation",
+      "tool": "Logic Pro X Project Arrangement",
+      "type": "human_daw"
+    },
+    {
+      "stage": "sound_source",
+      "tool": "Physical Electric Guitar & Acoustic Drums",
+      "type": "human_daw"
+    },
+    {
+      "stage": "post_production",
+      "tool": "Analog Outboard Processing & DAW Mixing",
+      "type": "utility_dsp"
+    }
+  ],
+  "creator": {
+    "@id": "https://trustnodelogic.com/#justin-ray",
+    "name": "Justin Ray",
+    "hps_id": "ed25519:a1b2c3d4e5f60718293a4b5c6d7e8f90a1b2c3d4e5f60718293a4b5c6d7e8f90"
+  },
+  "content_hash": {
+    "algorithm": "sha256",
+    "scope": "raw_audio_essence",
+    "value": "b94d27b9934d3e08a52e52d7da7dabfac484efe37a5380ee9088f7ace2efcde9"
+  },
+  "attestation_method": "daw_analysis",
+  "timestamp": "2026-08-05T14:30:00Z",
+  "signature": {
+    "algorithm": "ed25519",
+    "public_key": "a1b2c3d4e5f60718293a4b5c6d7e8f90a1b2c3d4e5f60718293a4b5c6d7e8f90",
+    "value": "1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d"
+  }
+}

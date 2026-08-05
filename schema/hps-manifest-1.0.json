@@ -1,0 +1,268 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://hps-standard.org/schema/hps-manifest-1.0.json",
+  "title": "HPS-1.0 Manifest Schema",
+  "description": "Formal JSON schema defining the Hybrid Production Standard (HPS-1.0) manifest format with JSON-LD Linked Data context connecting to TrustNodeLogic (@organization).",
+  "type": "object",
+  "required": [
+    "$schema",
+    "hps_version",
+    "tier",
+    "axes",
+    "tool_chain",
+    "creator",
+    "content_hash",
+    "attestation_method",
+    "timestamp",
+    "signature"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@context": {
+      "description": "JSON-LD context defining terms and linking to TrustNodeLogic standards vocabulary.",
+      "oneOf": [
+        { "type": "string" },
+        {
+          "type": "array",
+          "items": {
+            "oneOf": [
+              { "type": "string" },
+              { "type": "object" }
+            ]
+          }
+        }
+      ]
+    },
+    "@id": {
+      "type": "string",
+      "format": "uri",
+      "description": "Unique Linked Data identifier URI for this attestation manifest instance."
+    },
+    "@type": {
+      "description": "JSON-LD type definition (HPSManifest / CreativeWork).",
+      "oneOf": [
+        { "type": "string" },
+        {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      ]
+    },
+    "publisher": {
+      "type": "object",
+      "description": "JSON-LD reference to standard publisher organization.",
+      "required": ["@id", "name", "url"],
+      "properties": {
+        "@id": {
+          "type": "string",
+          "format": "uri"
+        },
+        "name": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "additionalProperties": false
+    },
+    "hps_version": {
+      "type": "string",
+      "enum": ["1.0"]
+    },
+    "tier": {
+      "type": "string",
+      "enum": ["H", "X1", "X2", "X3", "X4", "A"],
+      "description": "Deterministic HPS tier assigned by the 243-state classifier."
+    },
+    "axes": {
+      "type": "object",
+      "description": "Evaluation of human vs. AI participation across five discrete production stages.",
+      "required": [
+        "origination",
+        "performance",
+        "curation",
+        "sound_source",
+        "post_production"
+      ],
+      "properties": {
+        "origination": {
+          "type": "string",
+          "enum": ["H", "H+A", "A"]
+        },
+        "performance": {
+          "type": "string",
+          "enum": ["H", "H+A", "A"]
+        },
+        "curation": {
+          "type": "string",
+          "enum": ["H", "H+A", "A"]
+        },
+        "sound_source": {
+          "type": "string",
+          "enum": ["H", "H+A", "A"]
+        },
+        "post_production": {
+          "type": "string",
+          "enum": ["H", "H+A", "A"]
+        }
+      },
+      "additionalProperties": false
+    },
+    "overrides": {
+      "type": "array",
+      "description": "Record of manual user overrides against automated detection heuristics.",
+      "items": {
+        "type": "object",
+        "required": ["axis", "autoValue", "overriddenTo"],
+        "properties": {
+          "axis": {
+            "type": "string",
+            "enum": ["origination", "performance", "curation", "sound_source", "post_production"]
+          },
+          "autoValue": {
+            "type": "string",
+            "enum": ["H", "H+A", "A"]
+          },
+          "overriddenTo": {
+            "type": "string",
+            "enum": ["H", "H+A", "A"]
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "tool_chain": {
+      "type": "array",
+      "description": "Inventory of detected software, plugins, or platforms utilized during production.",
+      "items": {
+        "type": "object",
+        "required": ["stage", "tool", "type"],
+        "properties": {
+          "stage": {
+            "type": "string",
+            "enum": ["origination", "performance", "curation", "sound_source", "post_production"]
+          },
+          "tool": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string",
+            "enum": ["human_daw", "utility_dsp", "ai_assistant", "ai_generative"]
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "creator": {
+      "type": "object",
+      "description": "Identity and public key parameters of the primary attesting creator.",
+      "required": ["name", "hps_id"],
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "hps_id": {
+          "type": "string",
+          "pattern": "^ed25519:[a-fA-F0-9]{64}$",
+          "description": "Self-sovereign identity identifier formatted as ed25519:<hex_public_key>."
+        }
+      },
+      "additionalProperties": false
+    },
+    "content_hash": {
+      "type": "object",
+      "description": "Cryptographic digest of raw PCM audio essence.",
+      "required": ["algorithm", "scope", "value"],
+      "properties": {
+        "algorithm": {
+          "type": "string",
+          "enum": ["sha256"]
+        },
+        "scope": {
+          "type": "string",
+          "enum": ["raw_audio_essence"]
+        },
+        "value": {
+          "type": "string",
+          "pattern": "^[a-fA-F0-9]{64}$",
+          "description": "Lower-case hexadecimal string of SHA-256 digest."
+        }
+      },
+      "additionalProperties": false
+    },
+    "attestation_method": {
+      "type": "string",
+      "enum": ["daw_analysis", "manual"],
+      "description": "Method utilized to generate the axis evaluation."
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 UTC timestamp of manifest signing."
+    },
+    "signature": {
+      "type": "object",
+      "description": "Ed25519 signature of the primary creator.",
+      "required": ["algorithm", "public_key", "value"],
+      "properties": {
+        "algorithm": {
+          "type": "string",
+          "enum": ["ed25519"]
+        },
+        "public_key": {
+          "type": "string",
+          "pattern": "^[a-fA-F0-9]{64}$"
+        },
+        "value": {
+          "type": "string",
+          "pattern": "^[a-fA-F0-9]{128}$"
+        }
+      },
+      "additionalProperties": false
+    },
+    "signatures": {
+      "type": "array",
+      "description": "Optional array of secondary co-signers (producers, labels, writers).",
+      "items": {
+        "type": "object",
+        "required": ["signer", "role", "public_key", "value", "timestamp"],
+        "properties": {
+          "signer": {
+            "type": "string"
+          },
+          "role": {
+            "type": "string"
+          },
+          "public_key": {
+            "type": "string",
+            "pattern": "^[a-fA-F0-9]{64}$"
+          },
+          "value": {
+            "type": "string",
+            "pattern": "^[a-fA-F0-9]{128}$"
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

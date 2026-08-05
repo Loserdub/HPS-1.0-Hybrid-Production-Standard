@@ -1,0 +1,66 @@
+{
+  "$schema": "https://hps-standard.org/schema/hps-manifest-1.0.json",
+  "@context": [
+    "https://schema.org",
+    "https://trustnodelogic.com/hps/ns/1.0/context.jsonld"
+  ],
+  "@id": "https://trustnodelogic.com/manifests/8f4e3d2c1b0a9f8e7d6c5b4a392817065f4e3d2c1b0a9f8e7d6c5b4a39281706",
+  "@type": ["HPSManifest", "CreativeWork"],
+  "publisher": {
+    "@id": "https://trustnodelogic.com/#organization",
+    "name": "TrustNodeLogic",
+    "url": "https://trustnodelogic.com"
+  },
+  "hps_version": "1.0",
+  "tier": "A",
+  "axes": {
+    "origination": "A",
+    "performance": "A",
+    "curation": "A",
+    "sound_source": "A",
+    "post_production": "A"
+  },
+  "tool_chain": [
+    {
+      "stage": "origination",
+      "tool": "Generative Music Foundation Model v4",
+      "type": "ai_generative"
+    },
+    {
+      "stage": "performance",
+      "tool": "Neural Speech & Singing Synthesizer Engine",
+      "type": "ai_generative"
+    },
+    {
+      "stage": "curation",
+      "tool": "Autonomous Prompt Generation Pipeline",
+      "type": "ai_generative"
+    },
+    {
+      "stage": "sound_source",
+      "tool": "Latent Audio Diffusion Model",
+      "type": "ai_generative"
+    },
+    {
+      "stage": "post_production",
+      "tool": "Neural Autonomous Mastering Engine",
+      "type": "ai_generative"
+    }
+  ],
+  "creator": {
+    "name": "Synthetic Production Studio",
+    "hps_id": "ed25519:f9e8d7c6b5a4938271605f4e3d2c1b0a9f8e7d6c5b4a392817065f4e3d2c1b0a"
+  },
+  "content_hash": {
+    "algorithm": "sha256",
+    "scope": "raw_audio_essence",
+    "value": "8f4e3d2c1b0a9f8e7d6c5b4a392817065f4e3d2c1b0a9f8e7d6c5b4a39281706"
+  },
+  "attestation_method": "manual",
+  "timestamp": "2026-08-05T16:00:00Z",
+  "signature": {
+    "algorithm": "ed25519",
+    "public_key": "f9e8d7c6b5a4938271605f4e3d2c1b0a9f8e7d6c5b4a392817065f4e3d2c1b0a",
+    "value": "9f8e7d6c5b4a392817065f4e3d2c1b0a9f8e7d6c5b4a392817065f4e3d2c1b0a9f8e7d6c5b4a392817065f4e3d2c1b0a9f8e7d6c5b4a392817065f4e3d2c1b0a"
+  }
+}

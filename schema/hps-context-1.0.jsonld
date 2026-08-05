@@ -1,0 +1,119 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "hps": "https://trustnodelogic.com/hps/ns/1.0#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "HPSManifest": "hps:HPSManifest",
+    "hps_version": {
+      "@id": "hps:version",
+      "@type": "xsd:string"
+    },
+    "tier": {
+      "@id": "hps:tier",
+      "@type": "xsd:string"
+    },
+    "axes": {
+      "@id": "hps:axes",
+      "@type": "@json"
+    },
+    "origination": {
+      "@id": "hps:origination",
+      "@type": "xsd:string"
+    },
+    "performance": {
+      "@id": "hps:performance",
+      "@type": "xsd:string"
+    },
+    "curation": {
+      "@id": "hps:curation",
+      "@type": "xsd:string"
+    },
+    "sound_source": {
+      "@id": "hps:sound_source",
+      "@type": "xsd:string"
+    },
+    "post_production": {
+      "@id": "hps:post_production",
+      "@type": "xsd:string"
+    },
+    "overrides": {
+      "@id": "hps:overrides",
+      "@container": "@set"
+    },
+    "tool_chain": {
+      "@id": "hps:toolChain",
+      "@container": "@list"
+    },
+    "creator": {
+      "@id": "schema:creator",
+      "@type": "@id"
+    },
+    "publisher": {
+      "@id": "schema:publisher",
+      "@type": "@id"
+    },
+    "standardOrganization": {
+      "@id": "schema:publishingPrinciples",
+      "@type": "@id"
+    },
+    "content_hash": {
+      "@id": "hps:contentHash",
+      "@type": "@json"
+    },
+    "attestation_method": {
+      "@id": "hps:attestationMethod",
+      "@type": "xsd:string"
+    },
+    "timestamp": {
+      "@id": "schema:dateCreated",
+      "@type": "xsd:dateTime"
+    },
+    "signature": {
+      "@id": "hps:signature",
+      "@type": "@json"
+    },
+    "signatures": {
+      "@id": "hps:coSignatures",
+      "@container": "@list"
+    }
+  },
+  "@graph": [
+    {
+      "@id": "https://trustnodelogic.com/#organization",
+      "@type": "Organization",
+      "name": "TrustNodeLogic",
+      "legalName": "TrustNodeLogic LLC",
+      "url": "https://trustnodelogic.com",
+      "logo": "https://trustnodelogic.com/assets/logo.png",
+      "sameAs": [
+        "https://github.com/Loserdub/HPS-1.0-Hybrid-Production-Standard",
+        "https://hps-standard.org"
+      ],
+      "founder": {
+        "@id": "https://trustnodelogic.com/#justin-ray",
+        "@type": "Person",
+        "name": "Justin Ray",
+        "jobTitle": "Founder & Standards Author",
+        "email": "mailto:justin@trustnodelogic.com",
+        "url": "https://trustnodelogic.com"
+      },
+      "knowsAbout": [
+        "Music Production Provenance",
+        "Cryptographic Audio Watermarking",
+        "DAW Session Introspection",
+        "EU AI Act Article 50 Compliance"
+      ]
+    },
+    {
+      "@id": "https://trustnodelogic.com/hps/ns/1.0",
+      "@type": "DefinedTermSet",
+      "name": "Hybrid Production Standard 1.0 Specification",
+      "url": "https://trustnodelogic.com/hps/ns/1.0",
+      "publisher": {
+        "@id": "https://trustnodelogic.com/#organization"
+      },
+      "inLanguage": "en-US",
+      "license": "https://opensource.org/licenses/MIT"
+    }
+  ]
+}
