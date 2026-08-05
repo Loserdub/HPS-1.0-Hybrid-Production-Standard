@@ -1,7 +1,7 @@
 {
   "@context": {
     "@vocab": "https://schema.org/",
-    "hps": "https://trustnodelogic.com/hps/ns/1.0#",
+    "hps": "https://hps-standard.org/ns/1.0#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "HPSManifest": "hps:HPSManifest",
     "hps_version": {
@@ -83,12 +83,12 @@
   },
   "@graph": [
     {
-      "@id": "https://trustnodelogic.com/#organization",
+      "@id": "https://example-publisher.com/#organization",
       "@type": "Organization",
-      "name": "TrustNodeLogic",
-      "legalName": "TrustNodeLogic LLC",
-      "url": "https://trustnodelogic.com",
-      "logo": "https://trustnodelogic.com/assets/logo.png",
+      "name": "ExamplePublisher",
+      "legalName": "HPS Standards Working Group",
+      "url": "https://example-publisher.com",
+      "logo": "https://example-publisher.com/assets/logo.png",
       "keywords": [
         "Music Production Provenance",
         "AI Attribution Standard",
@@ -104,12 +104,12 @@
         "https://hps-standard.org"
       ],
       "founder": {
-        "@id": "https://trustnodelogic.com/#justin-ray",
+        "@id": "https://example-publisher.com/#creator",
         "@type": "Person",
         "name": "Justin Ray",
         "jobTitle": "Founder & Standards Author",
-        "email": "mailto:justin@trustnodelogic.com",
-        "url": "https://trustnodelogic.com"
+        "email": "mailto:creator@example-publisher.com",
+        "url": "https://example-publisher.com"
       },
       "knowsAbout": [
         "Music Production Provenance",
@@ -119,10 +119,10 @@
       ]
     },
     {
-      "@id": "https://trustnodelogic.com/hps/ns/1.0",
+      "@id": "https://hps-standard.org/ns/1.0",
       "@type": "DefinedTermSet",
       "name": "Hybrid Production Standard 1.0 Specification",
-      "url": "https://trustnodelogic.com/hps/ns/1.0",
+      "url": "https://hps-standard.org/ns/1.0",
       "keywords": [
         "HPS-1.0",
         "Multi-Axis Classification",
@@ -131,7 +131,7 @@
         "Attestation Schema"
       ],
       "publisher": {
-        "@id": "https://trustnodelogic.com/#organization"
+        "@id": "https://example-publisher.com/#organization"
       },
       "inLanguage": "en-US",
       "license": "https://opensource.org/licenses/MIT"
