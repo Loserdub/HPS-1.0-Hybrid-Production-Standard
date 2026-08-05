@@ -6,9 +6,7 @@
 - **Document Version**: 1.0.0 (Final Specification)
 - **Publication Date**: August 2026
 - **Author**: Justin Ray / HPS Standards Working Group
-- **Publisher Organization**: [TrustNodeLogic](https://trustnodelogic.com) / HPS Standards Working Group (`@id: https://example-publisher.com/#organization`)
-- **JSON-LD Context**: `https://hps-standard.org/ns/1.0/context.jsonld`
-- **Normative Schema**: `https://hps-standard.org/schema/hps-manifest-1.0.json`
+- **Publisher Organization**: [TrustNodeLogic](https://trustnodelogic.com)
 - **Target Audience**: Audio Engineers, Software Developers, Music Distributors, Streaming Platforms (DSPs), Rights Management Societies, and Legal Compliance Officers
 
 ---
