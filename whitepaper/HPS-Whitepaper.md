@@ -13,7 +13,7 @@
 
 ---
 
-## 1. Executive Summary
+## 1. Introduction & Scope
 
 ### 1.1 The Problem
 The rapid emergence of artificial intelligence (AI) foundation models capable of symbolic composition, raw audio synthesis, neural vocal cloning, and automated mixing has transformed contemporary music production. As creators integrate AI tools alongside traditional performance and composition, the boundaries between human agency and algorithmic generation have blurred. 
@@ -399,7 +399,15 @@ The HPS Technical Working Group is actively advancing five key initiatives for f
 
 ---
 
-## 14. References
+
+
+---
+
+## 14. Conclusion
+
+The Hybrid Production Standard (HPS-1.0) provides a necessary evolution beyond binary AI disclosure mechanisms. By measuring the granular process of creation across five independent axes, HPS-1.0 protects human authorship, ensures transparent collaboration with generative systems, and satisfies emerging regulatory transparency mandates. Through the combination of deterministic classification, semantic Linked Data, and cryptographic tamper-evidence, HPS-1.0 establishes a robust foundation of trust for the next generation of the music supply chain.
+
+## 15. References
 
 1. **European Parliament & Council**: *Regulation (EU) 2024/1689 laying down harmonised rules on artificial intelligence (Artificial Intelligence Act)*, Official Journal of the European Union, 2024.
 2. **IETF RFC 8032**: *Edwards-Curve Digital Signature Algorithm (Ed25519)*, Internet Engineering Task Force, 2017.
