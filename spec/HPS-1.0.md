@@ -6,9 +6,9 @@
 - **Document Version**: 1.0.0 (Final Specification)
 - **Date**: August 2026
 - **Status**: Published Specification
-- **Publisher**: HPS Standards Working Group / TrustNodeLogic (`https://trustnodelogic.com`)
+- **Publisher**: HPS Standards Working Group / ExamplePublisher (`https://example-publisher.com`)
 - **Normative Schema**: `https://hps-standard.org/schema/hps-manifest-1.0.json`
-- **JSON-LD Context**: `https://trustnodelogic.com/hps/ns/1.0/context.jsonld`
+- **JSON-LD Context**: `https://hps-standard.org/ns/1.0/context.jsonld`
 
 ---
 
@@ -43,7 +43,7 @@ For the purposes of this specification, the following terms apply:
 - **Classifier**: The deterministic function that maps a 5-tuple of axis states into exactly one production tier (`H`, `X1`, `X2`, `X3`, `X4`, `A`).
 - **Generative AI**: Algorithmic or neural network systems capable of producing novel musical structures, stems, lyrics, vocal performances, or synthesized sound sources based on training data or prompt conditioning.
 - **HPS Manifest**: The canonical JSON / JSON-LD structure containing the declared axis states, derived tier, creator identity attributes, audio essence hash, and digital signature.
-- **JSON-LD Linked Data**: Semantic Web metadata structure utilizing `@context`, `@id`, and `@type` parameters to bind manifestations to authoritative web graph entities (`https://trustnodelogic.com/#organization`).
+- **JSON-LD Linked Data**: Semantic Web metadata structure utilizing `@context`, `@id`, and `@type` parameters to bind manifestations to authoritative web graph entities (`https://example-publisher.com/#organization`).
 - **Tamper-Evidence**: The cryptographic property ensuring that any alteration to the audio essence or manifest payload invalidates the digital signature.
 
 ---
@@ -149,7 +149,7 @@ $$\begin{aligned}
 ### 6.1 Canonicalization & JSON Format
 HPS Manifests MUST be formatted as valid UTF-8 encoded JSON adhering to `schema/hps-manifest-1.0.json`.
 
-Before digital signing or hash verification, the JSON object MUST be canonicalized:
+Before digital signing or hash integrity checking, the JSON object MUST be canonicalized:
 1. Object keys MUST be recursively sorted in lexicographical order (ascending ASCII bytes).
 2. Insignificant whitespace (spaces, tabs, newlines outside string literals) MUST be removed.
 
@@ -160,14 +160,14 @@ Before digital signing or hash verification, the JSON object MUST be canonicaliz
   "$schema": "https://hps-standard.org/schema/hps-manifest-1.0.json",
   "@context": [
     "https://schema.org",
-    "https://trustnodelogic.com/hps/ns/1.0/context.jsonld"
+    "https://hps-standard.org/ns/1.0/context.jsonld"
   ],
-  "@id": "https://trustnodelogic.com/manifests/b94d27b9934d3e08a52e52d7da7dabfac484efe37a5380ee9088f7ace2efcde9",
+  "@id": "https://example-publisher.com/manifests/b94d27b9934d3e08a52e52d7da7dabfac484efe37a5380ee9088f7ace2efcde9",
   "@type": ["HPSManifest", "CreativeWork"],
   "publisher": {
-    "@id": "https://trustnodelogic.com/#organization",
-    "name": "TrustNodeLogic",
-    "url": "https://trustnodelogic.com"
+    "@id": "https://example-publisher.com/#organization",
+    "name": "ExamplePublisher",
+    "url": "https://example-publisher.com"
   },
   "hps_version": "1.0",
   "tier": "X2",
@@ -194,7 +194,7 @@ Before digital signing or hash verification, the JSON object MUST be canonicaliz
     }
   ],
   "creator": {
-    "@id": "https://trustnodelogic.com/#justin-ray",
+    "@id": "https://example-publisher.com/#creator",
     "name": "Justin Ray",
     "hps_id": "ed25519:7b3a9c...8f12"
   },
@@ -213,17 +213,17 @@ Before digital signing or hash verification, the JSON object MUST be canonicaliz
 }
 ```
 
-### 6.3 Linking to TrustNodeLogic Authority Graph (`@organization`)
-To establish decentralized authority binding, every HPS Manifest SHOULD include a JSON-LD `publisher` block resolving to the TrustNodeLogic organization graph:
+### 6.3 Linking to ExamplePublisher Authority Graph (`@organization`)
+To establish decentralized authority binding, every HPS Manifest SHOULD include a JSON-LD `publisher` block resolving to the publisher's organization graph:
 
 ```json
 {
-  "@id": "https://trustnodelogic.com/#organization",
+  "@id": "https://example-publisher.com/#organization",
   "@type": "Organization",
-  "name": "TrustNodeLogic",
-  "url": "https://trustnodelogic.com",
+  "name": "ExamplePublisher",
+  "url": "https://example-publisher.com",
   "founder": {
-    "@id": "https://trustnodelogic.com/#justin-ray",
+    "@id": "https://example-publisher.com/#creator",
     "@type": "Person",
     "name": "Justin Ray"
   }
@@ -244,7 +244,7 @@ This ensures semantic web indexers, legal auditors, and DSP ingestion engines ca
 HPS-1.0 is engineered to satisfy transparency mandates under **Article 50 of Regulation (EU) 2024/1689 (EU AI Act)**.
 
 1. **Article 50(2) Marking Requirement**: Mandates that deployers of AI systems generating audio mark the output in a machine-readable format. HPS-1.0 provides machine-readable JSON manifests embedded directly into RIFF container chunks and DDEX XML releases.
-2. **Tamper-Evidence & Verification**: The combination of Ed25519 signing and SHA-256 essence hashing prevents metadata falsification or post-export modification.
+2. **Tamper-Evidence & Integrity Check**: The combination of Ed25519 signing and SHA-256 essence hashing prevents metadata falsification or post-export modification.
 3. **Auditability of Overrides**: The optional `overrides` schema element records manual overrides of automated detection heuristics, providing transparent audit trails for legal and rights management review.
 
 ---
@@ -266,7 +266,7 @@ For MPEG-1 Audio Layer III files, the manifest MUST be stored in an ID3v2.4 fram
 Distributor delivery XML messages MUST embed classification details inside a dedicated XML namespace block:
 
 ```xml
-<hps:HPSClassificationBlock xmlns:hps="https://trustnodelogic.com/hps/ns/1.0">
+<hps:HPSClassificationBlock xmlns:hps="https://hps-standard.org/ns/1.0">
   <hps:Tier>X2</hps:Tier>
   <hps:AttestationMethod>daw_analysis</hps:AttestationMethod>
   <hps:CreatorHpsId>ed25519:7b3a9c...8f12</hps:CreatorHpsId>

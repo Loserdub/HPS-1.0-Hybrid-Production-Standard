@@ -2,21 +2,21 @@
   "$schema": "https://hps-standard.org/schema/hps-manifest-1.0.json",
   "@context": [
     "https://schema.org",
-    "https://trustnodelogic.com/hps/ns/1.0/context.jsonld"
+    "https://hps-standard.org/ns/1.0/context.jsonld"
   ],
-  "@id": "https://trustnodelogic.com/manifests/b94d27b9934d3e08a52e52d7da7dabfac484efe37a5380ee9088f7ace2efcde9",
+  "@id": "https://example-publisher.com/manifests/b94d27b9934d3e08a52e52d7da7dabfac484efe37a5380ee9088f7ace2efcde9",
   "@type": ["HPSManifest", "CreativeWork"],
   "publisher": {
-    "@id": "https://trustnodelogic.com/#organization",
-    "name": "TrustNodeLogic",
-    "url": "https://trustnodelogic.com"
+    "@id": "https://example-publisher.com/#organization",
+    "name": "ExamplePublisher",
+    "url": "https://example-publisher.com"
   },
   "keywords": [
     "Co-Creative Hybrid",
     "Human-AI Collaboration",
     "HPS-X2",
     "EU AI Act Article 50",
-    "TrustNodeLogic",
+    "ExamplePublisher",
     "Process Provenance"
   ],
   "hps_version": "1.0",
@@ -66,7 +66,7 @@
     }
   ],
   "creator": {
-    "@id": "https://trustnodelogic.com/#justin-ray",
+    "@id": "https://example-publisher.com/#creator",
     "name": "Justin Ray",
     "hps_id": "ed25519:a1b2c3d4e5f60718293a4b5c6d7e8f90a1b2c3d4e5f60718293a4b5c6d7e8f90"
   },

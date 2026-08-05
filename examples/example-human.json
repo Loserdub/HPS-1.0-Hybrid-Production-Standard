@@ -2,21 +2,21 @@
   "$schema": "https://hps-standard.org/schema/hps-manifest-1.0.json",
   "@context": [
     "https://schema.org",
-    "https://trustnodelogic.com/hps/ns/1.0/context.jsonld"
+    "https://hps-standard.org/ns/1.0/context.jsonld"
   ],
-  "@id": "https://trustnodelogic.com/manifests/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "@id": "https://example-publisher.com/manifests/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
   "@type": ["HPSManifest", "CreativeWork"],
   "publisher": {
-    "@id": "https://trustnodelogic.com/#organization",
-    "name": "TrustNodeLogic",
-    "url": "https://trustnodelogic.com"
+    "@id": "https://example-publisher.com/#organization",
+    "name": "ExamplePublisher",
+    "url": "https://example-publisher.com"
   },
   "keywords": [
     "Human Production",
     "Acoustic Recording",
     "100% Human",
     "HPS-H",
-    "TrustNodeLogic",
+    "ExamplePublisher",
     "Ed25519 Signed"
   ],
   "hps_version": "1.0",
@@ -56,7 +56,7 @@
     }
   ],
   "creator": {
-    "@id": "https://trustnodelogic.com/#justin-ray",
+    "@id": "https://example-publisher.com/#creator",
     "name": "Justin Ray",
     "hps_id": "ed25519:d3f4a18b92e70c54109823f6e147ab95c80123456789abcdef0123456789abcd"
   },
