@@ -7,7 +7,14 @@
 - **Publication Date**: August 2026
 - **Author**: Justin Ray / HPS Standards Working Group
 - **Publisher Organization**: [TrustNodeLogic](https://trustnodelogic.com)
+- **Contact & Inquiries**: [trustnodelogic.com/contact.html](https://trustnodelogic.com/contact.html) · `trustnodelogic@gmail.com`
 - **Target Audience**: Audio Engineers, Software Developers, Music Distributors, Streaming Platforms (DSPs), Rights Management Societies, and Legal Compliance Officers
+
+> ### Intellectual Property & Licensing Notice
+> - **Whitepaper Documentation**: Copyright © 2026 Justin Ray / TrustNodeLogic. Published under [CC BY-ND 4.0](https://creativecommons.org/licenses/by-nd/4.0/).
+> - **Schemas & Data Formats**: Associated JSON schemas and context files are licensed under the [MIT License](https://opensource.org/licenses/MIT) for open industry adoption.
+> - **Proprietary Technology & Patent Reservation**: This document describes an architectural and operational framework. Nothing herein grants any right, title, license, or interest in or to any patent, trade secret, or proprietary implementation of the TrustNodeLogic attestation engine, forensic detection heuristics, or acoustic watermarking algorithms.
+> - **Trademarks**: "HPS", "Hybrid Production Standard", and "TrustNodeLogic" are trademarks of TrustNodeLogic. No trademark license is granted.
 
 ---
 

@@ -7,9 +7,16 @@
 - **Date**: September 2026
 - **Status**: Published Specification
 - **Publisher**: HPS Standards Working Group / [TrustNodeLogic](https://trustnodelogic.com)
+- **Contact & Inquiries**: [trustnodelogic.com/contact.html](https://trustnodelogic.com/contact.html) · `trustnodelogic@gmail.com`
 - **Normative Schema**: `https://hps-standard.org/schema/hps-manifest-1.0.json`
 - **JSON-LD Context**: `https://hps-standard.org/ns/1.0/context.jsonld`
 - **Reference Implementation**: [hps-attestation-engine](https://github.com/Loserdub/hps-attestation-engine) · Live: [trustnodelogic.web.app](https://trustnodelogic.web.app)
+
+> ### Intellectual Property & Licensing Notice
+> - **Specification Documentation**: Copyright © 2026 Justin Ray / TrustNodeLogic. Published under [CC BY-ND 4.0](https://creativecommons.org/licenses/by-nd/4.0/).
+> - **Schemas & Data Interchange Formats**: Licensed under the [MIT License](https://opensource.org/licenses/MIT) for open industry interoperability.
+> - **Proprietary Technology & Patent Reservation**: This specification defines open data formats, manifest schemas, and classification rules. Nothing herein grants any right, title, license, or interest in or to any patent, trade secret, or proprietary implementation of the TrustNodeLogic attestation engine, forensic detection heuristics, or acoustic watermarking algorithms.
+> - **Trademarks**: "HPS", "Hybrid Production Standard", and "TrustNodeLogic" are trademarks of TrustNodeLogic. No trademark license is granted.
 
 ---
 
@@ -490,7 +497,38 @@ HPS-1.0 is engineered to satisfy transparency mandates under **Article 50 of Reg
 
 ---
 
-## 14. Governance & Versioning Policy
+## 14. Security & Cryptographic Considerations
+
+Conforming implementations MUST enforce the following cryptographic and operational security properties:
+
+### 14.1 Canonicalization & Signature Malleability Resistance
+To prevent signature malleability or bypass attacks via whitespace injection, attribute permutation, or numerical serialization variances:
+- Manifest payloads MUST be canonicalized strictly adhering to **RFC 8785 (JSON Canonicalization Scheme - JCS)** prior to computing the Ed25519 signature or signature verification.
+- The `signature` object itself MUST be omitted from the canonicalized byte stream during signature verification.
+- Verifiers MUST reject any manifest containing duplicate keys or non-standard encodings.
+
+### 14.2 Audio Essence Binding & Replay Resistance
+To prevent transplantation attacks (where a signed manifest from an authentic track is re-attached to unauthenticated or synthetic audio):
+- The `content_hash.value` MUST be computed exclusively across the uncompressed PCM audio bytes within the WAV `data` subchunk.
+- Verifiers MUST recalculate the SHA-256 digest of the audio essence and verify an exact byte match before evaluating manifest validity. If the digest differs by even a single bit, verification MUST fail with `AudioEssenceMismatch`.
+- Container metadata modifications (e.g., updating ID3 tags, Broadcast Wave BWF chunks, or RIFF info tags) MUST NOT alter the audio essence digest.
+
+### 14.3 Private Key Security & Self-Sovereignty
+- Conforming creator applications MUST generate Ed25519 keypairs client-side using cryptographically secure random number generators (e.g., `crypto.getRandomValues()`).
+- Private keys MUST NEVER be transmitted across external networks, cloud synchronizers, or analytics endpoints.
+- Stored identity vaults (`.hpskey`) MUST enforce public key re-derivation on import to prevent corrupted or malicious key injection (§9).
+
+### 14.4 Tamper-Evidence of Audit Logs & Overrides
+- The `overrides[]` array records intentional divergences between automated forensic detection and human user declarations.
+- Because the `overrides[]` array is an integral component of the canonical signed payload, an adversary cannot delete, truncate, or alter auto-detected evidence records without invalidating the Ed25519 signature.
+- Verifiers SHOULD surface any recorded overrides to downstream users or auditors to ensure complete disclosure transparency.
+
+### 14.5 Limitation of Factual Truth Claims
+Implementors, distributors, and verification tools MUST adhere to the self-attestation boundary (§1.2). A cryptographically valid signature proves non-repudiation and post-signing integrity; it does not constitute third-party proof of factual truthfulness. Verification interfaces MUST use precise status indicators (e.g., `"Signature: Valid"`, `"Audio Integrity: Intact"`, `"Process: Self-Attested"`) rather than misleading certification claims.
+
+---
+
+## 15. Governance & Versioning Policy
 
 HPS-1.0 is governed by the HPS Technical Working Group under Semantic Versioning 2.0.0 rules:
 - **Major Releases (`X.0.0`)**: Backwards-incompatible schema changes or rule redefinitions.
@@ -499,7 +537,7 @@ HPS-1.0 is governed by the HPS Technical Working Group under Semantic Versioning
 
 ---
 
-## 15. Technical Glossary
+## 16. Technical Glossary
 
 - **BPSK**: Binary Phase-Shift Keying. Modulation scheme used by the HPS acoustic watermark.
 - **CLAP**: CLever Audio Plugin. Cross-platform plugin format with bundle ID.
@@ -510,6 +548,7 @@ HPS-1.0 is governed by the HPS Technical Working Group under Semantic Versioning
 - **ISNI**: International Standard Name Identifier (ISO 27729).
 - **ISRC**: International Standard Recording Code (ISO 3901).
 - **IPI/CAE**: Interested Parties Information — performing rights organization identifier (CISAC).
+- **JCS**: JSON Canonicalization Scheme (RFC 8785).
 - **JSON-LD**: JavaScript Object Notation for Linked Data (W3C Standard).
 - **Merkle Root**: Cryptographic root hash of a Merkle tree constructed over a manifest's revision history.
 - **PCM**: Pulse Code Modulation. Uncompressed digital audio sample representation.
@@ -517,3 +556,4 @@ HPS-1.0 is governed by the HPS Technical Working Group under Semantic Versioning
 - **SHA-256**: Secure Hash Algorithm 256-bit cryptographic digest function.
 - **Sovereign Oracle**: Remote fingerprint database update mechanism with local cache fallback and embedded defaults.
 - **UPC/EAN**: Universal Product Code / European Article Number (GS1).
+

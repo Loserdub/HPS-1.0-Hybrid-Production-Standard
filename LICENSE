@@ -1,6 +1,12 @@
-MIT License
+# Hybrid Production Standard (HPS-1.0) Licensing & IP Notice
 
-Copyright (c) 2026 Justin Ray
+Copyright (c) 2026 Justin Ray / TrustNodeLogic. All rights reserved.
+
+---
+
+## 1. Schemas, Data Formats, and Code Snippets
+The JSON schemas, JSON-LD context definitions, and code examples located in the 
+`/schema` and `/examples` directories are licensed under the MIT License:
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -19,3 +25,60 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+---
+
+## 2. Specification and Whitepaper Documentation
+The normative specification, technical whitepaper, and related documentation 
+located in `/spec`, `/whitepaper`, and `README.md` are licensed under the:
+
+**Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0)**
+https://creativecommons.org/licenses/by-nd/4.0/
+
+Under this license, you are free to share, copy, and redistribute the material 
+in any medium or format for any purpose, even commercially, under the following terms:
+- **Attribution**: You must give appropriate credit to Justin Ray / TrustNodeLogic, 
+  provide a link to the license, and indicate if changes were made.
+- **NoDerivatives**: If you remix, transform, or build upon the material, you 
+  may not distribute the modified material as the official standard or under the 
+  HPS name.
+
+---
+
+## 3. Proprietary Technology & Patent Reservation
+This repository and its documentation describe open specifications and data structures. 
+
+**NO LICENSE, EXPRESS OR IMPLIED, BY ESTOPPEL OR OTHERWISE, TO ANY PATENTS, 
+PATENT APPLICATIONS, TRADE SECRETS, PROPRIETARY ALGORITHMS, OR CODE IMPLEMENTATIONS 
+IS GRANTED HEREIN.**
+
+Specifically:
+1. **Engine Internals**: The internal detection heuristics, forensic scoring algorithms, 
+   fingerprint databases, proprietary parsing routines, and acoustic watermarking 
+   implementations utilized in the TrustNodeLogic HPS Attestation Engine are proprietary 
+   trade secrets and intellectual property of Justin Ray / TrustNodeLogic.
+2. **Third-Party Implementations**: Anyone may create independent implementations that 
+   generate or read compliant HPS manifests conforming to the public schemas, provided 
+   they do not misappropriate or reverse-engineer proprietary software or algorithms.
+
+---
+
+## 4. Trademark Notice
+The names "HPS", "HPS-1.0", "Hybrid Production Standard", "TrustNodeLogic", and all 
+associated logos, badges, and wordmarks are trademarks of TrustNodeLogic.
+
+No trademark rights are granted under this license. You may not use these marks 
+to endorse, sponsor, certify, or promote third-party products, services, or 
+unauthorized engine implementations without prior written authorization. Conforming 
+implementations may refer to compatibility using nominative fair use (e.g., 
+"compatible with HPS-1.0 manifests") but must not claim official endorsement or certification.
+
+---
+
+## 5. Third-Party Reliance & Factual Truth Disclaimer
+HPS-1.0 is an open standard establishing a framework for **self-attestation and cryptographic tamper-evidence**, not third-party verification or truth certification.
+
+Concretely:
+1. **No Factual Truth Warranty**: Digital signatures and content digests prove that a manifest was not altered after signing by the private keyholder and that the audio essence matches the recorded digest. They do NOT prove or guarantee that user-declared axis states, tool usage, or creative descriptions are factually true.
+2. **Third-Party Reliance at Own Risk**: Music distributors, aggregators, streaming platforms (DSPs), collecting societies, rights buyers, and regulatory authorities rely upon user-declared HPS attestations at their own sole risk. 
+3. **Hold Harmless**: Justin Ray, TrustNodeLogic, and the contributors to the HPS Standards Working Group make no representations, express or implied, regarding the authenticity, copyright status, legal ownership, or factual veracity of any attested audio work. In no event shall the authors, maintainers, or copyright holders be liable for any direct, indirect, incidental, special, consequential, or regulatory damages (including penalties under Regulation (EU) 2024/1689 or copyright infringement liabilities) arising from false user attestations, fraudulent declarations, or third-party reliance on HPS manifests.

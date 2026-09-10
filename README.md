@@ -8,7 +8,7 @@
 - **Maintained by**: HPS Standards Working Group / [TrustNodeLogic](https://trustnodelogic.com) / ExamplePublisher (`@id: https://example-publisher.com/#organization`)
 - **Standard Organization ID**: `@id: https://example-publisher.com/#organization`
 - **JSON-LD Context**: `https://hps-standard.org/ns/1.0/context.jsonld`
-- **License**: [MIT License](LICENSE)
+- **License**: [Dual License & IP Notice](LICENSE) (MIT for Schemas; CC BY-ND 4.0 for Documentation)
 
 ---
 
@@ -119,7 +119,8 @@ The normative JSON Schema is located at [`/schema/hps-manifest-1.0.json`](schema
 ```
 .
 ├── README.md                          # Standard introduction & summary (this file)
-├── LICENSE                            # MIT License
+├── LICENSE                            # Dual-License & IP / Patent Reservation Notice
+├── SECURITY.md                         # Security Policy & Coordinated Vulnerability Disclosure
 ├── spec/
 │   └── HPS-1.0.md                     # Full Normative Specification (with JSON-LD)
 ├── schema/
@@ -135,10 +136,26 @@ The normative JSON Schema is located at [`/schema/hps-manifest-1.0.json`](schema
 
 ---
 
-## 7. License & Contact
+## 7. License & Intellectual Property Notice
 
-HPS-1.0 Specification and Schemas are published under the **MIT License**.
+HPS-1.0 employs a dual-layer licensing model to ensure open interoperability while protecting technical intellectual property and brand integrity:
+
+- **Schemas & Data Formats** (`/schema`, `/examples`): Licensed under the **[MIT License](LICENSE)** to allow unrestricted integration into DAWs, DSPs, distribution pipelines, and open-source tools.
+- **Specification & Documentation** (`/spec`, `/whitepaper`, `README.md`): Licensed under the **[Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0)](https://creativecommons.org/licenses/by-nd/4.0/)** license. You may freely share, quote, and distribute this documentation with attribution, but modified versions may not be distributed as the official standard.
+- **Proprietary Technology & Patent Reservation**: No license, express or implied, is granted to any patents, trade secrets, forensic detection heuristics, or proprietary algorithms of the TrustNodeLogic attestation engine. See [`LICENSE`](LICENSE) for complete details.
+- **Trademarks**: "HPS", "Hybrid Production Standard", and "TrustNodeLogic" are trademarks of TrustNodeLogic.
 
 - **Maintainer**: Justin Ray / the HPS Standards Working Group
 - **Organization Graph**: `@id: https://example-publisher.com/#organization`
 - **Specification Feedback**: [GitHub Issues](https://github.com/Loserdub/HPS-1.0-Hybrid-Production-Standard/issues)
+
+---
+
+## 8. Contact & Community
+
+- **Standards Author & Lead**: Justin Ray / [TrustNodeLogic](https://trustnodelogic.com)
+- **Direct Contact**: [trustnodelogic.com/contact.html](https://trustnodelogic.com/contact.html)
+- **General & Working Group Inquiries**: [`trustnodelogic@gmail.com`](mailto:trustnodelogic@gmail.com)
+- **Security Vulnerability Disclosures**: [`security@trustnodelogic.com`](mailto:security@trustnodelogic.com) (see [`SECURITY.md`](SECURITY.md))
+- **Technical RFCs & Issues**: [GitHub Issues](https://github.com/Loserdub/HPS-1.0-Hybrid-Production-Standard/issues)
+- **GitHub Profile**: [@Loserdub](https://github.com/Loserdub)
