@@ -232,15 +232,15 @@ This section outlines the conceptual architectural stages of the HPS attestation
 ```
 
 ### 6.1 DAW Session Parsing & Introspection
-During project export, an attestation engine introspects DAW session file structures (e.g., Ableton `.als` XML structures, Logic Pro `.logicx` project bundles/plists, and FL Studio `.flp` binary event streams).
+During project export, an attestation engine introspects DAW session file structures (e.g., Ableton `.als` XML structures, Logic Pro `.logicx` project bundles, and FL Studio `.flp` projects).
 - **Plugin Introspection**: Scans active session track chains, extracting VST3 GUIDs, AudioUnit ID triplets, VST2 identifiers, and plugin display names.
 - **Sample Directory Introspection**: Analyzes audio sample file paths and metadata tags for generative audio signatures or known synthetic stem markers.
 
 ### 6.2 AI-Tool Detection Heuristics & 5-Axis Suggestion Logic
 An AI-tool detection engine matches session introspection data against a multi-tier database:
 1. **Exact Binary ID Matching**: Matches immutable VST3 GUIDs or AU ID triplets to identify renamed plugins.
-2. **Name Pattern Matching**: Executes regex pattern evaluation against plugin titles.
-3. **Behavioral Node Heuristics**: Analyzes routing patterns (e.g., MIDI output with zero audio input, typical of generative composition assistants), scoring likelihood ($0.0 - 1.0$).
+2. **Name Pattern Matching**: Executes contextual pattern evaluation against plugin titles.
+3. **Behavioral & Topological Heuristics**: Analyzes routing patterns, node characteristics, and generative metadata indicators to categorize tool behavior.
 
 The engine synthesizes these findings into suggested initial values across the 5 axes. Creators retain full agency to review, edit, or override any suggested value. Any manual override triggering a contradiction against auto-detected evidence is recorded in the `overrides[]` array for transparent downstream auditing.
 
@@ -252,7 +252,7 @@ The engine synthesizes these findings into suggested initial values across the 5
 ### 6.4 Container Embedding & Reversible Acoustic Watermarking
 - **RIFF WAV Embedding**: The manifest payload is written to a custom `hps1` FourCC chunk in the WAV container.
 - **MP3 Container Embedding**: The manifest payload is written to an ID3v2.4 `TXXX` frame (`HPS_MANIFEST_1.0`).
-- **Time-Domain DSSS Acoustic Watermarking**: To preserve provenance across lossy transcodes or physical playback, a 64-bit signature ID is modulated via time-domain Direct Sequence Spread Spectrum (DSSS) BPSK across PCM audio samples. The payload includes a 16-bit Barker sync marker (`1110001001000000`). Energy is dynamically scaled relative to local window RMS (capped at -20 dB, max $\alpha = 0.04$), ensuring inaudibility while remaining zero-energy during silent passages ($\text{RMS} < 10^{-5}$).
+- **Time-Domain Spread-Spectrum Acoustic Watermarking**: To preserve provenance across lossy transcodes, re-encoding, or broadcast playback, an inaudible acoustic watermark can be modulated into the PCM audio samples (e.g., using spread-spectrum techniques). The watermark signal is psychoacoustically shaped below local masking thresholds, remaining completely imperceptible during active passages and zero-energy during silence, while enabling blind extraction by downstream verifiers without reference audio.
 
 ---
 

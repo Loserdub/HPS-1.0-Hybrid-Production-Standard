@@ -54,7 +54,7 @@ For the purposes of this specification, the following terms apply:
 - **Axis**: A discrete stage of the music production workflow evaluated independently (`Origination`, `Performance`, `Curation`, `Sound Source`, `Post-Production`).
 - **Classifier**: The deterministic function that maps a 5-tuple of axis states into exactly one production tier (`H`, `X1`, `X2`, `X3`, `X4`, `A`). Evaluation is strictly order-dependent; the first matching rule terminates evaluation.
 - **DAW Forensics**: The automated inspection of a raw DAW project file (`.als`, `.logicx`, `.flp`, `.ptx`, `.cpr`, `.song`, `.rpp`, `.dawproject`) to extract plugin inventory, sample references, tempo, clip bounds, and track hierarchy for axis suggestion.
-- **Fingerprint Engine**: The forensic plugin identification subsystem that classifies detected tools via ExactID binary matching, NameMatch regex, and SuspiciousNode heuristics to produce AI-likelihood scores and axis evidence labels.
+- **Fingerprint Engine**: The forensic plugin identification subsystem that classifies detected tools via multi-tier matching (binary identification, contextual lexical matching, and behavioral heuristics) to produce classification evidence and axis suggestions.
 - **Generative AI**: Algorithmic or neural network systems capable of producing novel musical structures, stems, lyrics, vocal performances, or synthesized sound sources based on training data or prompt conditioning.
 - **HPS Manifest**: The canonical JSON / JSON-LD structure containing the declared axis states, derived tier, creator identity, industry identifiers, audio essence hash, Merkle revision chain, and digital signature.
 - **Merkle Audit Chain**: An append-only, hash-linked revision log embedded in the manifest (`revision_history`, `merkle_root`) that enables downstream verifiers to confirm no intermediate metadata edits occurred after initial attestation.
@@ -177,13 +177,13 @@ Conforming implementations MAY provide a DAW forensic parser subsystem that inge
 | DAW Format | Extensions | Container / Encoding | Default Parse Confidence |
 |---|---|---|---|
 | Ableton Live | `.als` | GZIP-compressed XML DOM AST | `high (xml-ast)` |
-| Logic Pro | `.logicx` / `.zip` | Binary Plist / SQLite / macOS Package | `high (logic-native-binary)` |
-| FL Studio | `.flp` / `.zip` | Binary FLhd/FL20 event-chunk stream | `high (binary-chunk)` |
+| Logic Pro | `.logicx` / `.zip` | Package archive / binary project structure | `high (logic-native)` |
+| FL Studio | `.flp` / `.zip` | Binary event stream | `high (binary-stream)` |
 | REAPER | `.rpp` | Plain text nested AST | `high (plain-text-ast)` |
 | Studio One | `.song` | ZIP archive (`song.xml`) DOM | `high (zip-xml-ast)` |
 | DAWProject | `.dawproject` | Open standard ZIP (`project.xml`) | `high (dawproject-xml)` |
-| Pro Tools | `.ptx` / `.pts` | Binary stream forensic string-scan | `medium (forensic-string-scan)` |
-| Cubase / Nuendo | `.cpr` | RIFF binary forensic string-scan | `medium (forensic-string-scan)` |
+| Pro Tools | `.ptx` / `.pts` | Binary stream forensic scan | `medium (forensic-binary-scan)` |
+| Cubase / Nuendo | `.cpr` | RIFF binary forensic scan | `medium (forensic-binary-scan)` |
 
 ### 6.2 Parse Confidence Tiers
 Parsers MUST report an honest `parseConfidence` tier that is carried into all legal export deliverables:
@@ -193,8 +193,8 @@ Parsers MUST report an honest `parseConfidence` tier that is carried into all le
 3. **`partial`**: Audio sample assets discovered in project folders, but session container could not be parsed.
 4. **`none`** (`scanFailed: true`): Unrecognized or corrupt file.
 
-### 6.3 Binary Plist Handling (Logic Pro)
-Logic Pro may write project data as a **binary plist** (`bplist00` magic header). Parsers MUST detect this via the first 8 bytes and MUST NOT silently fall back to heuristic data generation. Either implement full binary-plist parsing or mark the result `parseConfidence: 'low'` / `dataSource: 'heuristic-fallback'` and surface a visible badge to the user.
+### 6.3 Complex Container & Binary Format Handling
+Certain project formats (such as Logic Pro binary plists or proprietary binary chunks) require specialized deserialization. Parsers MUST detect unsupported or opaque binary structures and MUST NOT silently fall back to fabricated or assumed data. If a session container cannot be reliably parsed, the system MUST honestly report a reduced confidence tier (e.g., `parseConfidence: 'low'` or `'partial'`) and surface a visible notification to the user.
 
 ---
 
@@ -204,9 +204,9 @@ The Fingerprint Engine classifies detected plugins and samples via a three-tier 
 
 ### 7.1 Matching Tiers (Evaluated in Priority Order)
 
-1. **ExactID**: Binary plugin identifiers (VST3 GUID 16-byte, AudioUnit AU_ID/Bundle ID, CLAP Bundle ID, VST2 ID). Catches renamed plugins since underlying binary IDs do not change with display name.
-2. **NameMatch**: Regex patterns against plugin display name using non-alphanumeric lookarounds `(?<![a-zA-Z0-9])keyword(?![a-zA-Z0-9])` to prevent false positives (e.g., `"Studio One"` does not match `udio`).
-3. **SuspiciousNode**: Heuristic scoring on AI-sounding keywords or behavioral markers (MIDI output without audio input, autonomous stem generation markers). Produces a continuous `ai_likelihood` (0.0–1.0), not a binary match.
+1. **ExactID**: Evaluates immutable binary plugin identifiers (such as VST3 GUIDs, AudioUnit component IDs, CLAP bundle IDs, or VST2 unique IDs). This guarantees reliable detection of tools even if their display names or bundle labels have been modified.
+2. **NameMatch**: Evaluates contextual lexical matching against verified tool databases and plugin nomenclature, utilizing word-boundary constraints to prevent substring false positives.
+3. **Behavioral Heuristics**: Evaluates routing topology, node capabilities, and stem generation markers to categorize tool behavior and identify potential generative systems.
 
 ### 7.2 Exemption Preservation
 Tools classified as corrective utility DSP (Melodyne, Auto-Tune, Soothe2, Pro-Q 3) MUST be tagged `axis: null` — never counted as AI evidence. Do not classify a tool as AI merely because its marketing copy uses "AI-powered."
@@ -382,26 +382,24 @@ On import, implementations MUST:
 
 ---
 
-## 10. Acoustic Watermark Specification
+## 10. Acoustic Watermark Principles & Interoperability
 
-### 10.1 Algorithm (DSSS/BPSK Time-Domain)
-The HPS acoustic watermark embeds a covert, audio-survivalable signal directly into the PCM time-domain samples using Direct-Sequence Spread-Spectrum Binary Phase-Shift Keying (DSSS/BPSK):
+### 10.1 Functional Architecture
+To ensure provenance survives physical playback, analog re-recording, and lossy audio transcoding, conforming implementations MAY incorporate an inaudible acoustic watermark directly within the audio essence.
 
-- **Modulation**: Bit=1 adds PN sequence; Bit=0 subtracts PN sequence. Applied directly to raw PCM samples (not frequency-domain).
-- **Spreading Factor**: `CHUNK_SIZE = 4096` samples per bit (~33 dB processing gain).
-- **Payload**: 16-bit Barker sync marker (`1110001001000000`) + 64 bits of signature material = **80 bits total** per embed.
-- **Psychoacoustic Gain**: NOT a flat dB level. Computed per-window (1024-sample analysis, 512 hop, 50% overlap) as `RELATIVE_DB = -20 dB below local RMS`, hard-capped at `MAX_ALPHA = 0.04` (approx. -28 dBFS). Silent passages (RMS < 1e-5) receive zero watermark energy.
-- **Multi-channel**: Embeds into every channel independently.
-- **PRNG**: Custom seeded linear congruential generator (Park-Miller, `z = z*16807 mod 2147483647`), default seed `0x99887766`. Security guarantee comes from the Ed25519 signature, not the watermark seed.
+- **Modulation Scheme**: Time-domain Direct-Sequence Spread-Spectrum (DSSS) or psychoacoustically shaped spread-spectrum phase modulation embedded into PCM samples.
+- **Acoustic Transparency**: Watermark amplitude MUST be dynamically governed by psychoacoustic masking principles relative to local signal energy. Watermark injection MUST automatically attenuate to zero energy during passages of digital silence to prevent noise floor elevation.
+- **Channel Support**: Watermarking SHOULD be embedded across individual audio channels to withstand mono downmixing or channel isolation.
+- **Security Boundary**: The acoustic watermark provides a persistent binding to the manifest or creator signature material; primary cryptographic authenticity and non-repudiation are guaranteed by the Ed25519 digital signature, not by secrecy of the spread-spectrum sequence.
 
-### 10.2 Watermark Decoding
-Blind decode requires no reference audio:
-- **Differential correlation**: First-difference filtering strips host-audio interference before correlating against the known PN sequence.
-- **Coarse-to-fine sync search**: Up to 2 seconds / 88,200 samples, step 16, refined +/-16 around candidates, to recover start offset after silence padding or trimming.
-- **Channel candidates**: Each channel plus computed mono downmix tried independently.
+### 10.2 Blind Decoding & Extraction Requirements
+Detection and recovery of embedded watermark payloads MUST support blind decoding:
+- **Reference-Free Extraction**: Decoders MUST NOT require access to the unwatermarked original master audio.
+- **Synchronization Resilience**: The extraction subsystem MUST accommodate temporal shifts, leading/trailing silence padding, and sample-rate conversions.
+- **Interference Mitigation**: Extraction algorithms SHOULD employ differential filtering or correlation techniques to mitigate host-audio interference.
 
 ### 10.3 Embedding Integrity Check
-After signing and watermark embedding, implementations SHOULD conduct an immediate loopback self-check verifying RIFF chunk presence, hash match, and signature validity before delivering the file to the user. Any failure MUST be surfaced as a visible user warning; silent failure is not acceptable.
+After signing and watermark embedding, implementations SHOULD conduct an immediate loopback self-check verifying container chunk presence, audio hash verification, and signature validity before delivering the file to the user. Any failure MUST be surfaced as a visible user warning; silent failure is not acceptable.
 
 ---
 
