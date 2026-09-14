@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="100%" height="100%" style="background:#090d16; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+<defs>
+  <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#080c18"/>
+    <stop offset="100%" stop-color="#0e1526"/>
+  </linearGradient>
+  <pattern id="grid-pattern" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5" stroke-opacity="0.3"/>
+  </pattern>
+</defs>
+<rect width="1200" height="680" fill="url(#bg-grad)"/>
+<rect width="1200" height="680" fill="url(#grid-pattern)"/>
+<rect x="40" y="20" width="1120" height="85" rx="10" fill="#111827" stroke="#1e293b" stroke-width="1.5"/>
+<text x="65" y="46" fill="#38bdf8" font-size="12" font-weight="700" letter-spacing="1.5">HPS-1.0 HYBRID PRODUCTION STANDARD  •  5-AXIS EVALUATION ARCHITECTURE</text>
+<text x="65" y="73" fill="#ffffff" font-size="21" font-weight="800" letter-spacing="-0.5">Parallel Coordinates Rating Flow: 5 Operational Axes &#8594; 6 Classification Tiers</text>
+<text x="65" y="93" fill="#94a3b8" font-size="12">Each axis takes discrete state [H], [H+A], or [A]. Pathways across the 5 axes deterministically derive the 243 rating permutations.</text>
+<rect x="990" y="36" width="150" height="38" rx="6" fill="#131d31" stroke="#0284c7" stroke-width="1.5"/>
+<text x="1065" y="60" text-anchor="middle" fill="#38bdf8" font-size="12.5" font-weight="800" letter-spacing="0.5">5 AXES  •  3 STATES</text>
+<path d="M 120 180 C 230.0 180, 230.0 180, 340 180 C 450.0 180, 450.0 180, 560 180 C 670.0 180, 670.0 180, 780 180 C 890.0 180, 890.0 180, 1000 180" fill="none" stroke="#38bdf8" stroke-width="6" opacity="0.85" stroke-linecap="round"/>
+<path d="M 120 186 C 230.0 186, 230.0 186, 340 186 C 450.0 186, 450.0 279, 560 279 C 670.0 279, 670.0 279, 780 279 C 890.0 279, 890.0 384, 1000 384" fill="none" stroke="#60a5fa" stroke-width="5" opacity="0.75" stroke-linecap="round"/>
+<path d="M 120 285 C 230.0 285, 230.0 285, 340 285 C 450.0 285, 450.0 180, 560 180 C 670.0 180, 670.0 180, 780 180 C 890.0 180, 890.0 180, 1000 180" fill="none" stroke="#c084fc" stroke-width="8" opacity="0.8" stroke-linecap="round"/>
+<path d="M 120 174 C 230.0 174, 230.0 291, 340 291 C 450.0 291, 450.0 291, 560 291 C 670.0 291, 670.0 291, 780 291 C 890.0 291, 890.0 186, 1000 186" fill="none" stroke="#a855f7" stroke-width="5" opacity="0.65" stroke-linecap="round"/>
+<path d="M 120 386 C 230.0 386, 230.0 281, 340 281 C 450.0 281, 450.0 184, 560 184 C 670.0 184, 670.0 184, 780 184 C 890.0 184, 890.0 184, 1000 184" fill="none" stroke="#c084fc" stroke-width="5" opacity="0.75" stroke-linecap="round"/>
+<path d="M 120 382 C 230.0 382, 230.0 382, 340 382 C 450.0 382, 450.0 188, 560 188 C 670.0 188, 670.0 384, 780 384 C 890.0 384, 890.0 172, 1000 172" fill="none" stroke="#fb923c" stroke-width="5" opacity="0.85" stroke-linecap="round"/>
+<path d="M 120 396 C 230.0 396, 230.0 396, 340 396 C 450.0 396, 450.0 396, 560 396 C 670.0 396, 670.0 396, 780 396 C 890.0 396, 890.0 396, 1000 396" fill="none" stroke="#f87171" stroke-width="5" opacity="0.85" stroke-linecap="round"/>
+<path d="M 120 378 C 230.0 378, 230.0 192, 340 192 C 450.0 192, 450.0 192, 560 192 C 670.0 192, 670.0 275, 780 275 C 890.0 275, 890.0 192, 1000 192" fill="none" stroke="#94a3b8" stroke-width="4" opacity="0.7" stroke-linecap="round" stroke-dasharray="6 4"/>
+<rect x="45" y="125" width="150" height="340" rx="8" fill="#0f172a" stroke="#1e293b" stroke-width="1.2" opacity="0.9"/>
+<text x="120" y="146" text-anchor="middle" fill="#38bdf8" font-size="12" font-weight="700">Origination (O)</text>
+<text x="120" y="160" text-anchor="middle" fill="#64748b" font-size="9">Composition, chords, lyrics</text>
+<rect x="60" y="156" width="120" height="48" rx="6" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+<rect x="68" y="164" width="38" height="32" rx="4" fill="#0284c7" stroke="#38bdf8" stroke-width="1"/>
+<text x="87" y="185" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="800">H</text>
+<text x="138" y="185" text-anchor="middle" fill="#f8fafc" font-size="11.5" font-weight="600">Human</text>
+<rect x="60" y="261" width="120" height="48" rx="6" fill="#1e293b" stroke="#c084fc" stroke-width="1.5"/>
+<rect x="68" y="269" width="38" height="32" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+<text x="87" y="290" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="800">H+A</text>
+<text x="138" y="290" text-anchor="middle" fill="#f8fafc" font-size="11.5" font-weight="600">Hybrid</text>
+<rect x="60" y="366" width="120" height="48" rx="6" fill="#1e293b" stroke="#f87171" stroke-width="1.5"/>
+<rect x="68" y="374" width="38" height="32" rx="4" fill="#dc2626" stroke="#f87171" stroke-width="1"/>
+<text x="87" y="395" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="800">A</text>
+<text x="138" y="395" text-anchor="middle" fill="#f8fafc" font-size="11.5" font-weight="600">AI Auto</text>
+<rect x="265" y="125" width="150" height="340" rx="8" fill="#0f172a" stroke="#1e293b" stroke-width="1.2" opacity="0.9"/>
+<text x="340" y="146" text-anchor="middle" fill="#38bdf8" font-size="12" font-weight="700">Performance (P)</text>
+<text x="340" y="160" text-anchor="middle" fill="#64748b" font-size="9">Vocal tracking, execution</text>
+<rect x="280" y="156" width="120" height="48" rx="6" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+<rect x="288" y="164" width="38" height="32" rx="4" fill="#0284c7" stroke="#38bdf8" stroke-width="1"/>
+<text x="307" y="185" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="800">H</text>
+<text x="358" y="185" text-anchor="middle" fill="#f8fafc" font-size="11.5" font-weight="600">Human</text>
+<rect x="280" y="261" width="120" height="48" rx="6" fill="#1e293b" stroke="#c084fc" stroke-width="1.5"/>
+<rect x="288" y="269" width="38" height="32" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+<text x="307" y="290" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="800">H+A</text>
+<text x="358" y="290" text-anchor="middle" fill="#f8fafc" font-size="11.5" font-weight="600">Hybrid</text>
+<rect x="280" y="366" width="120" height="48" rx="6" fill="#1e293b" stroke="#f87171" stroke-width="1.5"/>
+<rect x="288" y="374" width="38" height="32" rx="4" fill="#dc2626" stroke="#f87171" stroke-width="1"/>
+<text x="307" y="395" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="800">A</text>
+<text x="358" y="395" text-anchor="middle" fill="#f8fafc" font-size="11.5" font-weight="600">AI Auto</text>
+<rect x="485" y="125" width="150" height="340" rx="8" fill="#0f172a" stroke="#1e293b" stroke-width="1.2" opacity="0.9"/>
+<text x="560" y="146" text-anchor="middle" fill="#38bdf8" font-size="12" font-weight="700">Curation (C)</text>
+<text x="560" y="160" text-anchor="middle" fill="#64748b" font-size="9">Stem selection, chopping</text>
+<rect x="500" y="156" width="120" height="48" rx="6" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+<rect x="508" y="164" width="38" height="32" rx="4" fill="#0284c7" stroke="#38bdf8" stroke-width="1"/>
+<text x="527" y="185" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="800">H</text>
+<text x="578" y="185" text-anchor="middle" fill="#f8fafc" font-size="11.5" font-weight="600">Human</text>
+<rect x="500" y="261" width="120" height="48" rx="6" fill="#1e293b" stroke="#c084fc" stroke-width="1.5"/>
+<rect x="508" y="269" width="38" height="32" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+<text x="527" y="290" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="800">H+A</text>
+<text x="578" y="290" text-anchor="middle" fill="#f8fafc" font-size="11.5" font-weight="600">Hybrid</text>
+<rect x="500" y="366" width="120" height="48" rx="6" fill="#1e293b" stroke="#f87171" stroke-width="1.5"/>
+<rect x="508" y="374" width="38" height="32" rx="4" fill="#dc2626" stroke="#f87171" stroke-width="1"/>
+<text x="527" y="395" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="800">A</text>
+<text x="578" y="395" text-anchor="middle" fill="#f8fafc" font-size="11.5" font-weight="600">AI Auto</text>
+<rect x="705" y="125" width="150" height="340" rx="8" fill="#0f172a" stroke="#1e293b" stroke-width="1.2" opacity="0.9"/>
+<text x="780" y="146" text-anchor="middle" fill="#38bdf8" font-size="12" font-weight="700">Sound Source (S)</text>
+<text x="780" y="160" text-anchor="middle" fill="#64748b" font-size="9">Acoustic vs. neural timbre</text>
+<rect x="720" y="156" width="120" height="48" rx="6" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+<rect x="728" y="164" width="38" height="32" rx="4" fill="#0284c7" stroke="#38bdf8" stroke-width="1"/>
+<text x="747" y="185" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="800">H</text>
+<text x="798" y="185" text-anchor="middle" fill="#f8fafc" font-size="11.5" font-weight="600">Human</text>
+<rect x="720" y="261" width="120" height="48" rx="6" fill="#1e293b" stroke="#c084fc" stroke-width="1.5"/>
+<rect x="728" y="269" width="38" height="32" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+<text x="747" y="290" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="800">H+A</text>
+<text x="798" y="290" text-anchor="middle" fill="#f8fafc" font-size="11.5" font-weight="600">Hybrid</text>
+<rect x="720" y="366" width="120" height="48" rx="6" fill="#1e293b" stroke="#f87171" stroke-width="1.5"/>
+<rect x="728" y="374" width="38" height="32" rx="4" fill="#dc2626" stroke="#f87171" stroke-width="1"/>
+<text x="747" y="395" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="800">A</text>
+<text x="798" y="395" text-anchor="middle" fill="#f8fafc" font-size="11.5" font-weight="600">AI Auto</text>
+<rect x="925" y="125" width="150" height="340" rx="8" fill="#0f172a" stroke="#1e293b" stroke-width="1.2" opacity="0.9"/>
+<text x="1000" y="146" text-anchor="middle" fill="#38bdf8" font-size="12" font-weight="700">Post-Production (M)</text>
+<text x="1000" y="160" text-anchor="middle" fill="#64748b" font-size="9">Mixing, mastering, utility EQ</text>
+<rect x="940" y="156" width="120" height="48" rx="6" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+<rect x="948" y="164" width="38" height="32" rx="4" fill="#0284c7" stroke="#38bdf8" stroke-width="1"/>
+<text x="967" y="185" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="800">H</text>
+<text x="1018" y="185" text-anchor="middle" fill="#f8fafc" font-size="11.5" font-weight="600">Human</text>
+<rect x="940" y="261" width="120" height="48" rx="6" fill="#1e293b" stroke="#c084fc" stroke-width="1.5"/>
+<rect x="948" y="269" width="38" height="32" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+<text x="967" y="290" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="800">H+A</text>
+<text x="1018" y="290" text-anchor="middle" fill="#f8fafc" font-size="11.5" font-weight="600">Hybrid</text>
+<rect x="940" y="366" width="120" height="48" rx="6" fill="#1e293b" stroke="#f87171" stroke-width="1.5"/>
+<rect x="948" y="374" width="38" height="32" rx="4" fill="#dc2626" stroke="#f87171" stroke-width="1"/>
+<text x="967" y="395" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="800">A</text>
+<text x="1018" y="395" text-anchor="middle" fill="#f8fafc" font-size="11.5" font-weight="600">AI Auto</text>
+<rect x="500" y="445" width="200" height="28" rx="5" fill="#1c1917" stroke="#fb923c" stroke-width="1"/>
+<text x="600" y="463" text-anchor="middle" fill="#fb923c" font-size="10" font-weight="700">&#8593; CURATION: CRITICAL EDITORIAL GATE</text>
+<rect x="40" y="490" width="1120" height="165" rx="10" fill="#111827" stroke="#1e293b" stroke-width="1.5"/>
+<text x="65" y="514" fill="#f8fafc" font-size="12" font-weight="700" letter-spacing="0.5">SIX TIER PATHWAY ARCHETYPES (243 TOTAL DETERMINISTIC COMBINATIONS):</text>
+<rect x="65" y="526" width="505" height="36" rx="5" fill="#141d2e" stroke="#38bdf8" stroke-width="1"/>
+<rect x="70" y="531" width="28" height="26" rx="3" fill="#0284c7" stroke="#38bdf8" stroke-width="1"/>
+<text x="84" y="548" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="800">H</text>
+<text x="105" y="542" fill="#f8fafc" font-size="11" font-weight="700">Tier H: Human Production <tspan fill="#94a3b8" font-weight="400">(7 states (2.9%))</tspan></text>
+<text x="105" y="555" fill="#64748b" font-size="9.5">All 5 axes at [H] (max 1 secondary axis at [H+A]/[A] for utility tools)</text>
+<rect x="610" y="526" width="505" height="36" rx="5" fill="#141d2e" stroke="#60a5fa" stroke-width="1"/>
+<rect x="615" y="531" width="28" height="26" rx="3" fill="#2563eb" stroke="#60a5fa" stroke-width="1"/>
+<text x="629" y="548" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="800">X1</text>
+<text x="650" y="542" fill="#f8fafc" font-size="11" font-weight="700">Tier X1: Human-Led Hybrid <tspan fill="#94a3b8" font-weight="400">(20 states (8.2%))</tspan></text>
+<text x="650" y="555" fill="#64748b" font-size="9.5">[H] core on Origination &amp; Performance; 2+ secondary axes use AI</text>
+<rect x="65" y="568" width="505" height="36" rx="5" fill="#141d2e" stroke="#c084fc" stroke-width="1"/>
+<rect x="70" y="573" width="28" height="26" rx="3" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+<text x="84" y="590" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="800">X2</text>
+<text x="105" y="584" fill="#f8fafc" font-size="11" font-weight="700">Tier X2: Co-Creative Hybrid <tspan fill="#94a3b8" font-weight="400">(118 states (48.6%))</tspan></text>
+<text x="105" y="597" fill="#64748b" font-size="9.5">[H+A] on Origination or Performance; human retains full editorial control</text>
+<rect x="610" y="568" width="505" height="36" rx="5" fill="#141d2e" stroke="#94a3b8" stroke-width="1"/>
+<rect x="615" y="573" width="28" height="26" rx="3" fill="#334155" stroke="#94a3b8" stroke-width="1"/>
+<text x="629" y="590" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="800">X3</text>
+<text x="650" y="584" fill="#f8fafc" font-size="11" font-weight="700">Tier X3: AI-Led Hybrid <tspan fill="#94a3b8" font-weight="400">(75 states (30.9%))</tspan></text>
+<text x="650" y="597" fill="#64748b" font-size="9.5">Opposing core ([H]/[A]) or AI-seeded draft heavily reworked by human</text>
+<rect x="65" y="610" width="505" height="36" rx="5" fill="#141d2e" stroke="#fb923c" stroke-width="1"/>
+<rect x="70" y="615" width="28" height="26" rx="3" fill="#ea580c" stroke="#fb923c" stroke-width="1"/>
+<text x="84" y="632" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="800">X4</text>
+<text x="105" y="626" fill="#f8fafc" font-size="11" font-weight="700">Tier X4: Curated Hybrid <tspan fill="#94a3b8" font-weight="400">(18 states (7.4%))</tspan></text>
+<text x="105" y="639" fill="#64748b" font-size="9.5">Core [A] on Origination &amp; Performance, but snaps to [H]/[H+A] on Curation</text>
+<rect x="610" y="610" width="505" height="36" rx="5" fill="#141d2e" stroke="#f87171" stroke-width="1"/>
+<rect x="615" y="615" width="28" height="26" rx="3" fill="#dc2626" stroke="#f87171" stroke-width="1"/>
+<text x="629" y="632" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="800">A</text>
+<text x="650" y="626" fill="#f8fafc" font-size="11" font-weight="700">Tier A: Autonomous AI <tspan fill="#94a3b8" font-weight="400">(5 states (2.1%))</tspan></text>
+<text x="650" y="639" fill="#64748b" font-size="9.5">Pinned to [A] across Origination, Performance, Curation, and Sound Source</text>
+</svg>

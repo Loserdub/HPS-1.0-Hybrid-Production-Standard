@@ -1,0 +1,1390 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1580 675" width="100%" height="100%" style="background:#090d16; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+<defs>
+  <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#080c18"/>
+    <stop offset="100%" stop-color="#0e1526"/>
+  </linearGradient>
+  <pattern id="grid-pattern" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5" stroke-opacity="0.3"/>
+  </pattern>
+</defs>
+<rect width="1580" height="675" fill="url(#bg-grad)"/>
+<rect width="1580" height="675" fill="url(#grid-pattern)"/>
+<rect x="40" y="20" width="1500" height="92" rx="10" fill="#111827" stroke="#1e293b" stroke-width="1.5"/>
+<text x="65" y="46" fill="#38bdf8" font-size="12" font-weight="700" letter-spacing="1.5">HPS-1.0 HYBRID PRODUCTION STANDARD  •  243-STATE CLASSIFIER MATRIX</text>
+<text x="65" y="74" fill="#ffffff" font-size="22" font-weight="800" letter-spacing="-0.5">Complete Visual Matrix of All 243 Rating Combinations</text>
+<text x="65" y="96" fill="#94a3b8" font-size="12.5">Exhaustive deterministic mapping: 3⁵ = 243 permutations across [O] Origination, [P] Performance, [C] Curation, [S] Sound Source, [M] Post-Production</text>
+<rect x="1350" y="36" width="170" height="42" rx="6" fill="#131d31" stroke="#0284c7" stroke-width="1.5"/>
+<text x="1435" y="62" text-anchor="middle" fill="#38bdf8" font-size="13" font-weight="800" letter-spacing="0.5">243 / 243 STATES</text>
+<rect x="40" y="130" width="465" height="376" rx="8" fill="#101726" stroke="#1e293b" stroke-width="1.5"/>
+<text x="54" y="154" fill="#f8fafc" font-size="13.5" font-weight="700">Curation: Human [C = H]</text>
+<text x="54" y="170" fill="#64748b" font-size="10.5">Manual stem curation, chopping &amp; arrangement</text>
+<text x="303.5" y="190" text-anchor="middle" fill="#94a3b8" font-size="10" font-weight="700" letter-spacing="0.5">SOUND SOURCE (S) / POST-PRODUCTION (M)</text>
+<rect x="111" y="194" width="41" height="18" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/>
+<text x="131.5" y="207" text-anchor="middle" fill="#94a3b8" font-size="8.5" font-weight="600">H/H</text>
+<rect x="154" y="194" width="41" height="18" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/>
+<text x="174.5" y="207" text-anchor="middle" fill="#94a3b8" font-size="8.5" font-weight="600">H/H+A</text>
+<rect x="197" y="194" width="41" height="18" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/>
+<text x="217.5" y="207" text-anchor="middle" fill="#94a3b8" font-size="8.5" font-weight="600">H/A</text>
+<rect x="240" y="194" width="41" height="18" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/>
+<text x="260.5" y="207" text-anchor="middle" fill="#94a3b8" font-size="8.5" font-weight="600">H+A/H</text>
+<rect x="283" y="194" width="41" height="18" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/>
+<text x="303.5" y="207" text-anchor="middle" fill="#94a3b8" font-size="8.5" font-weight="600">H+A/H+A</text>
+<rect x="326" y="194" width="41" height="18" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/>
+<text x="346.5" y="207" text-anchor="middle" fill="#94a3b8" font-size="8.5" font-weight="600">H+A/A</text>
+<rect x="369" y="194" width="41" height="18" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/>
+<text x="389.5" y="207" text-anchor="middle" fill="#94a3b8" font-size="8.5" font-weight="600">A/H</text>
+<rect x="412" y="194" width="41" height="18" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/>
+<text x="432.5" y="207" text-anchor="middle" fill="#94a3b8" font-size="8.5" font-weight="600">A/H+A</text>
+<rect x="455" y="194" width="41" height="18" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/>
+<text x="475.5" y="207" text-anchor="middle" fill="#94a3b8" font-size="8.5" font-weight="600">A/A</text>
+<text x="48" y="207" fill="#94a3b8" font-size="9.5" font-weight="700">O / P</text>
+<rect x="46" y="215" width="61" height="30" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/>
+<text x="76.0" y="234.0" text-anchor="middle" fill="#cbd5e1" font-size="9.5" font-weight="600">H/H</text>
+<g>
+  <title>O=H, P=H, C=H, S=H, M=H &#8594; Tier H (Human Production)</title>
+  <rect x="111" y="215" width="41" height="30" rx="4" fill="#0284c7" stroke="#38bdf8" stroke-width="1"/>
+  <text x="131.5" y="234.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">H</text>
+</g>
+<g>
+  <title>O=H, P=H, C=H, S=H, M=H+A &#8594; Tier H (Human Production)</title>
+  <rect x="154" y="215" width="41" height="30" rx="4" fill="#0284c7" stroke="#38bdf8" stroke-width="1"/>
+  <text x="174.5" y="234.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">H</text>
+</g>
+<g>
+  <title>O=H, P=H, C=H, S=H, M=A &#8594; Tier H (Human Production)</title>
+  <rect x="197" y="215" width="41" height="30" rx="4" fill="#0284c7" stroke="#38bdf8" stroke-width="1"/>
+  <text x="217.5" y="234.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">H</text>
+</g>
+<g>
+  <title>O=H, P=H, C=H, S=H+A, M=H &#8594; Tier H (Human Production)</title>
+  <rect x="240" y="215" width="41" height="30" rx="4" fill="#0284c7" stroke="#38bdf8" stroke-width="1"/>
+  <text x="260.5" y="234.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">H</text>
+</g>
+<g>
+  <title>O=H, P=H, C=H, S=H+A, M=H+A &#8594; Tier X1 (Human-Led Hybrid)</title>
+  <rect x="283" y="215" width="41" height="30" rx="4" fill="#2563eb" stroke="#60a5fa" stroke-width="1"/>
+  <text x="303.5" y="234.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X1</text>
+</g>
+<g>
+  <title>O=H, P=H, C=H, S=H+A, M=A &#8594; Tier X1 (Human-Led Hybrid)</title>
+  <rect x="326" y="215" width="41" height="30" rx="4" fill="#2563eb" stroke="#60a5fa" stroke-width="1"/>
+  <text x="346.5" y="234.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X1</text>
+</g>
+<g>
+  <title>O=H, P=H, C=H, S=A, M=H &#8594; Tier H (Human Production)</title>
+  <rect x="369" y="215" width="41" height="30" rx="4" fill="#0284c7" stroke="#38bdf8" stroke-width="1"/>
+  <text x="389.5" y="234.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">H</text>
+</g>
+<g>
+  <title>O=H, P=H, C=H, S=A, M=H+A &#8594; Tier X1 (Human-Led Hybrid)</title>
+  <rect x="412" y="215" width="41" height="30" rx="4" fill="#2563eb" stroke="#60a5fa" stroke-width="1"/>
+  <text x="432.5" y="234.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X1</text>
+</g>
+<g>
+  <title>O=H, P=H, C=H, S=A, M=A &#8594; Tier X1 (Human-Led Hybrid)</title>
+  <rect x="455" y="215" width="41" height="30" rx="4" fill="#2563eb" stroke="#60a5fa" stroke-width="1"/>
+  <text x="475.5" y="234.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X1</text>
+</g>
+<rect x="46" y="247" width="61" height="30" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/>
+<text x="76.0" y="266.0" text-anchor="middle" fill="#cbd5e1" font-size="9.5" font-weight="600">H/H+A</text>
+<g>
+  <title>O=H, P=H+A, C=H, S=H, M=H &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="111" y="247" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="131.5" y="266.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H, P=H+A, C=H, S=H, M=H+A &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="154" y="247" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="174.5" y="266.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H, P=H+A, C=H, S=H, M=A &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="197" y="247" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="217.5" y="266.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H, P=H+A, C=H, S=H+A, M=H &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="240" y="247" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="260.5" y="266.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H, P=H+A, C=H, S=H+A, M=H+A &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="283" y="247" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="303.5" y="266.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H, P=H+A, C=H, S=H+A, M=A &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="326" y="247" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="346.5" y="266.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H, P=H+A, C=H, S=A, M=H &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="369" y="247" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="389.5" y="266.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H, P=H+A, C=H, S=A, M=H+A &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="412" y="247" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="432.5" y="266.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H, P=H+A, C=H, S=A, M=A &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="455" y="247" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="475.5" y="266.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<rect x="46" y="279" width="61" height="30" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/>
+<text x="76.0" y="298.0" text-anchor="middle" fill="#cbd5e1" font-size="9.5" font-weight="600">H/A</text>
+<g>
+  <title>O=H, P=A, C=H, S=H, M=H &#8594; Tier X3 (AI-Led Hybrid)</title>
+  <rect x="111" y="279" width="41" height="30" rx="4" fill="#334155" stroke="#94a3b8" stroke-width="1"/>
+  <text x="131.5" y="298.0" text-anchor="middle" fill="#f8fafc" font-size="10.5" font-weight="700">X3</text>
+</g>
+<g>
+  <title>O=H, P=A, C=H, S=H, M=H+A &#8594; Tier X3 (AI-Led Hybrid)</title>
+  <rect x="154" y="279" width="41" height="30" rx="4" fill="#334155" stroke="#94a3b8" stroke-width="1"/>
+  <text x="174.5" y="298.0" text-anchor="middle" fill="#f8fafc" font-size="10.5" font-weight="700">X3</text>
+</g>
+<g>
+  <title>O=H, P=A, C=H, S=H, M=A &#8594; Tier X3 (AI-Led Hybrid)</title>
+  <rect x="197" y="279" width="41" height="30" rx="4" fill="#334155" stroke="#94a3b8" stroke-width="1"/>
+  <text x="217.5" y="298.0" text-anchor="middle" fill="#f8fafc" font-size="10.5" font-weight="700">X3</text>
+</g>
+<g>
+  <title>O=H, P=A, C=H, S=H+A, M=H &#8594; Tier X3 (AI-Led Hybrid)</title>
+  <rect x="240" y="279" width="41" height="30" rx="4" fill="#334155" stroke="#94a3b8" stroke-width="1"/>
+  <text x="260.5" y="298.0" text-anchor="middle" fill="#f8fafc" font-size="10.5" font-weight="700">X3</text>
+</g>
+<g>
+  <title>O=H, P=A, C=H, S=H+A, M=H+A &#8594; Tier X3 (AI-Led Hybrid)</title>
+  <rect x="283" y="279" width="41" height="30" rx="4" fill="#334155" stroke="#94a3b8" stroke-width="1"/>
+  <text x="303.5" y="298.0" text-anchor="middle" fill="#f8fafc" font-size="10.5" font-weight="700">X3</text>
+</g>
+<g>
+  <title>O=H, P=A, C=H, S=H+A, M=A &#8594; Tier X3 (AI-Led Hybrid)</title>
+  <rect x="326" y="279" width="41" height="30" rx="4" fill="#334155" stroke="#94a3b8" stroke-width="1"/>
+  <text x="346.5" y="298.0" text-anchor="middle" fill="#f8fafc" font-size="10.5" font-weight="700">X3</text>
+</g>
+<g>
+  <title>O=H, P=A, C=H, S=A, M=H &#8594; Tier X3 (AI-Led Hybrid)</title>
+  <rect x="369" y="279" width="41" height="30" rx="4" fill="#334155" stroke="#94a3b8" stroke-width="1"/>
+  <text x="389.5" y="298.0" text-anchor="middle" fill="#f8fafc" font-size="10.5" font-weight="700">X3</text>
+</g>
+<g>
+  <title>O=H, P=A, C=H, S=A, M=H+A &#8594; Tier X3 (AI-Led Hybrid)</title>
+  <rect x="412" y="279" width="41" height="30" rx="4" fill="#334155" stroke="#94a3b8" stroke-width="1"/>
+  <text x="432.5" y="298.0" text-anchor="middle" fill="#f8fafc" font-size="10.5" font-weight="700">X3</text>
+</g>
+<g>
+  <title>O=H, P=A, C=H, S=A, M=A &#8594; Tier X3 (AI-Led Hybrid)</title>
+  <rect x="455" y="279" width="41" height="30" rx="4" fill="#334155" stroke="#94a3b8" stroke-width="1"/>
+  <text x="475.5" y="298.0" text-anchor="middle" fill="#f8fafc" font-size="10.5" font-weight="700">X3</text>
+</g>
+<rect x="46" y="311" width="61" height="30" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/>
+<text x="76.0" y="330.0" text-anchor="middle" fill="#cbd5e1" font-size="9.5" font-weight="600">H+A/H</text>
+<g>
+  <title>O=H+A, P=H, C=H, S=H, M=H &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="111" y="311" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="131.5" y="330.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H+A, P=H, C=H, S=H, M=H+A &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="154" y="311" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="174.5" y="330.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H+A, P=H, C=H, S=H, M=A &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="197" y="311" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="217.5" y="330.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H+A, P=H, C=H, S=H+A, M=H &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="240" y="311" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="260.5" y="330.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H+A, P=H, C=H, S=H+A, M=H+A &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="283" y="311" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="303.5" y="330.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H+A, P=H, C=H, S=H+A, M=A &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="326" y="311" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="346.5" y="330.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H+A, P=H, C=H, S=A, M=H &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="369" y="311" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="389.5" y="330.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H+A, P=H, C=H, S=A, M=H+A &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="412" y="311" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="432.5" y="330.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H+A, P=H, C=H, S=A, M=A &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="455" y="311" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="475.5" y="330.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<rect x="46" y="343" width="61" height="30" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/>
+<text x="76.0" y="362.0" text-anchor="middle" fill="#cbd5e1" font-size="9.5" font-weight="600">H+A/H+A</text>
+<g>
+  <title>O=H+A, P=H+A, C=H, S=H, M=H &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="111" y="343" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="131.5" y="362.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H+A, P=H+A, C=H, S=H, M=H+A &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="154" y="343" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="174.5" y="362.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H+A, P=H+A, C=H, S=H, M=A &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="197" y="343" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="217.5" y="362.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H+A, P=H+A, C=H, S=H+A, M=H &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="240" y="343" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="260.5" y="362.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H+A, P=H+A, C=H, S=H+A, M=H+A &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="283" y="343" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="303.5" y="362.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H+A, P=H+A, C=H, S=H+A, M=A &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="326" y="343" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="346.5" y="362.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H+A, P=H+A, C=H, S=A, M=H &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="369" y="343" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="389.5" y="362.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H+A, P=H+A, C=H, S=A, M=H+A &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="412" y="343" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="432.5" y="362.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H+A, P=H+A, C=H, S=A, M=A &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="455" y="343" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="475.5" y="362.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<rect x="46" y="375" width="61" height="30" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/>
+<text x="76.0" y="394.0" text-anchor="middle" fill="#cbd5e1" font-size="9.5" font-weight="600">H+A/A</text>
+<g>
+  <title>O=H+A, P=A, C=H, S=H, M=H &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="111" y="375" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="131.5" y="394.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H+A, P=A, C=H, S=H, M=H+A &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="154" y="375" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="174.5" y="394.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H+A, P=A, C=H, S=H, M=A &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="197" y="375" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="217.5" y="394.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H+A, P=A, C=H, S=H+A, M=H &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="240" y="375" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="260.5" y="394.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H+A, P=A, C=H, S=H+A, M=H+A &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="283" y="375" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="303.5" y="394.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H+A, P=A, C=H, S=H+A, M=A &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="326" y="375" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="346.5" y="394.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H+A, P=A, C=H, S=A, M=H &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="369" y="375" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="389.5" y="394.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H+A, P=A, C=H, S=A, M=H+A &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="412" y="375" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="432.5" y="394.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H+A, P=A, C=H, S=A, M=A &#8594; Tier X3 (AI-Led Hybrid)</title>
+  <rect x="455" y="375" width="41" height="30" rx="4" fill="#334155" stroke="#94a3b8" stroke-width="1"/>
+  <text x="475.5" y="394.0" text-anchor="middle" fill="#f8fafc" font-size="10.5" font-weight="700">X3</text>
+</g>
+<rect x="46" y="407" width="61" height="30" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/>
+<text x="76.0" y="426.0" text-anchor="middle" fill="#cbd5e1" font-size="9.5" font-weight="600">A/H</text>
+<g>
+  <title>O=A, P=H, C=H, S=H, M=H &#8594; Tier X3 (AI-Led Hybrid)</title>
+  <rect x="111" y="407" width="41" height="30" rx="4" fill="#334155" stroke="#94a3b8" stroke-width="1"/>
+  <text x="131.5" y="426.0" text-anchor="middle" fill="#f8fafc" font-size="10.5" font-weight="700">X3</text>
+</g>
+<g>
+  <title>O=A, P=H, C=H, S=H, M=H+A &#8594; Tier X3 (AI-Led Hybrid)</title>
+  <rect x="154" y="407" width="41" height="30" rx="4" fill="#334155" stroke="#94a3b8" stroke-width="1"/>
+  <text x="174.5" y="426.0" text-anchor="middle" fill="#f8fafc" font-size="10.5" font-weight="700">X3</text>
+</g>
+<g>
+  <title>O=A, P=H, C=H, S=H, M=A &#8594; Tier X3 (AI-Led Hybrid)</title>
+  <rect x="197" y="407" width="41" height="30" rx="4" fill="#334155" stroke="#94a3b8" stroke-width="1"/>
+  <text x="217.5" y="426.0" text-anchor="middle" fill="#f8fafc" font-size="10.5" font-weight="700">X3</text>
+</g>
+<g>
+  <title>O=A, P=H, C=H, S=H+A, M=H &#8594; Tier X3 (AI-Led Hybrid)</title>
+  <rect x="240" y="407" width="41" height="30" rx="4" fill="#334155" stroke="#94a3b8" stroke-width="1"/>
+  <text x="260.5" y="426.0" text-anchor="middle" fill="#f8fafc" font-size="10.5" font-weight="700">X3</text>
+</g>
+<g>
+  <title>O=A, P=H, C=H, S=H+A, M=H+A &#8594; Tier X3 (AI-Led Hybrid)</title>
+  <rect x="283" y="407" width="41" height="30" rx="4" fill="#334155" stroke="#94a3b8" stroke-width="1"/>
+  <text x="303.5" y="426.0" text-anchor="middle" fill="#f8fafc" font-size="10.5" font-weight="700">X3</text>
+</g>
+<g>
+  <title>O=A, P=H, C=H, S=H+A, M=A &#8594; Tier X3 (AI-Led Hybrid)</title>
+  <rect x="326" y="407" width="41" height="30" rx="4" fill="#334155" stroke="#94a3b8" stroke-width="1"/>
+  <text x="346.5" y="426.0" text-anchor="middle" fill="#f8fafc" font-size="10.5" font-weight="700">X3</text>
+</g>
+<g>
+  <title>O=A, P=H, C=H, S=A, M=H &#8594; Tier X3 (AI-Led Hybrid)</title>
+  <rect x="369" y="407" width="41" height="30" rx="4" fill="#334155" stroke="#94a3b8" stroke-width="1"/>
+  <text x="389.5" y="426.0" text-anchor="middle" fill="#f8fafc" font-size="10.5" font-weight="700">X3</text>
+</g>
+<g>
+  <title>O=A, P=H, C=H, S=A, M=H+A &#8594; Tier X3 (AI-Led Hybrid)</title>
+  <rect x="412" y="407" width="41" height="30" rx="4" fill="#334155" stroke="#94a3b8" stroke-width="1"/>
+  <text x="432.5" y="426.0" text-anchor="middle" fill="#f8fafc" font-size="10.5" font-weight="700">X3</text>
+</g>
+<g>
+  <title>O=A, P=H, C=H, S=A, M=A &#8594; Tier X3 (AI-Led Hybrid)</title>
+  <rect x="455" y="407" width="41" height="30" rx="4" fill="#334155" stroke="#94a3b8" stroke-width="1"/>
+  <text x="475.5" y="426.0" text-anchor="middle" fill="#f8fafc" font-size="10.5" font-weight="700">X3</text>
+</g>
+<rect x="46" y="439" width="61" height="30" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/>
+<text x="76.0" y="458.0" text-anchor="middle" fill="#cbd5e1" font-size="9.5" font-weight="600">A/H+A</text>
+<g>
+  <title>O=A, P=H+A, C=H, S=H, M=H &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="111" y="439" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="131.5" y="458.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=A, P=H+A, C=H, S=H, M=H+A &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="154" y="439" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="174.5" y="458.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=A, P=H+A, C=H, S=H, M=A &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="197" y="439" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="217.5" y="458.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=A, P=H+A, C=H, S=H+A, M=H &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="240" y="439" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="260.5" y="458.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=A, P=H+A, C=H, S=H+A, M=H+A &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="283" y="439" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="303.5" y="458.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=A, P=H+A, C=H, S=H+A, M=A &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="326" y="439" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="346.5" y="458.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=A, P=H+A, C=H, S=A, M=H &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="369" y="439" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="389.5" y="458.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=A, P=H+A, C=H, S=A, M=H+A &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="412" y="439" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="432.5" y="458.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=A, P=H+A, C=H, S=A, M=A &#8594; Tier X3 (AI-Led Hybrid)</title>
+  <rect x="455" y="439" width="41" height="30" rx="4" fill="#334155" stroke="#94a3b8" stroke-width="1"/>
+  <text x="475.5" y="458.0" text-anchor="middle" fill="#f8fafc" font-size="10.5" font-weight="700">X3</text>
+</g>
+<rect x="46" y="471" width="61" height="30" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/>
+<text x="76.0" y="490.0" text-anchor="middle" fill="#cbd5e1" font-size="9.5" font-weight="600">A/A</text>
+<g>
+  <title>O=A, P=A, C=H, S=H, M=H &#8594; Tier X4 (Curated Hybrid)</title>
+  <rect x="111" y="471" width="41" height="30" rx="4" fill="#ea580c" stroke="#fb923c" stroke-width="1"/>
+  <text x="131.5" y="490.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X4</text>
+</g>
+<g>
+  <title>O=A, P=A, C=H, S=H, M=H+A &#8594; Tier X4 (Curated Hybrid)</title>
+  <rect x="154" y="471" width="41" height="30" rx="4" fill="#ea580c" stroke="#fb923c" stroke-width="1"/>
+  <text x="174.5" y="490.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X4</text>
+</g>
+<g>
+  <title>O=A, P=A, C=H, S=H, M=A &#8594; Tier X4 (Curated Hybrid)</title>
+  <rect x="197" y="471" width="41" height="30" rx="4" fill="#ea580c" stroke="#fb923c" stroke-width="1"/>
+  <text x="217.5" y="490.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X4</text>
+</g>
+<g>
+  <title>O=A, P=A, C=H, S=H+A, M=H &#8594; Tier X4 (Curated Hybrid)</title>
+  <rect x="240" y="471" width="41" height="30" rx="4" fill="#ea580c" stroke="#fb923c" stroke-width="1"/>
+  <text x="260.5" y="490.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X4</text>
+</g>
+<g>
+  <title>O=A, P=A, C=H, S=H+A, M=H+A &#8594; Tier X4 (Curated Hybrid)</title>
+  <rect x="283" y="471" width="41" height="30" rx="4" fill="#ea580c" stroke="#fb923c" stroke-width="1"/>
+  <text x="303.5" y="490.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X4</text>
+</g>
+<g>
+  <title>O=A, P=A, C=H, S=H+A, M=A &#8594; Tier X4 (Curated Hybrid)</title>
+  <rect x="326" y="471" width="41" height="30" rx="4" fill="#ea580c" stroke="#fb923c" stroke-width="1"/>
+  <text x="346.5" y="490.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X4</text>
+</g>
+<g>
+  <title>O=A, P=A, C=H, S=A, M=H &#8594; Tier X4 (Curated Hybrid)</title>
+  <rect x="369" y="471" width="41" height="30" rx="4" fill="#ea580c" stroke="#fb923c" stroke-width="1"/>
+  <text x="389.5" y="490.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X4</text>
+</g>
+<g>
+  <title>O=A, P=A, C=H, S=A, M=H+A &#8594; Tier X4 (Curated Hybrid)</title>
+  <rect x="412" y="471" width="41" height="30" rx="4" fill="#ea580c" stroke="#fb923c" stroke-width="1"/>
+  <text x="432.5" y="490.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X4</text>
+</g>
+<g>
+  <title>O=A, P=A, C=H, S=A, M=A &#8594; Tier X4 (Curated Hybrid)</title>
+  <rect x="455" y="471" width="41" height="30" rx="4" fill="#ea580c" stroke="#fb923c" stroke-width="1"/>
+  <text x="475.5" y="490.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X4</text>
+</g>
+<rect x="545" y="130" width="465" height="376" rx="8" fill="#101726" stroke="#1e293b" stroke-width="1.5"/>
+<text x="559" y="154" fill="#f8fafc" font-size="13.5" font-weight="700">Curation: Hybrid [C = H+A]</text>
+<text x="559" y="170" fill="#64748b" font-size="10.5">Interactive human + AI co-curation</text>
+<text x="808.5" y="190" text-anchor="middle" fill="#94a3b8" font-size="10" font-weight="700" letter-spacing="0.5">SOUND SOURCE (S) / POST-PRODUCTION (M)</text>
+<rect x="616" y="194" width="41" height="18" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/>
+<text x="636.5" y="207" text-anchor="middle" fill="#94a3b8" font-size="8.5" font-weight="600">H/H</text>
+<rect x="659" y="194" width="41" height="18" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/>
+<text x="679.5" y="207" text-anchor="middle" fill="#94a3b8" font-size="8.5" font-weight="600">H/H+A</text>
+<rect x="702" y="194" width="41" height="18" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/>
+<text x="722.5" y="207" text-anchor="middle" fill="#94a3b8" font-size="8.5" font-weight="600">H/A</text>
+<rect x="745" y="194" width="41" height="18" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/>
+<text x="765.5" y="207" text-anchor="middle" fill="#94a3b8" font-size="8.5" font-weight="600">H+A/H</text>
+<rect x="788" y="194" width="41" height="18" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/>
+<text x="808.5" y="207" text-anchor="middle" fill="#94a3b8" font-size="8.5" font-weight="600">H+A/H+A</text>
+<rect x="831" y="194" width="41" height="18" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/>
+<text x="851.5" y="207" text-anchor="middle" fill="#94a3b8" font-size="8.5" font-weight="600">H+A/A</text>
+<rect x="874" y="194" width="41" height="18" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/>
+<text x="894.5" y="207" text-anchor="middle" fill="#94a3b8" font-size="8.5" font-weight="600">A/H</text>
+<rect x="917" y="194" width="41" height="18" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/>
+<text x="937.5" y="207" text-anchor="middle" fill="#94a3b8" font-size="8.5" font-weight="600">A/H+A</text>
+<rect x="960" y="194" width="41" height="18" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/>
+<text x="980.5" y="207" text-anchor="middle" fill="#94a3b8" font-size="8.5" font-weight="600">A/A</text>
+<text x="553" y="207" fill="#94a3b8" font-size="9.5" font-weight="700">O / P</text>
+<rect x="551" y="215" width="61" height="30" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/>
+<text x="581.0" y="234.0" text-anchor="middle" fill="#cbd5e1" font-size="9.5" font-weight="600">H/H</text>
+<g>
+  <title>O=H, P=H, C=H+A, S=H, M=H &#8594; Tier H (Human Production)</title>
+  <rect x="616" y="215" width="41" height="30" rx="4" fill="#0284c7" stroke="#38bdf8" stroke-width="1"/>
+  <text x="636.5" y="234.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">H</text>
+</g>
+<g>
+  <title>O=H, P=H, C=H+A, S=H, M=H+A &#8594; Tier X1 (Human-Led Hybrid)</title>
+  <rect x="659" y="215" width="41" height="30" rx="4" fill="#2563eb" stroke="#60a5fa" stroke-width="1"/>
+  <text x="679.5" y="234.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X1</text>
+</g>
+<g>
+  <title>O=H, P=H, C=H+A, S=H, M=A &#8594; Tier X1 (Human-Led Hybrid)</title>
+  <rect x="702" y="215" width="41" height="30" rx="4" fill="#2563eb" stroke="#60a5fa" stroke-width="1"/>
+  <text x="722.5" y="234.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X1</text>
+</g>
+<g>
+  <title>O=H, P=H, C=H+A, S=H+A, M=H &#8594; Tier X1 (Human-Led Hybrid)</title>
+  <rect x="745" y="215" width="41" height="30" rx="4" fill="#2563eb" stroke="#60a5fa" stroke-width="1"/>
+  <text x="765.5" y="234.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X1</text>
+</g>
+<g>
+  <title>O=H, P=H, C=H+A, S=H+A, M=H+A &#8594; Tier X1 (Human-Led Hybrid)</title>
+  <rect x="788" y="215" width="41" height="30" rx="4" fill="#2563eb" stroke="#60a5fa" stroke-width="1"/>
+  <text x="808.5" y="234.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X1</text>
+</g>
+<g>
+  <title>O=H, P=H, C=H+A, S=H+A, M=A &#8594; Tier X1 (Human-Led Hybrid)</title>
+  <rect x="831" y="215" width="41" height="30" rx="4" fill="#2563eb" stroke="#60a5fa" stroke-width="1"/>
+  <text x="851.5" y="234.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X1</text>
+</g>
+<g>
+  <title>O=H, P=H, C=H+A, S=A, M=H &#8594; Tier X1 (Human-Led Hybrid)</title>
+  <rect x="874" y="215" width="41" height="30" rx="4" fill="#2563eb" stroke="#60a5fa" stroke-width="1"/>
+  <text x="894.5" y="234.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X1</text>
+</g>
+<g>
+  <title>O=H, P=H, C=H+A, S=A, M=H+A &#8594; Tier X1 (Human-Led Hybrid)</title>
+  <rect x="917" y="215" width="41" height="30" rx="4" fill="#2563eb" stroke="#60a5fa" stroke-width="1"/>
+  <text x="937.5" y="234.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X1</text>
+</g>
+<g>
+  <title>O=H, P=H, C=H+A, S=A, M=A &#8594; Tier X1 (Human-Led Hybrid)</title>
+  <rect x="960" y="215" width="41" height="30" rx="4" fill="#2563eb" stroke="#60a5fa" stroke-width="1"/>
+  <text x="980.5" y="234.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X1</text>
+</g>
+<rect x="551" y="247" width="61" height="30" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/>
+<text x="581.0" y="266.0" text-anchor="middle" fill="#cbd5e1" font-size="9.5" font-weight="600">H/H+A</text>
+<g>
+  <title>O=H, P=H+A, C=H+A, S=H, M=H &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="616" y="247" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="636.5" y="266.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H, P=H+A, C=H+A, S=H, M=H+A &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="659" y="247" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="679.5" y="266.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H, P=H+A, C=H+A, S=H, M=A &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="702" y="247" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="722.5" y="266.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H, P=H+A, C=H+A, S=H+A, M=H &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="745" y="247" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="765.5" y="266.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H, P=H+A, C=H+A, S=H+A, M=H+A &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="788" y="247" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="808.5" y="266.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H, P=H+A, C=H+A, S=H+A, M=A &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="831" y="247" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="851.5" y="266.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H, P=H+A, C=H+A, S=A, M=H &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="874" y="247" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="894.5" y="266.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H, P=H+A, C=H+A, S=A, M=H+A &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="917" y="247" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="937.5" y="266.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H, P=H+A, C=H+A, S=A, M=A &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="960" y="247" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="980.5" y="266.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<rect x="551" y="279" width="61" height="30" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/>
+<text x="581.0" y="298.0" text-anchor="middle" fill="#cbd5e1" font-size="9.5" font-weight="600">H/A</text>
+<g>
+  <title>O=H, P=A, C=H+A, S=H, M=H &#8594; Tier X3 (AI-Led Hybrid)</title>
+  <rect x="616" y="279" width="41" height="30" rx="4" fill="#334155" stroke="#94a3b8" stroke-width="1"/>
+  <text x="636.5" y="298.0" text-anchor="middle" fill="#f8fafc" font-size="10.5" font-weight="700">X3</text>
+</g>
+<g>
+  <title>O=H, P=A, C=H+A, S=H, M=H+A &#8594; Tier X3 (AI-Led Hybrid)</title>
+  <rect x="659" y="279" width="41" height="30" rx="4" fill="#334155" stroke="#94a3b8" stroke-width="1"/>
+  <text x="679.5" y="298.0" text-anchor="middle" fill="#f8fafc" font-size="10.5" font-weight="700">X3</text>
+</g>
+<g>
+  <title>O=H, P=A, C=H+A, S=H, M=A &#8594; Tier X3 (AI-Led Hybrid)</title>
+  <rect x="702" y="279" width="41" height="30" rx="4" fill="#334155" stroke="#94a3b8" stroke-width="1"/>
+  <text x="722.5" y="298.0" text-anchor="middle" fill="#f8fafc" font-size="10.5" font-weight="700">X3</text>
+</g>
+<g>
+  <title>O=H, P=A, C=H+A, S=H+A, M=H &#8594; Tier X3 (AI-Led Hybrid)</title>
+  <rect x="745" y="279" width="41" height="30" rx="4" fill="#334155" stroke="#94a3b8" stroke-width="1"/>
+  <text x="765.5" y="298.0" text-anchor="middle" fill="#f8fafc" font-size="10.5" font-weight="700">X3</text>
+</g>
+<g>
+  <title>O=H, P=A, C=H+A, S=H+A, M=H+A &#8594; Tier X3 (AI-Led Hybrid)</title>
+  <rect x="788" y="279" width="41" height="30" rx="4" fill="#334155" stroke="#94a3b8" stroke-width="1"/>
+  <text x="808.5" y="298.0" text-anchor="middle" fill="#f8fafc" font-size="10.5" font-weight="700">X3</text>
+</g>
+<g>
+  <title>O=H, P=A, C=H+A, S=H+A, M=A &#8594; Tier X3 (AI-Led Hybrid)</title>
+  <rect x="831" y="279" width="41" height="30" rx="4" fill="#334155" stroke="#94a3b8" stroke-width="1"/>
+  <text x="851.5" y="298.0" text-anchor="middle" fill="#f8fafc" font-size="10.5" font-weight="700">X3</text>
+</g>
+<g>
+  <title>O=H, P=A, C=H+A, S=A, M=H &#8594; Tier X3 (AI-Led Hybrid)</title>
+  <rect x="874" y="279" width="41" height="30" rx="4" fill="#334155" stroke="#94a3b8" stroke-width="1"/>
+  <text x="894.5" y="298.0" text-anchor="middle" fill="#f8fafc" font-size="10.5" font-weight="700">X3</text>
+</g>
+<g>
+  <title>O=H, P=A, C=H+A, S=A, M=H+A &#8594; Tier X3 (AI-Led Hybrid)</title>
+  <rect x="917" y="279" width="41" height="30" rx="4" fill="#334155" stroke="#94a3b8" stroke-width="1"/>
+  <text x="937.5" y="298.0" text-anchor="middle" fill="#f8fafc" font-size="10.5" font-weight="700">X3</text>
+</g>
+<g>
+  <title>O=H, P=A, C=H+A, S=A, M=A &#8594; Tier X3 (AI-Led Hybrid)</title>
+  <rect x="960" y="279" width="41" height="30" rx="4" fill="#334155" stroke="#94a3b8" stroke-width="1"/>
+  <text x="980.5" y="298.0" text-anchor="middle" fill="#f8fafc" font-size="10.5" font-weight="700">X3</text>
+</g>
+<rect x="551" y="311" width="61" height="30" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/>
+<text x="581.0" y="330.0" text-anchor="middle" fill="#cbd5e1" font-size="9.5" font-weight="600">H+A/H</text>
+<g>
+  <title>O=H+A, P=H, C=H+A, S=H, M=H &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="616" y="311" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="636.5" y="330.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H+A, P=H, C=H+A, S=H, M=H+A &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="659" y="311" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="679.5" y="330.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H+A, P=H, C=H+A, S=H, M=A &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="702" y="311" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="722.5" y="330.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H+A, P=H, C=H+A, S=H+A, M=H &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="745" y="311" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="765.5" y="330.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H+A, P=H, C=H+A, S=H+A, M=H+A &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="788" y="311" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="808.5" y="330.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H+A, P=H, C=H+A, S=H+A, M=A &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="831" y="311" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="851.5" y="330.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H+A, P=H, C=H+A, S=A, M=H &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="874" y="311" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="894.5" y="330.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H+A, P=H, C=H+A, S=A, M=H+A &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="917" y="311" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="937.5" y="330.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H+A, P=H, C=H+A, S=A, M=A &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="960" y="311" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="980.5" y="330.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<rect x="551" y="343" width="61" height="30" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/>
+<text x="581.0" y="362.0" text-anchor="middle" fill="#cbd5e1" font-size="9.5" font-weight="600">H+A/H+A</text>
+<g>
+  <title>O=H+A, P=H+A, C=H+A, S=H, M=H &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="616" y="343" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="636.5" y="362.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H+A, P=H+A, C=H+A, S=H, M=H+A &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="659" y="343" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="679.5" y="362.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H+A, P=H+A, C=H+A, S=H, M=A &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="702" y="343" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="722.5" y="362.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H+A, P=H+A, C=H+A, S=H+A, M=H &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="745" y="343" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="765.5" y="362.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H+A, P=H+A, C=H+A, S=H+A, M=H+A &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="788" y="343" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="808.5" y="362.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H+A, P=H+A, C=H+A, S=H+A, M=A &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="831" y="343" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="851.5" y="362.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H+A, P=H+A, C=H+A, S=A, M=H &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="874" y="343" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="894.5" y="362.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H+A, P=H+A, C=H+A, S=A, M=H+A &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="917" y="343" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="937.5" y="362.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H+A, P=H+A, C=H+A, S=A, M=A &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="960" y="343" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="980.5" y="362.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<rect x="551" y="375" width="61" height="30" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/>
+<text x="581.0" y="394.0" text-anchor="middle" fill="#cbd5e1" font-size="9.5" font-weight="600">H+A/A</text>
+<g>
+  <title>O=H+A, P=A, C=H+A, S=H, M=H &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="616" y="375" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="636.5" y="394.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H+A, P=A, C=H+A, S=H, M=H+A &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="659" y="375" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="679.5" y="394.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H+A, P=A, C=H+A, S=H, M=A &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="702" y="375" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="722.5" y="394.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H+A, P=A, C=H+A, S=H+A, M=H &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="745" y="375" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="765.5" y="394.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H+A, P=A, C=H+A, S=H+A, M=H+A &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="788" y="375" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="808.5" y="394.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H+A, P=A, C=H+A, S=H+A, M=A &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="831" y="375" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="851.5" y="394.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H+A, P=A, C=H+A, S=A, M=H &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="874" y="375" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="894.5" y="394.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H+A, P=A, C=H+A, S=A, M=H+A &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="917" y="375" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="937.5" y="394.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H+A, P=A, C=H+A, S=A, M=A &#8594; Tier X3 (AI-Led Hybrid)</title>
+  <rect x="960" y="375" width="41" height="30" rx="4" fill="#334155" stroke="#94a3b8" stroke-width="1"/>
+  <text x="980.5" y="394.0" text-anchor="middle" fill="#f8fafc" font-size="10.5" font-weight="700">X3</text>
+</g>
+<rect x="551" y="407" width="61" height="30" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/>
+<text x="581.0" y="426.0" text-anchor="middle" fill="#cbd5e1" font-size="9.5" font-weight="600">A/H</text>
+<g>
+  <title>O=A, P=H, C=H+A, S=H, M=H &#8594; Tier X3 (AI-Led Hybrid)</title>
+  <rect x="616" y="407" width="41" height="30" rx="4" fill="#334155" stroke="#94a3b8" stroke-width="1"/>
+  <text x="636.5" y="426.0" text-anchor="middle" fill="#f8fafc" font-size="10.5" font-weight="700">X3</text>
+</g>
+<g>
+  <title>O=A, P=H, C=H+A, S=H, M=H+A &#8594; Tier X3 (AI-Led Hybrid)</title>
+  <rect x="659" y="407" width="41" height="30" rx="4" fill="#334155" stroke="#94a3b8" stroke-width="1"/>
+  <text x="679.5" y="426.0" text-anchor="middle" fill="#f8fafc" font-size="10.5" font-weight="700">X3</text>
+</g>
+<g>
+  <title>O=A, P=H, C=H+A, S=H, M=A &#8594; Tier X3 (AI-Led Hybrid)</title>
+  <rect x="702" y="407" width="41" height="30" rx="4" fill="#334155" stroke="#94a3b8" stroke-width="1"/>
+  <text x="722.5" y="426.0" text-anchor="middle" fill="#f8fafc" font-size="10.5" font-weight="700">X3</text>
+</g>
+<g>
+  <title>O=A, P=H, C=H+A, S=H+A, M=H &#8594; Tier X3 (AI-Led Hybrid)</title>
+  <rect x="745" y="407" width="41" height="30" rx="4" fill="#334155" stroke="#94a3b8" stroke-width="1"/>
+  <text x="765.5" y="426.0" text-anchor="middle" fill="#f8fafc" font-size="10.5" font-weight="700">X3</text>
+</g>
+<g>
+  <title>O=A, P=H, C=H+A, S=H+A, M=H+A &#8594; Tier X3 (AI-Led Hybrid)</title>
+  <rect x="788" y="407" width="41" height="30" rx="4" fill="#334155" stroke="#94a3b8" stroke-width="1"/>
+  <text x="808.5" y="426.0" text-anchor="middle" fill="#f8fafc" font-size="10.5" font-weight="700">X3</text>
+</g>
+<g>
+  <title>O=A, P=H, C=H+A, S=H+A, M=A &#8594; Tier X3 (AI-Led Hybrid)</title>
+  <rect x="831" y="407" width="41" height="30" rx="4" fill="#334155" stroke="#94a3b8" stroke-width="1"/>
+  <text x="851.5" y="426.0" text-anchor="middle" fill="#f8fafc" font-size="10.5" font-weight="700">X3</text>
+</g>
+<g>
+  <title>O=A, P=H, C=H+A, S=A, M=H &#8594; Tier X3 (AI-Led Hybrid)</title>
+  <rect x="874" y="407" width="41" height="30" rx="4" fill="#334155" stroke="#94a3b8" stroke-width="1"/>
+  <text x="894.5" y="426.0" text-anchor="middle" fill="#f8fafc" font-size="10.5" font-weight="700">X3</text>
+</g>
+<g>
+  <title>O=A, P=H, C=H+A, S=A, M=H+A &#8594; Tier X3 (AI-Led Hybrid)</title>
+  <rect x="917" y="407" width="41" height="30" rx="4" fill="#334155" stroke="#94a3b8" stroke-width="1"/>
+  <text x="937.5" y="426.0" text-anchor="middle" fill="#f8fafc" font-size="10.5" font-weight="700">X3</text>
+</g>
+<g>
+  <title>O=A, P=H, C=H+A, S=A, M=A &#8594; Tier X3 (AI-Led Hybrid)</title>
+  <rect x="960" y="407" width="41" height="30" rx="4" fill="#334155" stroke="#94a3b8" stroke-width="1"/>
+  <text x="980.5" y="426.0" text-anchor="middle" fill="#f8fafc" font-size="10.5" font-weight="700">X3</text>
+</g>
+<rect x="551" y="439" width="61" height="30" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/>
+<text x="581.0" y="458.0" text-anchor="middle" fill="#cbd5e1" font-size="9.5" font-weight="600">A/H+A</text>
+<g>
+  <title>O=A, P=H+A, C=H+A, S=H, M=H &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="616" y="439" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="636.5" y="458.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=A, P=H+A, C=H+A, S=H, M=H+A &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="659" y="439" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="679.5" y="458.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=A, P=H+A, C=H+A, S=H, M=A &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="702" y="439" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="722.5" y="458.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=A, P=H+A, C=H+A, S=H+A, M=H &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="745" y="439" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="765.5" y="458.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=A, P=H+A, C=H+A, S=H+A, M=H+A &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="788" y="439" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="808.5" y="458.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=A, P=H+A, C=H+A, S=H+A, M=A &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="831" y="439" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="851.5" y="458.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=A, P=H+A, C=H+A, S=A, M=H &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="874" y="439" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="894.5" y="458.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=A, P=H+A, C=H+A, S=A, M=H+A &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="917" y="439" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="937.5" y="458.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=A, P=H+A, C=H+A, S=A, M=A &#8594; Tier X3 (AI-Led Hybrid)</title>
+  <rect x="960" y="439" width="41" height="30" rx="4" fill="#334155" stroke="#94a3b8" stroke-width="1"/>
+  <text x="980.5" y="458.0" text-anchor="middle" fill="#f8fafc" font-size="10.5" font-weight="700">X3</text>
+</g>
+<rect x="551" y="471" width="61" height="30" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/>
+<text x="581.0" y="490.0" text-anchor="middle" fill="#cbd5e1" font-size="9.5" font-weight="600">A/A</text>
+<g>
+  <title>O=A, P=A, C=H+A, S=H, M=H &#8594; Tier X4 (Curated Hybrid)</title>
+  <rect x="616" y="471" width="41" height="30" rx="4" fill="#ea580c" stroke="#fb923c" stroke-width="1"/>
+  <text x="636.5" y="490.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X4</text>
+</g>
+<g>
+  <title>O=A, P=A, C=H+A, S=H, M=H+A &#8594; Tier X4 (Curated Hybrid)</title>
+  <rect x="659" y="471" width="41" height="30" rx="4" fill="#ea580c" stroke="#fb923c" stroke-width="1"/>
+  <text x="679.5" y="490.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X4</text>
+</g>
+<g>
+  <title>O=A, P=A, C=H+A, S=H, M=A &#8594; Tier X4 (Curated Hybrid)</title>
+  <rect x="702" y="471" width="41" height="30" rx="4" fill="#ea580c" stroke="#fb923c" stroke-width="1"/>
+  <text x="722.5" y="490.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X4</text>
+</g>
+<g>
+  <title>O=A, P=A, C=H+A, S=H+A, M=H &#8594; Tier X4 (Curated Hybrid)</title>
+  <rect x="745" y="471" width="41" height="30" rx="4" fill="#ea580c" stroke="#fb923c" stroke-width="1"/>
+  <text x="765.5" y="490.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X4</text>
+</g>
+<g>
+  <title>O=A, P=A, C=H+A, S=H+A, M=H+A &#8594; Tier X4 (Curated Hybrid)</title>
+  <rect x="788" y="471" width="41" height="30" rx="4" fill="#ea580c" stroke="#fb923c" stroke-width="1"/>
+  <text x="808.5" y="490.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X4</text>
+</g>
+<g>
+  <title>O=A, P=A, C=H+A, S=H+A, M=A &#8594; Tier X4 (Curated Hybrid)</title>
+  <rect x="831" y="471" width="41" height="30" rx="4" fill="#ea580c" stroke="#fb923c" stroke-width="1"/>
+  <text x="851.5" y="490.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X4</text>
+</g>
+<g>
+  <title>O=A, P=A, C=H+A, S=A, M=H &#8594; Tier X4 (Curated Hybrid)</title>
+  <rect x="874" y="471" width="41" height="30" rx="4" fill="#ea580c" stroke="#fb923c" stroke-width="1"/>
+  <text x="894.5" y="490.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X4</text>
+</g>
+<g>
+  <title>O=A, P=A, C=H+A, S=A, M=H+A &#8594; Tier X4 (Curated Hybrid)</title>
+  <rect x="917" y="471" width="41" height="30" rx="4" fill="#ea580c" stroke="#fb923c" stroke-width="1"/>
+  <text x="937.5" y="490.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X4</text>
+</g>
+<g>
+  <title>O=A, P=A, C=H+A, S=A, M=A &#8594; Tier X4 (Curated Hybrid)</title>
+  <rect x="960" y="471" width="41" height="30" rx="4" fill="#ea580c" stroke="#fb923c" stroke-width="1"/>
+  <text x="980.5" y="490.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X4</text>
+</g>
+<rect x="1050" y="130" width="465" height="376" rx="8" fill="#101726" stroke="#1e293b" stroke-width="1.5"/>
+<text x="1064" y="154" fill="#f8fafc" font-size="13.5" font-weight="700">Curation: Autonomous AI [C = A]</text>
+<text x="1064" y="170" fill="#64748b" font-size="10.5">Autonomous algorithmic / prompt selection</text>
+<text x="1313.5" y="190" text-anchor="middle" fill="#94a3b8" font-size="10" font-weight="700" letter-spacing="0.5">SOUND SOURCE (S) / POST-PRODUCTION (M)</text>
+<rect x="1121" y="194" width="41" height="18" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/>
+<text x="1141.5" y="207" text-anchor="middle" fill="#94a3b8" font-size="8.5" font-weight="600">H/H</text>
+<rect x="1164" y="194" width="41" height="18" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/>
+<text x="1184.5" y="207" text-anchor="middle" fill="#94a3b8" font-size="8.5" font-weight="600">H/H+A</text>
+<rect x="1207" y="194" width="41" height="18" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/>
+<text x="1227.5" y="207" text-anchor="middle" fill="#94a3b8" font-size="8.5" font-weight="600">H/A</text>
+<rect x="1250" y="194" width="41" height="18" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/>
+<text x="1270.5" y="207" text-anchor="middle" fill="#94a3b8" font-size="8.5" font-weight="600">H+A/H</text>
+<rect x="1293" y="194" width="41" height="18" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/>
+<text x="1313.5" y="207" text-anchor="middle" fill="#94a3b8" font-size="8.5" font-weight="600">H+A/H+A</text>
+<rect x="1336" y="194" width="41" height="18" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/>
+<text x="1356.5" y="207" text-anchor="middle" fill="#94a3b8" font-size="8.5" font-weight="600">H+A/A</text>
+<rect x="1379" y="194" width="41" height="18" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/>
+<text x="1399.5" y="207" text-anchor="middle" fill="#94a3b8" font-size="8.5" font-weight="600">A/H</text>
+<rect x="1422" y="194" width="41" height="18" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/>
+<text x="1442.5" y="207" text-anchor="middle" fill="#94a3b8" font-size="8.5" font-weight="600">A/H+A</text>
+<rect x="1465" y="194" width="41" height="18" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/>
+<text x="1485.5" y="207" text-anchor="middle" fill="#94a3b8" font-size="8.5" font-weight="600">A/A</text>
+<text x="1058" y="207" fill="#94a3b8" font-size="9.5" font-weight="700">O / P</text>
+<rect x="1056" y="215" width="61" height="30" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/>
+<text x="1086.0" y="234.0" text-anchor="middle" fill="#cbd5e1" font-size="9.5" font-weight="600">H/H</text>
+<g>
+  <title>O=H, P=H, C=A, S=H, M=H &#8594; Tier H (Human Production)</title>
+  <rect x="1121" y="215" width="41" height="30" rx="4" fill="#0284c7" stroke="#38bdf8" stroke-width="1"/>
+  <text x="1141.5" y="234.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">H</text>
+</g>
+<g>
+  <title>O=H, P=H, C=A, S=H, M=H+A &#8594; Tier X1 (Human-Led Hybrid)</title>
+  <rect x="1164" y="215" width="41" height="30" rx="4" fill="#2563eb" stroke="#60a5fa" stroke-width="1"/>
+  <text x="1184.5" y="234.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X1</text>
+</g>
+<g>
+  <title>O=H, P=H, C=A, S=H, M=A &#8594; Tier X1 (Human-Led Hybrid)</title>
+  <rect x="1207" y="215" width="41" height="30" rx="4" fill="#2563eb" stroke="#60a5fa" stroke-width="1"/>
+  <text x="1227.5" y="234.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X1</text>
+</g>
+<g>
+  <title>O=H, P=H, C=A, S=H+A, M=H &#8594; Tier X1 (Human-Led Hybrid)</title>
+  <rect x="1250" y="215" width="41" height="30" rx="4" fill="#2563eb" stroke="#60a5fa" stroke-width="1"/>
+  <text x="1270.5" y="234.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X1</text>
+</g>
+<g>
+  <title>O=H, P=H, C=A, S=H+A, M=H+A &#8594; Tier X1 (Human-Led Hybrid)</title>
+  <rect x="1293" y="215" width="41" height="30" rx="4" fill="#2563eb" stroke="#60a5fa" stroke-width="1"/>
+  <text x="1313.5" y="234.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X1</text>
+</g>
+<g>
+  <title>O=H, P=H, C=A, S=H+A, M=A &#8594; Tier X1 (Human-Led Hybrid)</title>
+  <rect x="1336" y="215" width="41" height="30" rx="4" fill="#2563eb" stroke="#60a5fa" stroke-width="1"/>
+  <text x="1356.5" y="234.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X1</text>
+</g>
+<g>
+  <title>O=H, P=H, C=A, S=A, M=H &#8594; Tier X1 (Human-Led Hybrid)</title>
+  <rect x="1379" y="215" width="41" height="30" rx="4" fill="#2563eb" stroke="#60a5fa" stroke-width="1"/>
+  <text x="1399.5" y="234.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X1</text>
+</g>
+<g>
+  <title>O=H, P=H, C=A, S=A, M=H+A &#8594; Tier X1 (Human-Led Hybrid)</title>
+  <rect x="1422" y="215" width="41" height="30" rx="4" fill="#2563eb" stroke="#60a5fa" stroke-width="1"/>
+  <text x="1442.5" y="234.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X1</text>
+</g>
+<g>
+  <title>O=H, P=H, C=A, S=A, M=A &#8594; Tier X1 (Human-Led Hybrid)</title>
+  <rect x="1465" y="215" width="41" height="30" rx="4" fill="#2563eb" stroke="#60a5fa" stroke-width="1"/>
+  <text x="1485.5" y="234.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X1</text>
+</g>
+<rect x="1056" y="247" width="61" height="30" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/>
+<text x="1086.0" y="266.0" text-anchor="middle" fill="#cbd5e1" font-size="9.5" font-weight="600">H/H+A</text>
+<g>
+  <title>O=H, P=H+A, C=A, S=H, M=H &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="1121" y="247" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="1141.5" y="266.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H, P=H+A, C=A, S=H, M=H+A &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="1164" y="247" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="1184.5" y="266.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H, P=H+A, C=A, S=H, M=A &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="1207" y="247" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="1227.5" y="266.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H, P=H+A, C=A, S=H+A, M=H &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="1250" y="247" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="1270.5" y="266.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H, P=H+A, C=A, S=H+A, M=H+A &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="1293" y="247" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="1313.5" y="266.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H, P=H+A, C=A, S=H+A, M=A &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="1336" y="247" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="1356.5" y="266.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H, P=H+A, C=A, S=A, M=H &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="1379" y="247" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="1399.5" y="266.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H, P=H+A, C=A, S=A, M=H+A &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="1422" y="247" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="1442.5" y="266.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H, P=H+A, C=A, S=A, M=A &#8594; Tier X3 (AI-Led Hybrid)</title>
+  <rect x="1465" y="247" width="41" height="30" rx="4" fill="#334155" stroke="#94a3b8" stroke-width="1"/>
+  <text x="1485.5" y="266.0" text-anchor="middle" fill="#f8fafc" font-size="10.5" font-weight="700">X3</text>
+</g>
+<rect x="1056" y="279" width="61" height="30" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/>
+<text x="1086.0" y="298.0" text-anchor="middle" fill="#cbd5e1" font-size="9.5" font-weight="600">H/A</text>
+<g>
+  <title>O=H, P=A, C=A, S=H, M=H &#8594; Tier X3 (AI-Led Hybrid)</title>
+  <rect x="1121" y="279" width="41" height="30" rx="4" fill="#334155" stroke="#94a3b8" stroke-width="1"/>
+  <text x="1141.5" y="298.0" text-anchor="middle" fill="#f8fafc" font-size="10.5" font-weight="700">X3</text>
+</g>
+<g>
+  <title>O=H, P=A, C=A, S=H, M=H+A &#8594; Tier X3 (AI-Led Hybrid)</title>
+  <rect x="1164" y="279" width="41" height="30" rx="4" fill="#334155" stroke="#94a3b8" stroke-width="1"/>
+  <text x="1184.5" y="298.0" text-anchor="middle" fill="#f8fafc" font-size="10.5" font-weight="700">X3</text>
+</g>
+<g>
+  <title>O=H, P=A, C=A, S=H, M=A &#8594; Tier X3 (AI-Led Hybrid)</title>
+  <rect x="1207" y="279" width="41" height="30" rx="4" fill="#334155" stroke="#94a3b8" stroke-width="1"/>
+  <text x="1227.5" y="298.0" text-anchor="middle" fill="#f8fafc" font-size="10.5" font-weight="700">X3</text>
+</g>
+<g>
+  <title>O=H, P=A, C=A, S=H+A, M=H &#8594; Tier X3 (AI-Led Hybrid)</title>
+  <rect x="1250" y="279" width="41" height="30" rx="4" fill="#334155" stroke="#94a3b8" stroke-width="1"/>
+  <text x="1270.5" y="298.0" text-anchor="middle" fill="#f8fafc" font-size="10.5" font-weight="700">X3</text>
+</g>
+<g>
+  <title>O=H, P=A, C=A, S=H+A, M=H+A &#8594; Tier X3 (AI-Led Hybrid)</title>
+  <rect x="1293" y="279" width="41" height="30" rx="4" fill="#334155" stroke="#94a3b8" stroke-width="1"/>
+  <text x="1313.5" y="298.0" text-anchor="middle" fill="#f8fafc" font-size="10.5" font-weight="700">X3</text>
+</g>
+<g>
+  <title>O=H, P=A, C=A, S=H+A, M=A &#8594; Tier X3 (AI-Led Hybrid)</title>
+  <rect x="1336" y="279" width="41" height="30" rx="4" fill="#334155" stroke="#94a3b8" stroke-width="1"/>
+  <text x="1356.5" y="298.0" text-anchor="middle" fill="#f8fafc" font-size="10.5" font-weight="700">X3</text>
+</g>
+<g>
+  <title>O=H, P=A, C=A, S=A, M=H &#8594; Tier X3 (AI-Led Hybrid)</title>
+  <rect x="1379" y="279" width="41" height="30" rx="4" fill="#334155" stroke="#94a3b8" stroke-width="1"/>
+  <text x="1399.5" y="298.0" text-anchor="middle" fill="#f8fafc" font-size="10.5" font-weight="700">X3</text>
+</g>
+<g>
+  <title>O=H, P=A, C=A, S=A, M=H+A &#8594; Tier X3 (AI-Led Hybrid)</title>
+  <rect x="1422" y="279" width="41" height="30" rx="4" fill="#334155" stroke="#94a3b8" stroke-width="1"/>
+  <text x="1442.5" y="298.0" text-anchor="middle" fill="#f8fafc" font-size="10.5" font-weight="700">X3</text>
+</g>
+<g>
+  <title>O=H, P=A, C=A, S=A, M=A &#8594; Tier X3 (AI-Led Hybrid)</title>
+  <rect x="1465" y="279" width="41" height="30" rx="4" fill="#334155" stroke="#94a3b8" stroke-width="1"/>
+  <text x="1485.5" y="298.0" text-anchor="middle" fill="#f8fafc" font-size="10.5" font-weight="700">X3</text>
+</g>
+<rect x="1056" y="311" width="61" height="30" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/>
+<text x="1086.0" y="330.0" text-anchor="middle" fill="#cbd5e1" font-size="9.5" font-weight="600">H+A/H</text>
+<g>
+  <title>O=H+A, P=H, C=A, S=H, M=H &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="1121" y="311" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="1141.5" y="330.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H+A, P=H, C=A, S=H, M=H+A &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="1164" y="311" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="1184.5" y="330.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H+A, P=H, C=A, S=H, M=A &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="1207" y="311" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="1227.5" y="330.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H+A, P=H, C=A, S=H+A, M=H &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="1250" y="311" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="1270.5" y="330.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H+A, P=H, C=A, S=H+A, M=H+A &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="1293" y="311" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="1313.5" y="330.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H+A, P=H, C=A, S=H+A, M=A &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="1336" y="311" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="1356.5" y="330.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H+A, P=H, C=A, S=A, M=H &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="1379" y="311" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="1399.5" y="330.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H+A, P=H, C=A, S=A, M=H+A &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="1422" y="311" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="1442.5" y="330.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H+A, P=H, C=A, S=A, M=A &#8594; Tier X3 (AI-Led Hybrid)</title>
+  <rect x="1465" y="311" width="41" height="30" rx="4" fill="#334155" stroke="#94a3b8" stroke-width="1"/>
+  <text x="1485.5" y="330.0" text-anchor="middle" fill="#f8fafc" font-size="10.5" font-weight="700">X3</text>
+</g>
+<rect x="1056" y="343" width="61" height="30" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/>
+<text x="1086.0" y="362.0" text-anchor="middle" fill="#cbd5e1" font-size="9.5" font-weight="600">H+A/H+A</text>
+<g>
+  <title>O=H+A, P=H+A, C=A, S=H, M=H &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="1121" y="343" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="1141.5" y="362.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H+A, P=H+A, C=A, S=H, M=H+A &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="1164" y="343" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="1184.5" y="362.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H+A, P=H+A, C=A, S=H, M=A &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="1207" y="343" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="1227.5" y="362.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H+A, P=H+A, C=A, S=H+A, M=H &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="1250" y="343" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="1270.5" y="362.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H+A, P=H+A, C=A, S=H+A, M=H+A &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="1293" y="343" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="1313.5" y="362.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H+A, P=H+A, C=A, S=H+A, M=A &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="1336" y="343" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="1356.5" y="362.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H+A, P=H+A, C=A, S=A, M=H &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="1379" y="343" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="1399.5" y="362.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H+A, P=H+A, C=A, S=A, M=H+A &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="1422" y="343" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="1442.5" y="362.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H+A, P=H+A, C=A, S=A, M=A &#8594; Tier X3 (AI-Led Hybrid)</title>
+  <rect x="1465" y="343" width="41" height="30" rx="4" fill="#334155" stroke="#94a3b8" stroke-width="1"/>
+  <text x="1485.5" y="362.0" text-anchor="middle" fill="#f8fafc" font-size="10.5" font-weight="700">X3</text>
+</g>
+<rect x="1056" y="375" width="61" height="30" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/>
+<text x="1086.0" y="394.0" text-anchor="middle" fill="#cbd5e1" font-size="9.5" font-weight="600">H+A/A</text>
+<g>
+  <title>O=H+A, P=A, C=A, S=H, M=H &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="1121" y="375" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="1141.5" y="394.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H+A, P=A, C=A, S=H, M=H+A &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="1164" y="375" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="1184.5" y="394.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H+A, P=A, C=A, S=H, M=A &#8594; Tier X3 (AI-Led Hybrid)</title>
+  <rect x="1207" y="375" width="41" height="30" rx="4" fill="#334155" stroke="#94a3b8" stroke-width="1"/>
+  <text x="1227.5" y="394.0" text-anchor="middle" fill="#f8fafc" font-size="10.5" font-weight="700">X3</text>
+</g>
+<g>
+  <title>O=H+A, P=A, C=A, S=H+A, M=H &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="1250" y="375" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="1270.5" y="394.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H+A, P=A, C=A, S=H+A, M=H+A &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="1293" y="375" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="1313.5" y="394.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=H+A, P=A, C=A, S=H+A, M=A &#8594; Tier X3 (AI-Led Hybrid)</title>
+  <rect x="1336" y="375" width="41" height="30" rx="4" fill="#334155" stroke="#94a3b8" stroke-width="1"/>
+  <text x="1356.5" y="394.0" text-anchor="middle" fill="#f8fafc" font-size="10.5" font-weight="700">X3</text>
+</g>
+<g>
+  <title>O=H+A, P=A, C=A, S=A, M=H &#8594; Tier X3 (AI-Led Hybrid)</title>
+  <rect x="1379" y="375" width="41" height="30" rx="4" fill="#334155" stroke="#94a3b8" stroke-width="1"/>
+  <text x="1399.5" y="394.0" text-anchor="middle" fill="#f8fafc" font-size="10.5" font-weight="700">X3</text>
+</g>
+<g>
+  <title>O=H+A, P=A, C=A, S=A, M=H+A &#8594; Tier X3 (AI-Led Hybrid)</title>
+  <rect x="1422" y="375" width="41" height="30" rx="4" fill="#334155" stroke="#94a3b8" stroke-width="1"/>
+  <text x="1442.5" y="394.0" text-anchor="middle" fill="#f8fafc" font-size="10.5" font-weight="700">X3</text>
+</g>
+<g>
+  <title>O=H+A, P=A, C=A, S=A, M=A &#8594; Tier X3 (AI-Led Hybrid)</title>
+  <rect x="1465" y="375" width="41" height="30" rx="4" fill="#334155" stroke="#94a3b8" stroke-width="1"/>
+  <text x="1485.5" y="394.0" text-anchor="middle" fill="#f8fafc" font-size="10.5" font-weight="700">X3</text>
+</g>
+<rect x="1056" y="407" width="61" height="30" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/>
+<text x="1086.0" y="426.0" text-anchor="middle" fill="#cbd5e1" font-size="9.5" font-weight="600">A/H</text>
+<g>
+  <title>O=A, P=H, C=A, S=H, M=H &#8594; Tier X3 (AI-Led Hybrid)</title>
+  <rect x="1121" y="407" width="41" height="30" rx="4" fill="#334155" stroke="#94a3b8" stroke-width="1"/>
+  <text x="1141.5" y="426.0" text-anchor="middle" fill="#f8fafc" font-size="10.5" font-weight="700">X3</text>
+</g>
+<g>
+  <title>O=A, P=H, C=A, S=H, M=H+A &#8594; Tier X3 (AI-Led Hybrid)</title>
+  <rect x="1164" y="407" width="41" height="30" rx="4" fill="#334155" stroke="#94a3b8" stroke-width="1"/>
+  <text x="1184.5" y="426.0" text-anchor="middle" fill="#f8fafc" font-size="10.5" font-weight="700">X3</text>
+</g>
+<g>
+  <title>O=A, P=H, C=A, S=H, M=A &#8594; Tier X3 (AI-Led Hybrid)</title>
+  <rect x="1207" y="407" width="41" height="30" rx="4" fill="#334155" stroke="#94a3b8" stroke-width="1"/>
+  <text x="1227.5" y="426.0" text-anchor="middle" fill="#f8fafc" font-size="10.5" font-weight="700">X3</text>
+</g>
+<g>
+  <title>O=A, P=H, C=A, S=H+A, M=H &#8594; Tier X3 (AI-Led Hybrid)</title>
+  <rect x="1250" y="407" width="41" height="30" rx="4" fill="#334155" stroke="#94a3b8" stroke-width="1"/>
+  <text x="1270.5" y="426.0" text-anchor="middle" fill="#f8fafc" font-size="10.5" font-weight="700">X3</text>
+</g>
+<g>
+  <title>O=A, P=H, C=A, S=H+A, M=H+A &#8594; Tier X3 (AI-Led Hybrid)</title>
+  <rect x="1293" y="407" width="41" height="30" rx="4" fill="#334155" stroke="#94a3b8" stroke-width="1"/>
+  <text x="1313.5" y="426.0" text-anchor="middle" fill="#f8fafc" font-size="10.5" font-weight="700">X3</text>
+</g>
+<g>
+  <title>O=A, P=H, C=A, S=H+A, M=A &#8594; Tier X3 (AI-Led Hybrid)</title>
+  <rect x="1336" y="407" width="41" height="30" rx="4" fill="#334155" stroke="#94a3b8" stroke-width="1"/>
+  <text x="1356.5" y="426.0" text-anchor="middle" fill="#f8fafc" font-size="10.5" font-weight="700">X3</text>
+</g>
+<g>
+  <title>O=A, P=H, C=A, S=A, M=H &#8594; Tier X3 (AI-Led Hybrid)</title>
+  <rect x="1379" y="407" width="41" height="30" rx="4" fill="#334155" stroke="#94a3b8" stroke-width="1"/>
+  <text x="1399.5" y="426.0" text-anchor="middle" fill="#f8fafc" font-size="10.5" font-weight="700">X3</text>
+</g>
+<g>
+  <title>O=A, P=H, C=A, S=A, M=H+A &#8594; Tier X3 (AI-Led Hybrid)</title>
+  <rect x="1422" y="407" width="41" height="30" rx="4" fill="#334155" stroke="#94a3b8" stroke-width="1"/>
+  <text x="1442.5" y="426.0" text-anchor="middle" fill="#f8fafc" font-size="10.5" font-weight="700">X3</text>
+</g>
+<g>
+  <title>O=A, P=H, C=A, S=A, M=A &#8594; Tier X3 (AI-Led Hybrid)</title>
+  <rect x="1465" y="407" width="41" height="30" rx="4" fill="#334155" stroke="#94a3b8" stroke-width="1"/>
+  <text x="1485.5" y="426.0" text-anchor="middle" fill="#f8fafc" font-size="10.5" font-weight="700">X3</text>
+</g>
+<rect x="1056" y="439" width="61" height="30" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/>
+<text x="1086.0" y="458.0" text-anchor="middle" fill="#cbd5e1" font-size="9.5" font-weight="600">A/H+A</text>
+<g>
+  <title>O=A, P=H+A, C=A, S=H, M=H &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="1121" y="439" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="1141.5" y="458.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=A, P=H+A, C=A, S=H, M=H+A &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="1164" y="439" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="1184.5" y="458.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=A, P=H+A, C=A, S=H, M=A &#8594; Tier X3 (AI-Led Hybrid)</title>
+  <rect x="1207" y="439" width="41" height="30" rx="4" fill="#334155" stroke="#94a3b8" stroke-width="1"/>
+  <text x="1227.5" y="458.0" text-anchor="middle" fill="#f8fafc" font-size="10.5" font-weight="700">X3</text>
+</g>
+<g>
+  <title>O=A, P=H+A, C=A, S=H+A, M=H &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="1250" y="439" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="1270.5" y="458.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=A, P=H+A, C=A, S=H+A, M=H+A &#8594; Tier X2 (Co-Creative Hybrid)</title>
+  <rect x="1293" y="439" width="41" height="30" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+  <text x="1313.5" y="458.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">X2</text>
+</g>
+<g>
+  <title>O=A, P=H+A, C=A, S=H+A, M=A &#8594; Tier X3 (AI-Led Hybrid)</title>
+  <rect x="1336" y="439" width="41" height="30" rx="4" fill="#334155" stroke="#94a3b8" stroke-width="1"/>
+  <text x="1356.5" y="458.0" text-anchor="middle" fill="#f8fafc" font-size="10.5" font-weight="700">X3</text>
+</g>
+<g>
+  <title>O=A, P=H+A, C=A, S=A, M=H &#8594; Tier X3 (AI-Led Hybrid)</title>
+  <rect x="1379" y="439" width="41" height="30" rx="4" fill="#334155" stroke="#94a3b8" stroke-width="1"/>
+  <text x="1399.5" y="458.0" text-anchor="middle" fill="#f8fafc" font-size="10.5" font-weight="700">X3</text>
+</g>
+<g>
+  <title>O=A, P=H+A, C=A, S=A, M=H+A &#8594; Tier X3 (AI-Led Hybrid)</title>
+  <rect x="1422" y="439" width="41" height="30" rx="4" fill="#334155" stroke="#94a3b8" stroke-width="1"/>
+  <text x="1442.5" y="458.0" text-anchor="middle" fill="#f8fafc" font-size="10.5" font-weight="700">X3</text>
+</g>
+<g>
+  <title>O=A, P=H+A, C=A, S=A, M=A &#8594; Tier X3 (AI-Led Hybrid)</title>
+  <rect x="1465" y="439" width="41" height="30" rx="4" fill="#334155" stroke="#94a3b8" stroke-width="1"/>
+  <text x="1485.5" y="458.0" text-anchor="middle" fill="#f8fafc" font-size="10.5" font-weight="700">X3</text>
+</g>
+<rect x="1056" y="471" width="61" height="30" rx="3" fill="#1e293b" stroke="#334155" stroke-width="0.5"/>
+<text x="1086.0" y="490.0" text-anchor="middle" fill="#cbd5e1" font-size="9.5" font-weight="600">A/A</text>
+<g>
+  <title>O=A, P=A, C=A, S=H, M=H &#8594; Tier X3 (AI-Led Hybrid)</title>
+  <rect x="1121" y="471" width="41" height="30" rx="4" fill="#334155" stroke="#94a3b8" stroke-width="1"/>
+  <text x="1141.5" y="490.0" text-anchor="middle" fill="#f8fafc" font-size="10.5" font-weight="700">X3</text>
+</g>
+<g>
+  <title>O=A, P=A, C=A, S=H, M=H+A &#8594; Tier X3 (AI-Led Hybrid)</title>
+  <rect x="1164" y="471" width="41" height="30" rx="4" fill="#334155" stroke="#94a3b8" stroke-width="1"/>
+  <text x="1184.5" y="490.0" text-anchor="middle" fill="#f8fafc" font-size="10.5" font-weight="700">X3</text>
+</g>
+<g>
+  <title>O=A, P=A, C=A, S=H, M=A &#8594; Tier A (AI Production)</title>
+  <rect x="1207" y="471" width="41" height="30" rx="4" fill="#dc2626" stroke="#f87171" stroke-width="1"/>
+  <text x="1227.5" y="490.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">A</text>
+</g>
+<g>
+  <title>O=A, P=A, C=A, S=H+A, M=H &#8594; Tier X3 (AI-Led Hybrid)</title>
+  <rect x="1250" y="471" width="41" height="30" rx="4" fill="#334155" stroke="#94a3b8" stroke-width="1"/>
+  <text x="1270.5" y="490.0" text-anchor="middle" fill="#f8fafc" font-size="10.5" font-weight="700">X3</text>
+</g>
+<g>
+  <title>O=A, P=A, C=A, S=H+A, M=H+A &#8594; Tier X3 (AI-Led Hybrid)</title>
+  <rect x="1293" y="471" width="41" height="30" rx="4" fill="#334155" stroke="#94a3b8" stroke-width="1"/>
+  <text x="1313.5" y="490.0" text-anchor="middle" fill="#f8fafc" font-size="10.5" font-weight="700">X3</text>
+</g>
+<g>
+  <title>O=A, P=A, C=A, S=H+A, M=A &#8594; Tier A (AI Production)</title>
+  <rect x="1336" y="471" width="41" height="30" rx="4" fill="#dc2626" stroke="#f87171" stroke-width="1"/>
+  <text x="1356.5" y="490.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">A</text>
+</g>
+<g>
+  <title>O=A, P=A, C=A, S=A, M=H &#8594; Tier A (AI Production)</title>
+  <rect x="1379" y="471" width="41" height="30" rx="4" fill="#dc2626" stroke="#f87171" stroke-width="1"/>
+  <text x="1399.5" y="490.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">A</text>
+</g>
+<g>
+  <title>O=A, P=A, C=A, S=A, M=H+A &#8594; Tier A (AI Production)</title>
+  <rect x="1422" y="471" width="41" height="30" rx="4" fill="#dc2626" stroke="#f87171" stroke-width="1"/>
+  <text x="1442.5" y="490.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">A</text>
+</g>
+<g>
+  <title>O=A, P=A, C=A, S=A, M=A &#8594; Tier A (AI Production)</title>
+  <rect x="1465" y="471" width="41" height="30" rx="4" fill="#dc2626" stroke="#f87171" stroke-width="1"/>
+  <text x="1485.5" y="490.0" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">A</text>
+</g>
+<rect x="40" y="512" width="1500" height="105" rx="10" fill="#111827" stroke="#1e293b" stroke-width="1.5"/>
+<text x="65" y="534" fill="#f8fafc" font-size="12" font-weight="700" letter-spacing="0.5">TIER RATING LEGEND &amp; DETERMINISTIC 243-STATE DISTRIBUTION (RULES 1–6):</text>
+<rect x="65.0" y="544" width="230.0" height="38" rx="6" fill="#141d2e" stroke="#38bdf8" stroke-width="1"/>
+<rect x="71.0" y="550" width="26" height="26" rx="4" fill="#0284c7" stroke="#38bdf8" stroke-width="1"/>
+<text x="84.0" y="567" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="800">H</text>
+<text x="103.0" y="562" fill="#f8fafc" font-size="11" font-weight="700">Tier H: Human</text>
+<text x="103.0" y="575" fill="#94a3b8" font-size="9.5">7 states (2.9%)</text>
+<rect x="309.0" y="544" width="230.0" height="38" rx="6" fill="#141d2e" stroke="#60a5fa" stroke-width="1"/>
+<rect x="315.0" y="550" width="26" height="26" rx="4" fill="#2563eb" stroke="#60a5fa" stroke-width="1"/>
+<text x="328.0" y="567" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="800">X1</text>
+<text x="347.0" y="562" fill="#f8fafc" font-size="11" font-weight="700">Tier X1: Human-Led</text>
+<text x="347.0" y="575" fill="#94a3b8" font-size="9.5">20 states (8.2%)</text>
+<rect x="553.0" y="544" width="230.0" height="38" rx="6" fill="#141d2e" stroke="#c084fc" stroke-width="1"/>
+<rect x="559.0" y="550" width="26" height="26" rx="4" fill="#7c3aed" stroke="#c084fc" stroke-width="1"/>
+<text x="572.0" y="567" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="800">X2</text>
+<text x="591.0" y="562" fill="#f8fafc" font-size="11" font-weight="700">Tier X2: Co-Creative</text>
+<text x="591.0" y="575" fill="#94a3b8" font-size="9.5">118 states (48.6%)</text>
+<rect x="797.0" y="544" width="230.0" height="38" rx="6" fill="#141d2e" stroke="#94a3b8" stroke-width="1"/>
+<rect x="803.0" y="550" width="26" height="26" rx="4" fill="#334155" stroke="#94a3b8" stroke-width="1"/>
+<text x="816.0" y="567" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="800">X3</text>
+<text x="835.0" y="562" fill="#f8fafc" font-size="11" font-weight="700">Tier X3: AI-Led</text>
+<text x="835.0" y="575" fill="#94a3b8" font-size="9.5">75 states (30.9%)</text>
+<rect x="1041.0" y="544" width="230.0" height="38" rx="6" fill="#141d2e" stroke="#fb923c" stroke-width="1"/>
+<rect x="1047.0" y="550" width="26" height="26" rx="4" fill="#ea580c" stroke="#fb923c" stroke-width="1"/>
+<text x="1060.0" y="567" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="800">X4</text>
+<text x="1079.0" y="562" fill="#f8fafc" font-size="11" font-weight="700">Tier X4: Curated</text>
+<text x="1079.0" y="575" fill="#94a3b8" font-size="9.5">18 states (7.4%)</text>
+<rect x="1285.0" y="544" width="230.0" height="38" rx="6" fill="#141d2e" stroke="#f87171" stroke-width="1"/>
+<rect x="1291.0" y="550" width="26" height="26" rx="4" fill="#dc2626" stroke="#f87171" stroke-width="1"/>
+<text x="1304.0" y="567" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="800">A</text>
+<text x="1323.0" y="562" fill="#f8fafc" font-size="11" font-weight="700">Tier A: Autonomous AI</text>
+<text x="1323.0" y="575" fill="#94a3b8" font-size="9.5">5 states (2.1%)</text>
+<text x="65" y="600" fill="#64748b" font-size="10.5">Order-Dependent Rule Precedence: Rule 1: H=7 | Rule 2: A=5 | Rule 3: X4=18 | Rule 4: X1=20 | Rule 5: X2=118 | Rule 6 (Default): X3=75. Complete exhaustive 243-state coverage with 0 collisions.</text>
+</svg>

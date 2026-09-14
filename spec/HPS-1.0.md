@@ -173,6 +173,41 @@ $$\begin{aligned}
 
 > **Ordering rationale**: Rule 2 requires `C == A` as a hard gate for Tier A, and Rule 3 requires `C in {H, H+A}` for Tier X4. This resolves the collision on states like `O=A, P=A, S=A, M=A, C=H` (textbook X4) that would otherwise satisfy a simpler "4-of-5 A" Tier A rule. Any conforming implementation MUST pass exhaustive 243-state collision testing with zero unclaimed states and zero multi-tier collisions.
 
+### 5.2 243-State Decision Matrix & 5-Axis Flow Illustration
+
+The illustrations and tables below demonstrate the exhaustive 243-state classification space evaluated by Rules 1–6:
+
+![HPS 5-Axis Parallel Rating Flow](../whitepaper/assets/hps_5_axis_flow_matrix.png)
+*Figure 5.1: Parallel Coordinates Rating Flow across the 5 Production Axes [O, P, C, S, M] taking discrete states [H], [H+A], and [A]. [Vector SVG Version](../whitepaper/assets/hps_5_axis_flow_matrix.svg).*
+
+#### Unified 5-Axis Decision Table (All 243 Combinations by Rule)
+
+| Resulting Tier | Origination ($O$) | Performance ($P$) | Curation ($C$) | Sound Source ($S$) | Post-Prod ($M$) | Normative Rule & Conditions | State Count | Share |
+| :---: | :---: | :---: | :---: | :---: | :---: | :--- | :---: | :---: |
+| 🟦 **`Tier H`** | **`H`** | **`H`** | `H` / `H+A` / `A` | `H` / `H+A` / `A` | `H` / `H+A` / `A` | **Rule 1**: $O=\text{H} \land P=\text{H} \land hCount \ge 4$ | **7** | 2.9% |
+| 🔷 **`Tier X1`** | **`H`** | **`H`** | `H` / `H+A` / `A` | `H` / `H+A` / `A` | `H` / `H+A` / `A` | **Rule 4**: $O=\text{H} \land P=\text{H} \land hCount < 4$ | **20** | 8.2% |
+| 🟪 **`Tier X2`** | `H+A` or `H` or `A` | `H+A` or `H` or `A` | `H` / `H+A` / `A` | `H` / `H+A` / `A` | `H` / `H+A` / `A` | **Rule 5**: $(O=\text{H+A} \lor P=\text{H+A}) \land aCount \le 2$ | **118** | 48.6% |
+| 🟧 **`Tier X4`** | **`A`** | **`A`** | **`H`** or **`H+A`** | `H` / `H+A` / `A` | `H` / `H+A` / `A` | **Rule 3**: $O=\text{A} \land P=\text{A} \land C \in \{\text{H}, \text{H+A}\}$ | **18** | 7.4% |
+| 🟥 **`Tier A`** | **`A`** | **`A`** | **`A`** | `H` / `H+A` / `A` | `H` / `H+A` / `A` | **Rule 2**: $O=\text{A} \land P=\text{A} \land C=\text{A} \land aCount \ge 4$ | **5** | 2.1% |
+| 🔘 **`Tier X3`** | *(Any)* | *(Any)* | *(Any)* | *(Any)* | *(Any)* | **Rule 6**: Default Fallthrough for remaining hybrid permutations | **75** | 30.9% |
+| **TOTAL** | — | — | — | — | — | **Exhaustive Deterministic Classification (0 collisions / 0 unassigned)** | **243** | **100.0%** |
+
+![HPS 243-State Rating Combinations Matrix](../whitepaper/assets/hps_243_matrix_combinations.png)
+*Figure 5.2: Complete Visual Matrix of All 243 HPS Rating Combinations across 3 Curation Planes ($C=\text{H}$, $C=\text{H+A}$, $C=\text{A}$). [Vector SVG Version](../whitepaper/assets/hps_243_matrix_combinations.svg).*
+
+| Origination ($O$) & Performance ($P$) | Total States | `Tier H` | `Tier X1` | `Tier X2` | `Tier X3` | `Tier X4` | `Tier A` |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **H / H** (Human Core) | 27 | 7 | 20 | 0 | 0 | 0 | 0 |
+| **H / H+A** (Human Comp, Hybrid Perf) | 27 | 0 | 0 | 26 | 1 | 0 | 0 |
+| **H / A** (Human Comp, AI Perf) | 27 | 0 | 0 | 0 | 27 | 0 | 0 |
+| **H+A / H** (Hybrid Comp, Human Perf) | 27 | 0 | 0 | 26 | 1 | 0 | 0 |
+| **H+A / H+A** (Co-Creative Core) | 27 | 0 | 0 | 26 | 1 | 0 | 0 |
+| **H+A / A** (Hybrid Comp, AI Perf) | 27 | 0 | 0 | 20 | 7 | 0 | 0 |
+| **A / H** (AI Seed, Human Perf) | 27 | 0 | 0 | 0 | 27 | 0 | 0 |
+| **A / H+A** (AI Seed, Hybrid Perf) | 27 | 0 | 0 | 20 | 7 | 0 | 0 |
+| **A / A** (Autonomous AI Core) | 27 | 0 | 0 | 0 | 4 | 18 | 5 |
+| **Total Permutations** | **243** | **7** | **20** | **118** | **75** | **18** | **5** |
+
 ---
 
 ## 6. DAW Forensic Parser Subsystem
