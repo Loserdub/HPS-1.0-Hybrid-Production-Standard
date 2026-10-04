@@ -4,6 +4,7 @@
 
 - **Standard Identifier**: HPS-1.0 Whitepaper
 - **Document Version**: 1.0.6 (Engine-Synchronized Specification & Architecture)
+- **Revision**: r2 (corrections), October 2026
 - **Publication Date**: September 2026
 - **Author**: Justin Ray / HPS Standards Working Group
 - **Publisher Organization**: [TrustNodeLogic](https://trustnodelogic.com)
@@ -14,7 +15,7 @@
 > ### Intellectual Property & Licensing Notice
 > - **Whitepaper Documentation**: Copyright © 2026 Justin Ray / TrustNodeLogic. Published under [CC BY-ND 4.0](https://creativecommons.org/licenses/by-nd/4.0/).
 > - **Schemas & Data Formats**: Associated JSON schemas and context files are licensed under the [MIT License](https://opensource.org/licenses/MIT) for open industry adoption.
-> - **Proprietary Technology & Patent Reservation**: This document describes an architectural and operational framework. Nothing herein grants any right, title, license, or interest in or to any patent, trade secret, or proprietary implementation of the TrustNodeLogic attestation engine, forensic detection heuristics, or acoustic watermarking algorithms.
+> - **Proprietary Technology & Patent Reservation**: This document describes an architectural and operational framework. Nothing herein grants any right, title, license, or interest in or to any patent, trade secret, or proprietary implementation of the TrustNodeLogic attestation engine or forensic detection heuristics.
 > - **Trademarks**: "HPS", "Hybrid Production Standard", and "TrustNodeLogic" are trademarks of TrustNodeLogic. No trademark license is granted.
 
 ---
@@ -26,12 +27,12 @@ The rapid emergence of artificial intelligence (AI) foundation models capable of
 
 Existing metadata systems and regulatory initiatives attempt to address this transformation through **binary disclosure flags** (e.g., `Is_AI_Generated: True/False`). Binary flags create severe systemic distortions:
 - **Over-Flagging (False Positives)**: Human producers who utilize utility DSP tools (e.g., intelligent noise suppression, adaptive equalization, utility pitch tuning) are misclassified as "AI creators," exposing them to algorithmic penalties or rejection by distribution platforms.
-- **Labor Stripping (False Negatives)**: Human producers who utilize a generative AI seed but spend dozens of hours re-arranging, chopping stems, writing original lyrics, tracking live acoustic instruments, and mixing the track have their human labor completely erased under an unqualified "AI" label.
+- **Labor Stripping (False Negatives)**: Human producers who utilize a generative AI seed but spend dozens of hours re-arranging, chopping stems, writing original lyrics, tracking live physical instruments, and mixing the track have their human labor completely erased under an unqualified "AI" label.
 - **Fragility**: Unsigned metadata checkboxes can be stripped or modified during file processing without detection, leaving rights organizations and marketplaces with unverifiable claims.
 
 ### 1.2 Why Provenance Matters
-Provenance—the verifiable, immutable record of how an audio recording was created—is essential for:
-1. **Legal & Regulatory Compliance**: Fulfilling mandatory transparency directives such as **Article 50 of the European Union AI Act (Regulation EU 2024/1689)**.
+Provenance—the verifiable, tamper-evident record of how an audio recording was created—is essential for:
+1. **Legal & Regulatory Compliance**: Supporting mandatory transparency directives such as **Article 50 of the European Union AI Act (Regulation EU 2024/1689)**.
 2. **Rights Management & Licensing**: Enabling collecting societies (BMI, ASCAP, PRS, SACEM) to calculate accurate royalty distributions based on human compositional contribution.
 3. **Marketplace Transparency**: Providing sample libraries, distributors, and streaming platforms with verifiable proof of asset origins.
 4. **Consumer & Artist Trust**: Protecting human musicians from credit erasure while giving AI-collaborative creators a transparent mechanism to disclose tool usage without stigma.
@@ -41,7 +42,7 @@ The **Hybrid Production Standard (HPS-1.0)** replaces binary disclosure with a g
 - **Process-Based Evaluation**: HPS measures *process*, not tool presence, evaluating human vs. AI contribution across five independent production stages (*Origination*, *Performance*, *Curation*, *Sound Source*, and *Post-Production*).
 - **Deterministic 243-State Classification**: An order-dependent evaluation classifier maps all $3^5 = 243$ possible axis state combinations into a clear six-tier production scale (`H`, `X1`, `X2`, `X3`, `X4`, `A`).
 - **Cryptographic Provenance & Tamper-Evidence**: Attestations are sealed into canonical JSON/JSON-LD manifests bound to the uncompressed Pulse Code Modulation (PCM) audio essence and multitrack DAW session via SHA-256 digests and RFC 8032 Ed25519 digital signatures.
-- **Container Embedding & Theoretical Acoustic Watermarking**: Manifest payloads travel directly with the audio file via RIFF container chunks (`hps1`), ID3v2.4 frames (`TXXX`), DDEX ERN 4.3 XML blocks (`<hps:HPSClassificationBlock>`), alongside an open theoretical reference specification for inaudible time-domain spread-spectrum acoustic watermarks.
+- **Container Embedding**: Manifest payloads travel with the audio file in RIFF container chunks (`hps1`), ID3v2.4 frames (`TXXX`), and DDEX ERN 4.3 XML blocks (`<hps:HPSClassificationBlock>`).
 
 ---
 
@@ -54,7 +55,7 @@ To facilitate industry adoption across standards bodies (AES, DDEX, ISO), the fo
 - **Generative Autonomy**: The capability of an artificial intelligence model or neural network to generate novel musical structures, MIDI sequences, lyrics, vocal performances, or audio waveforms without direct real-time human performance or manual compositional notation.
 - **Hybrid Production**: Any music creation workflow where human creative agency and generative AI systems collaborate interactively across one or more production stages.
 - **Linked Data Graph**: A W3C JSON-LD 1.1 metadata structure utilizing `@context`, `@id`, and `@type` parameters to bind attestation manifestations to authoritative web graph entities (e.g., `https://example-publisher.com/#organization`), enabling semantic interoperability.
-- **Manifest**: The canonical UTF-8 JSON document adhering to Manifest Schema 2.0 containing the declared axis states, derived tier code, creator identity parameters, session digest, audio essence digest, revision history, and RFC 8032 Ed25519 digital signatures. Manifests are canonicalized using RFC 8785 JSON Canonicalization Scheme (JCS) prior to hashing and signing.
+- **Manifest**: The canonical UTF-8 JSON document adhering to Manifest Schema 2.0 containing the declared axis states, derived tier code, creator identity parameters, session digest, audio essence digest, revision history, and RFC 8032 Ed25519 digital signatures. Manifests are canonicalized as key-sorted UTF-8 JSON. Full RFC 8785 conformance is planned.
 - **PCM Essence Digest**: The bit-exact SHA-256 cryptographic hash computed exclusively over uncompressed Pulse Code Modulation (PCM) sample data inside the WAV `data` subchunk, excluding container headers, ID3 tags, or metadata chunks, ensuring the hash remains valid even if metadata is restamped.
 - **The 3-Point Cryptographic Seal**: The tripartite cryptographic binding between:
   1. **DAW Session Content Hash (`session_hash` / `session_binding`)**: SHA-256 hash computed over canonicalized multitrack project structure, track hierarchies, inserted plugin GUIDs, audio pool manifests, and clip bounds.
@@ -85,7 +86,7 @@ Music technology has continually evolved through technological augmentation—fr
 
 However, professional music creation rarely occurs in binary isolation. Musicians infrequently rely on 100% autonomous prompt generation; instead, modern workflows are deeply hybrid:
 - A producer may generate a harmonic progression using a generative assistant, manually chop and re-pitch the MIDI, track a human lead vocal, synthesize backing harmonies via neural models, and mix the project in a traditional Digital Audio Workstation (DAW).
-- A songwriter may record live acoustic guitar and lead vocals, but use generative diffusion models to construct background environmental soundscapes or automated mastering engines to finalize dynamic range.
+- A songwriter may record live physical guitar and lead vocals, but use generative diffusion models to construct background environmental soundscapes or automated mastering engines to finalize dynamic range.
 
 ### 3.2 Lack of Provenance Standards in Audio Containers
 Standard digital audio container formats (such as WAV RIFF, MP3, FLAC, and AAC) were designed to convey uncompressed or compressed sample payloads, not production provenance. When a DAW project is rendered to a flat audio master, all structural session metadata—plugin inventories, track arrangements, MIDI parameters, and edit histories—is stripped.
@@ -127,7 +128,7 @@ HPS-1.0 evaluates a music recording across five discrete, sequential stages of p
 1. **Origination ($O$)**: Composition, songwriting, melody, chord progressions, lyrics, and structural seed generation.
 2. **Performance ($P$)**: Vocal tracking, physical instrument performance, MIDI execution, and expressive timing.
 3. **Curation ($C$)**: Editorial stem selection, structural chopping, arrangement sequencing, and sound editing.
-4. **Sound Source ($S$)**: Timbral provenance (acoustic instruments, analog/subtractive synthesis, vs. neural diffusion sound generators).
+4. **Sound Source ($S$)**: Timbral provenance (physical instruments, analog/subtractive synthesis, vs. neural diffusion sound generators).
 5. **Post-Production ($M$)**: Dynamic processing, equalization, spatial placement, mixing, and final mastering.
 
 ### 4.2 Permissible Axis States & Utility Processing Exemption
@@ -159,7 +160,7 @@ To prevent minor incidental background elements (such as a 2-second generative t
    - **Substantial Hybrid Contribution ($0.05 \le \text{ACI} < 0.50$)**: When an AI asset contributes between $5\%$ and $50\%$ weighted arrangement presence, the affected axis is classified as **`H+A` (Co-Creative Hybrid)**.
    - **Dominant AI Contribution ($\text{ACI} \ge 0.50$)**: When an AI asset contributes $50\%$ or more of the weighted arrangement, the affected axis escalates to **`A` (AI Autonomous)** if generative, or `H+A` if assistive DSP.
 
-4. **Multi-Asset Channel Isolation**: Incidental auxiliary sweeps and background sound design are strictly isolated to their host channel roles. They MUST NOT bleed into or contaminate lead vocal performance ($P$) or primary acoustic instrument tracking declarations ($S$).
+4. **Multi-Asset Channel Isolation**: Incidental auxiliary sweeps and background sound design are strictly isolated to their host channel roles. They MUST NOT bleed into or contaminate lead vocal performance ($P$) or primary physical instrument tracking declarations ($S$).
 
 ### 4.3 The Human→AI Production Scale (6 Tiers)
 
@@ -199,7 +200,7 @@ graph TD
 
 #### Ordering Rationale & The Curation Editorial Gate
 
-The 6-rule sequential evaluation is order-dependent by design, preventing multi-tier collisions and establishing rigorous legal auditability:
+The 6-rule sequential evaluation is order-dependent by design, preventing multi-tier collisions and establishing clear auditability:
 
 - **The Curation Axis as an Editorial Gate**: When both primary composition and performance are fully executed by autonomous AI ($O = \text{A} \land P = \text{A}$), human creative agency can only enter the production pipeline through **Curation ($C$)**—the conscious editorial acts of auditioning, stems chopping, re-sequencing, and arrangement assembly:
   - **Rule 2 Gate ($C = \text{A}$)**: Tier A (AI Production) strictly requires that Curation is autonomous ($C = \text{A}$). This hard gate ensures that Tier A is reserved exclusively for unedited, prompt-direct outputs where no human arrangement labor took place.
@@ -311,7 +312,7 @@ While the 243-cell matrix in §4.5 provides exhaustive cell-by-cell verification
                                   HPS-1.0 5-AXIS PARALLEL RATING FLOW ARCHITECTURE
 ====================================================================================================================
      [1] Origination       [2] Performance         [3] Curation         [4] Sound Source     [5] Post-Production
-      (Songwriting)       (Vocals/Execution)     (Stem Arranging)      (Acoustic/Diffusion)      (Mix/Master)
+      (Songwriting)       (Vocals/Execution)     (Stem Arranging)      (Physical/Diffusion)      (Mix/Master)
      +---------------+     +---------------+     +---------------+      +---------------+     +-----------------+
      |      [H]      |=====|      [H]      |=====|      [H]      |======|      [H]      |=====|       [H]       | ==> TIER H (7)
      |               |     |               |     \---------------\      \---------------\     \-----------------\
@@ -363,7 +364,7 @@ While the 243-cell matrix in §4.5 provides exhaustive cell-by-cell verification
 ## 5. Provenance Manifest Specification
 
 ### 5.1 Manifest Structure & JSON-LD Linked Data Context
-An HPS-1.0 Manifest is a UTF-8 JSON / JSON-LD document adhering to Manifest Schema 2.0 (`https://hps-standard.org/schemas/v2.0/manifest.json`) and `schema/hps-context-1.0.jsonld`. Prior to computing the manifest signature, the JSON payload (excluding mutable signature envelopes) MUST be canonicalized according to RFC 8785 (JSON Canonicalization Scheme) to prevent cryptographic failure due to whitespace or key ordering differences.
+An HPS-1.0 Manifest is a UTF-8 JSON / JSON-LD document adhering to Manifest Schema 2.0 (`https://hps-standard.org/schemas/v2.0/manifest.json`) and `schema/hps-context-1.0.jsonld`. Prior to computing the manifest signature, the JSON payload (excluding mutable signature envelopes) MUST be canonicalized as key-sorted UTF-8 JSON. Full RFC 8785 conformance is planned. This prevents cryptographic failure due to whitespace or key ordering differences.
 
 Schema 2.0 incorporates native industry release identifiers, extraction confidence indicators, the complete 3-point seal bindings (session hash, audio essence hash, and identity), multi-party co-attestation envelopes (`signatures[]`), and an active, multi-revision Merkle tree audit trail:
 
@@ -534,14 +535,16 @@ Schema 2.0 incorporates native industry release identifiers, extraction confiden
 }
 ```
 
+> The published schema file `/schema/hps-manifest-1.0.json` describes legacy Schema 1.0. The Schema 2.0 file is coming soon.
+
 ### 5.2 Active Merkle Tree Revision History & Multi-Signer Co-Attestation Specification
 To support professional music supply chain workflows (e.g., label delivery, publisher verification, co-writer split agreements, post-export mastering amendments), HPS-1.0 incorporates an active, dual cryptographic integrity model:
 
 1. **Active SHA-256 Merkle Revision History (`revision_history[]`)**:
-   - **Parent-Chained Immutability**: Every amendment, re-attestation, or co-signature appends an entry to the `revision_history` array. The pure manifest state (excluding mutable signature envelopes) is canonicalized (RFC 8785) and hashed to compute `revision_hash`.
+   - **Parent-Chained Tamper-Evidence**: Every amendment, re-attestation, or co-signature appends an entry to the `revision_history` array. The pure manifest state (excluding mutable signature envelopes) is canonicalized as key-sorted UTF-8 JSON (full RFC 8785 conformance is planned) and hashed to compute `revision_hash`.
    - **Chaining Algorithm**: For a fresh attestation ($revision\_id = 1$), `action` is set to `"initial_attestation"` and `parent_hash` is initialized to 64 hexadecimal zeros (`0000...0000`). For subsequent amendments ($revision\_id \ge 2$), `action` is set to `"revision"`, and `parent_hash` is explicitly bound to the preceding entry's `revision_hash`.
    - **Merkle Root Accumulation**: A binary SHA-256 Merkle root (`merkle_root`) is computed across all historical revision hashes.
-   - **Audit Guarantee**: Downstream DSPs, distributors, and collecting societies can execute `verifyRevisionHistory(manifest)` to cryptographically prove that no intermediate metadata fields were manipulated, backdated, or deleted following initial attestation.
+   - **Audit Guarantee**: Downstream DSPs, distributors, and collecting societies can execute `verifyRevisionHistory(manifest)` to detect edits to earlier revisions in the recorded chain. Revision timestamps are declared by the signer. HPS-1.0 does not include a trusted timestamp service.
 
 2. **Normative Multi-Signer Co-Attestation (`signatures[]`)**:
    - **Independent Multi-Signature Verification**: While the primary creator signs with `signer_role: "creator"`, additional stakeholders (record labels, publishers, co-producers) append Ed25519 signatures to `signatures[]` via `addCoSignerToManifest()`.
@@ -567,7 +570,7 @@ This section outlines the operational architectural stages of the HPS attestatio
 
 ### 6.1 DAW Session Parsing & Introspection
 During project export or catalog ingestion, an attestation engine introspects DAW session structures across major formats (e.g., Ableton Live `.als`, Logic Pro `.logicx`, FL Studio `.flp`, REAPER `.rpp`, Pro Tools `.ptx`, Cubase `.cpr`, Studio One `.song`, and open `.dawproject` archives):
-- **Plugin Introspection**: Scans active track channel strips, extracting immutable VST3 GUIDs (16-byte hashes), AudioUnit ID triplets (Type/Subtype/Manufacturer FourCC), CLAP bundle IDs, AAX identifiers, and plugin display names.
+- **Plugin Introspection**: Scans active track channel strips, extracting binary VST3 GUIDs (16-byte hashes), AudioUnit ID triplets (Type/Subtype/Manufacturer FourCC), CLAP bundle IDs, AAX identifiers, and plugin display names.
 - **Sample Directory Introspection**: Analyzes audio pool paths, filenames, and container headers (RIFF `bext` BWF chunks, `LIST:INFO` chunks) for generative audio metadata, prompt signatures, or synthetic stem markers.
 - **Extraction Confidence Tiers (`parse_confidence`)**: To ensure complete transparency regarding the provenance of extracted session data, parsers evaluate an honest extraction confidence grade:
   - `high (native-ast)`: Full AST decoded with track hierarchy, instruments, and clip bounds.
@@ -581,8 +584,8 @@ During project export or catalog ingestion, an attestation engine introspects DA
   - **Audit Display Guarantee**: Evidence exporters (PDF evidence packets, DDEX XML, and UI track trees) MUST visibly annotate generic keyword matches (e.g. `Audio 1 [Inferred String Match]`) to prevent weak textual clues from being misrepresented as structurally verified tracks.
 
 ### 6.2 AI-Tool Detection Heuristics, Arrangement Topology & BIP Neutralization
-The detection engine matches session introspection data against a dynamic, three-tier classification hierarchy:
-1. **Exact Binary ID Matching**: Matches immutable VST3 GUIDs, AU FourCC triplets, or CLAP bundle IDs to identify renamed or disguised plugins.
+The detection engine matches session introspection data against a dynamic, four-part classification hierarchy:
+1. **Exact Binary ID Matching**: Matches binary VST3 GUIDs, AU FourCC triplets, or CLAP bundle IDs to identify renamed or disguised plugins.
 2. **Name Pattern Matching with Word-Boundary Protection**: Evaluates contextual regex patterns with non-alphanumeric lookarounds (e.g., `(?<![a-zA-Z0-9])keyword(?![a-zA-Z0-9])`), preventing false positives such as matching "Studio One" against "Udio".
 3. **Behavioral & Topological Heuristics**: Analyzes routing characteristics (e.g., plugins with MIDI output but no audio inputs, typical of generative composition assistants) and computes continuous likelihood scores ($0.0 \text{ to } 1.0$).
 4. **Manual Axis Overrides Provenance**: When an artist adjusts an automatically suggested axis rating, the system does not silently accept the change; it logs an explicit record in `overrides[]` containing the affected axis, the automatic machine suggestion (`autoValue`), the final human selection (`overriddenTo`), and forensic evidence bullets. This array is bound by the Ed25519 signature, ensuring full legal auditability under EU AI Act Article 50 without blocking human agency.
@@ -633,8 +636,8 @@ Professional music producers routinely bounce heavy virtual instruments, analog 
   - **Resting Schema**: Encrypted keystores persist `{ encrypted: true, salt, iv, ciphertext }`. On session start, the user supplies their passphrase to decrypt the private key into ephemeral memory.
   - **First-Run Backup Nudge**: Following initial key generation, engines present a dismissible backup prompt with a direct export trigger to guarantee creators do not lose past attestation signing capability.
 
-### 6.4 Container Embedding & Theoretical Acoustic Watermarking Specification
-HPS-1.0 provides two complementary transmission mechanisms for attestation manifests: native container metadata embedding (active in current production deployments) and an open theoretical reference specification for time-domain spread-spectrum acoustic watermarking:
+### 6.4 Container Embedding
+HPS-1.0 provides native container metadata embedding for attestation manifests:
 
 - **Active Container Embedding**:
   - **RIFF WAV Embedding**: The canonical manifest JSON is written directly into a custom `hps1` FourCC subchunk in the master WAV container.
@@ -643,16 +646,7 @@ HPS-1.0 provides two complementary transmission mechanisms for attestation manif
   - **MP3 Container Embedding**: The manifest payload is serialized into an ID3v2.4 `TXXX` frame (`HPS_MANIFEST_1.0`).
   - **Fast Verification**: Downstream ingestion pipelines read the `hps1` RIFF chunk or `TXXX` frame, verify the Ed25519 signature in under 5 milliseconds, and hash the PCM audio data to verify bit-exact waveform integrity.
 
-- **Theoretical Acoustic Watermarking Specification**:
-  > [!NOTE]
-  > **Implementation Status Note**: In current production deployments, attestation manifests travel via native container chunks (`hps1`), ID3 tags, and DDEX ERN 4.3 XML sidecars to ensure 100% bit-perfect audio fidelity without sample modification. The acoustic watermarking architecture specified below represents a complementary theoretical reference design designed for future hardware, DSP plugin, and codec-level standardization to survive lossy transcoding (e.g. AAC/MP3) and analog broadcast channels.
-
-  - **Modulation**: Direct Sequence Spread Spectrum (DSSS) using Binary Phase Shift Keying (BPSK) modulated directly across uncompressed PCM time-domain samples.
-  - **Processing Gain & Chip Size**: `CHUNK_SIZE = 4096` samples per bit ($\approx 33\text{ dB}$ processing gain).
-  - **Payload Framing**: 64-bit cryptographic signature digest prefixed by a **16-bit Barker synchronization sequence** (`1110001001000000`) for robust frame alignment ($80$ bits total).
-  - **Psychoacoustic Masking Gain**: Windowed analysis (1024-sample Hann window, 512 hop, 50% overlap), with relative gain set to **$-20\text{ dB}$ below the local RMS** of the host audio, hard-capped at $\alpha = 0.04$ ($\approx -28\text{ dB}$).
-  - **Silence Gate**: Silent passages ($\text{RMS} < 10^{-5}$) receive **zero watermark energy**, guaranteeing pristine, unmodulated silence.
-  - **Blind Extraction**: Differential correlation (first-difference filtering) strips host-audio interference before correlating against the public pseudo-random spreading sequence, followed by coarse-to-fine synchronization search across up to 2 seconds (88,200 samples).
+**Limits**: Container metadata does not survive re-encoding or format conversion. A stripped file loses its embedded manifest. The signed manifest can still be held in a registry record or a DDEX sidecar. Durable in-audio binding is listed under Future Work.
 
 ### 6.5 DDEX ERN 4.3 XML Distribution Integration
 For automated delivery to music aggregators, distributors, and DSP platforms, HPS manifests map directly into standard DDEX ERN 4.3 `<ern:NewReleaseMessage>` structures under a dedicated XML namespace:
@@ -723,7 +717,7 @@ To prevent format confusion and enforce unambiguous cryptographic contracts, HPS
   - `EMPTY`: Neither slot populated. Primary actions remain disabled.
   - `SLOT1_ONLY`: DAW Session loaded. Enables **Partial Session Audit** (`sealStatus: PARTIAL_SESSION_AUDIT`). Prompts the user to optionally supply Master WAV into Slot 2.
   - `SLOT2_ONLY`: Master WAV loaded. Enables **Audio Only Seal** (`sealStatus: PARTIAL_AUDIO_ATTESTATION`). Prompts the user to optionally supply DAW Project into Slot 1.
-  - `BOTH_FILLED`: Both artifacts loaded and verified. Unlocks **Full 3-Point Attestation Seal** (`sealStatus: COMPLETE`), binding multitrack session lineage, PCM audio essence, and creator signature into an unforgeable attestation.
+  - `BOTH_FILLED`: Both artifacts loaded and verified. Unlocks **Full 3-Point Attestation Seal** (`sealStatus: COMPLETE`), binding multitrack session lineage, PCM audio essence, and creator signature into a tamper-evident attestation.
 
 ### 6.7 Cloud Registry & Stateless Public Verification Protocol
 To enable instantaneous verification for downstream DSPs, listeners, and distributors without transmitting proprietary audio or project binaries, HPS specifies a hybrid decentralized registry model:
@@ -743,8 +737,8 @@ To enable instantaneous verification for downstream DSPs, listeners, and distrib
 
 To demonstrate real-world adoption, this section details how HPS applies comprehensively across all 6 classification tiers plus a standard DAW export workflow:
 
-### 7.1 Tier H: Fully Human Acoustic Track
-- **Scenario**: A singer-songwriter records acoustic guitar, lead vocal, upright bass, and percussion in an analog studio, mixing in a DAW with static EQ, optical compression, and utility pitch tuning.
+### 7.1 Tier H: Fully Human Physical Instrument Track
+- **Scenario**: A singer-songwriter records physical guitar, lead vocal, upright bass, and percussion in an analog studio, mixing in a DAW with static EQ, optical compression, and utility pitch tuning.
 - **Axis Breakdown**: $O=\text{H}, P=\text{H}, C=\text{H}, S=\text{H}, M=\text{H}$ (Utility tuning exempt per §4.2).
 - **Derived Tier**: **`Tier H` (Human Production)**.
 - **Value**: Establishes 100% human authenticity proof, protecting the artist from false-positive AI flags by automated streaming sweep filters.
@@ -777,9 +771,11 @@ To demonstrate real-world adoption, this section details how HPS applies compreh
 - **Scenario**: An artist inputs a text prompt into an autonomous generative foundation model to produce a 3-minute ambient soundscape. The rendered audio is exported directly without editing.
 - **Axis Breakdown**: $O=\text{A}, P=\text{A}, C=\text{A}, S=\text{A}, M=\text{A}$.
 - **Derived Tier**: **`Tier A` (AI Production)**.
-- **Value**: Satisfies mandatory EU AI Act Article 50 disclosure obligations, ensuring machine-readable transparency for commercial deployment.
+- **Value**: Supports Article 50 disclosure workflows, ensuring machine-readable transparency for commercial deployment.
 
 ### 7.7 Workflow Integration: Automated DAW Export
+
+This workflow is illustrative. DAW export hooks are coming soon.
 - **Scenario**: A producer clicks "Export Master WAV" in a DAW equipped with an HPS export hook.
 - **Workflow**:
   1. DAW introspection automatically detects session plugins (e.g., 1 generative synth, 8 utility EQs).
@@ -790,16 +786,16 @@ To demonstrate real-world adoption, this section details how HPS applies compreh
 
 ## 8. Threat Model & Security Analysis
 
-To achieve formal regulatory alignment and institutional trust, HPS addresses six primary attack vectors:
+To achieve formal regulatory alignment and institutional trust, HPS considers six primary attack vectors. Mitigation levels differ. HPS-1.0 provides tamper-evidence and accountability. It does not verify that a declaration is true.
 
 | Threat Vector | Description | Adversary Goal | HPS Technical Mitigation |
 | :--- | :--- | :--- | :--- |
 | **T1: Audio Tampering** | Splicing, editing, or modifying the audio payload post-signing. | Alter recording while claiming valid attestation. | **SHA-256 PCM Essence Digest Binding**: Modifying a single audio sample invalidates the digest, failing 3-point signature and integrity check. |
-| **T2: Metadata Stripping** | Stripping JSON metadata chunks during format conversion or re-encoding. | Evade AI disclosure requirements. | **Dual-Container Embedding & Theoretical DSSS Watermark Specification**: Container chunks (RIFF `hps1` / ID3 `TXXX`) travel natively; theoretical DSSS spread-spectrum design addresses lossy transcoding. |
-| **T3: False Attestation** | Maliciously declaring an AI track as `Tier H` (Human). | Claim false human authorship for commercial gain. | **Override Audit Logging & Forensic Introspection**: Auto-detection discrepancies are permanently logged in `overrides[]`, creating legal audit trails under Art. 50. |
-| **T4: Model-Generated Stems** | Disguising synthetic stems as live studio instruments. | Bypass sample library human-only policies. | **Exact Binary VST3/AU Introspection**: Introspection parses plugin GUIDs directly from session files, catching disguised synthetic plugins. |
+| **T2: Metadata Stripping** | Stripping JSON metadata chunks during format conversion or re-encoding. | Evade AI disclosure requirements. | Partly mitigated. Container chunks and DDEX sidecars carry the manifest. Re-encoding removes embedded chunks. Durable in-audio binding is future work (see section 13). |
+| **T3: False Attestation** | Maliciously declaring an AI track as `Tier H` (Human). | Claim false human authorship for commercial gain. | **Override Audit Logging & Forensic Introspection**: Overrides are recorded in the signed manifest. The signer is accountable for the declaration. HPS-1.0 does not verify that declared axes are true. |
+| **T4: Model-Generated Stems** | Disguising synthetic stems as live studio instruments. | Bypass sample library human-only policies. | **Exact Binary VST3/AU Introspection**: Introspection parses plugin GUIDs directly from session files, identifying known AI plugins by binary ID, including renamed copies. Unknown tools are not detected. |
 | **T5: Provenance Loss** | Loss of creator identity linkage across aggregators. | Strip artist attribution. | **Self-Sovereign Ed25519 Signatures & JSON-LD Graph**: Public key signatures bound to `@id: https://example-publisher.com/#organization`. |
-| **T6: Key Compromise / Replay** | Attacker extracts the Ed25519 key or replays an old signed manifest onto new audio. | Forgery of human attestation on synthetic tracks. | **Client-Side Enclaves & Essence Binding**: Keys remain local; replay attacks fail because the SHA-256 PCM digest rigidly binds the signature to the exact audio waveform. |
+| **T6: Key Compromise / Replay** | Attacker extracts the Ed25519 key or replays an old signed manifest onto new audio. | Forgery of human attestation on synthetic tracks. | **Local Keys & Essence Binding**: Keys are generated in the browser. Private keys are encrypted at rest only when the user sets a passphrase. A signed manifest names one audio digest. A stolen key allows new signatures. HPS-1.0 has no key revocation mechanism yet. |
 
 ---
 
@@ -812,8 +808,8 @@ To achieve formal regulatory alignment and institutional trust, HPS addresses si
 | **Tamper-Evident Cryptographic Sealing** | ❌ No | ❌ No | ❌ No | ❌ No | **✅ Yes (Ed25519/SHA-256)**|
 | **JSON-LD Linked Data Graph** | ❌ No | ❌ No | ❌ No | ❌ No | **✅ Yes (@organization)**|
 | **Utility DSP Exemption Protection** | ❌ No | ❌ No | ❌ No | ❌ No | **✅ Yes (Normative Rule)**|
-| **Container & Acoustic Embedding** | ❌ No | Partial (Audio only)| Partial (DAW only) | ❌ Metadata only | **✅ Dual (RIFF/ID3 + Theoretical DSSS)** |
-| **Open Standards-Body Spec (AES/DDEX)** | ❌ No | ❌ Proprietary | ❌ Lock-in | ❌ Proprietary | **✅ 100% Open Spec** |
+| **Container Metadata Embedding** | ❌ No | ❌ No | Partial (DAW only) | ❌ Metadata only | **✅ Yes (RIFF / ID3 / DDEX)** |
+| **Open Specification** | ❌ No | ❌ Proprietary | ❌ Lock-in | ❌ Proprietary | **✅ Yes (CC BY-ND 4.0 text, MIT schemas)** |
 
 ---
 
@@ -826,10 +822,12 @@ Regulation (EU) 2024/1689 (EU AI Act) establishes comprehensive transparency obl
 - **Phased Implementation Deadlines**: General transparency obligations apply starting **August 2, 2026**. Machine-readable marking requirements for AI systems placed on the market prior to this date become enforceable by **December 2, 2026**.
 - **Provider vs. Deployer Scope**: Obligations fall on system providers and commercial deployers, rather than individual human artists using utility software.
 
-### 10.2 How HPS Fulfills Technical Compliance Mandates
+### 10.2 How HPS Supports Technical Compliance Efforts
 1. **Machine-Readable Standard Formatting**: HPS manifests provide standardized JSON, JSON-LD, and DDEX XML structures (`<hps:HPSClassificationBlock>`) readable by ingestion pipelines.
-2. **Tamper-Evidence & Authenticity**: Ed25519 digital signatures and SHA-256 essence digests prevent post-export alteration of machine-readable disclosures.
+2. **Tamper-Evidence & Authenticity**: Ed25519 digital signatures and SHA-256 essence digests make post-export alteration detectable.
 3. **Auditability of Overrides**: The `overrides[]` schema element provides legal compliance officers with transparent records of manual user adjustments against automated tool detection heuristics.
+
+HPS is not legal advice. HPS does not certify compliance.
 
 ---
 
@@ -842,14 +840,17 @@ DAWs should incorporate HPS export hooks:
 - Format and sign the canonical HPS manifest JSON.
 - Write the `hps1` RIFF chunk directly into rendered WAV audio files.
 
+The DAW plugin SDK is planned (see section 13).
+
 ### 11.2 For Music Distributors & Aggregators
 Distributors should integrate HPS manifest validation into ingestion pipelines:
 - Parse `hps1` RIFF chunks or DDEX XML `<hps:HPSClassificationBlock>` elements.
 - Validate Ed25519 signatures and SHA-256 essence digests in milliseconds (Fast Check).
+  A hosted verification API is coming soon. Today, verify with the client-side SDK or the public verify page.
 - Pass validated HPS tier codes directly to DSP delivery feeds.
 
 ### 11.3 For Sample Marketplaces & Royalty Libraries
-Sample platforms (e.g., Splice, Loopcloud) should stamp all catalog sample packs with HPS metadata:
+Sample platforms should stamp all catalog sample packs with HPS metadata:
 - Embed `hps1` chunks into individual sample WAVs.
 - Provide buyers with cryptographic proof that samples are 100% human-recorded (`Tier H`) or transparently classified hybrid stems (`Tier X1-X4`).
 
@@ -884,25 +885,26 @@ HPS strictly follows Semantic Versioning 2.0.0 (`MAJOR.MINOR.PATCH`):
 
 The HPS Technical Working Group is actively advancing key initiatives for subsequent specification iterations:
 
-1. **HPS-2.0 Automated Real-Time In-DAW Introspection**: Developing native C++/Rust VST3, AU, and AAX background tracking plugins that log session timeline edits continuously to generate real-time attestation evidence.
-2. **Open-Source DAW Plugin SDK**: Publishing standardized C++ (`JUCE`) and Rust libraries to enable DAW developers to integrate HPS signing with under 50 lines of code.
-3. **Distributor Fast-Verify Ingestion API**: Standardizing REST and gRPC endpoint contracts (`POST /v1/verify/manifest`) for automated catalog intake pipelines across major distributors and aggregators.
-4. **Perceptual Acoustic Content Fingerprinting**: Integrating Chromaprint-style perceptual audio fingerprinting to provide lossy-transcoding-resilient audio identification across MP3, AAC, and analog broadcast transmissions.
-5. **C2PA JUMBF Container Embedding**: Standardizing `uuid` atom embedding inside MP4/M4A `moov` container atoms carrying C2PA JUMBF superboxes for compressed video and audio formats.
-6. **Distributor Post-Attestation Protocol (`attestations[]`)**: Formalizing third-party distributor intake verification badges (`[HPS-X1 Verified by DistroKid]`) recorded in a dedicated `attestations[]` array, maintaining strict separation from artist/creator `signatures[]`.
-7. **Sample Marketplace Provenance Stamping**: Establishing high-throughput automated batch-stamping specifications for sample libraries and stem distribution platforms.
+1. **Status: Planned.** **HPS-2.0 Automated Real-Time In-DAW Introspection**: Developing native C++/Rust VST3, AU, and AAX background tracking plugins that log session timeline edits continuously to generate real-time attestation evidence.
+2. **Status: Planned.** **Open-Source DAW Plugin SDK**: Publishing standardized C++ (`JUCE`) and Rust libraries to enable DAW developers to integrate HPS signing with under 50 lines of code.
+3. **Status: Coming soon.** **Distributor Fast-Verify Ingestion API**: The reference implementation verifies on the client. No public REST or gRPC endpoint is available yet. Standardizing REST and gRPC endpoint contracts (`POST /v1/verify/manifest`) for automated catalog intake pipelines across major distributors and aggregators.
+4. **Perceptual Audio Content Fingerprinting**: Integrating Chromaprint-style perceptual audio fingerprinting to provide lossy-transcoding-resilient audio identification across MP3, AAC, and analog broadcast transmissions.
+5. **Status: Planned.** **C2PA JUMBF Container Embedding**: Standardizing `uuid` atom embedding inside MP4/M4A `moov` container atoms carrying C2PA JUMBF superboxes for compressed video and audio formats.
+6. **Status: Planned.** **Distributor Post-Attestation Protocol (`attestations[]`)**: Formalizing third-party distributor intake verification badges (`[HPS-X1 Verified by <Distributor>]`) recorded in a dedicated `attestations[]` array, maintaining strict separation from artist/creator `signatures[]`.
+7. **Status: Planned.** **Sample Marketplace Provenance Stamping**: Establishing high-throughput automated batch-stamping specifications for sample libraries and stem distribution platforms.
+8. **Durable In-Audio Binding**: Evaluating methods that keep an HPS manifest reference attached to audio after lossy transcoding. Status: under evaluation.
 
 ---
 
 ## 14. Conclusion
 
-The Hybrid Production Standard (HPS-1.0) provides a necessary evolution beyond binary AI disclosure mechanisms. By measuring the granular process of creation across five independent axes, HPS-1.0 protects human authorship, ensures transparent collaboration with generative systems, and satisfies emerging regulatory transparency mandates. Through the combination of deterministic classification, semantic Linked Data, and cryptographic tamper-evidence, HPS-1.0 establishes a robust foundation of trust for the next generation of the music supply chain.
+The Hybrid Production Standard (HPS-1.0) provides a necessary evolution beyond binary AI disclosure mechanisms. By measuring the granular process of creation across five independent axes, HPS-1.0 protects human authorship, ensures transparent collaboration with generative systems, and supports emerging regulatory transparency efforts. Through the combination of deterministic classification, semantic Linked Data, and cryptographic tamper-evidence, HPS-1.0 establishes a robust foundation of trust for the next generation of the music supply chain.
 
 ## 15. References
 
 1. **European Parliament & Council**: *Regulation (EU) 2024/1689 laying down harmonised rules on artificial intelligence (Artificial Intelligence Act)*, Official Journal of the European Union, 2024.
 2. **IETF RFC 8032**: *Edwards-Curve Digital Signature Algorithm (Ed25519)*, Internet Engineering Task Force, 2017.
-3. **IETF RFC 8785**: *JSON Canonicalization Scheme (JCS)*, Internet Engineering Task Force, 2020.
+3. **IETF RFC 8785**: *JSON Canonicalization Scheme (JCS)* (target for planned conformance), Internet Engineering Task Force, 2020.
 4. **NIST FIPS PUB 180-4**: *Secure Hash Standard (SHA-256)*, National Institute of Standards and Technology, 2015.
 5. **W3C**: *JSON-LD 1.1: A JSON-based Serialization for Linked Data*, World Wide Web Consortium, 2020.
 6. **DDEX**: *Electronic Release Notification Message Suite Standard (ERN 4.3)*, Digital Data Exchange, 2022.
@@ -919,14 +921,12 @@ To establish unambiguous shared terminology across audio engineering, software e
 - **Arrangement Contribution Index (ACI)**: A quantitative metric ($0.0 \text{ to } 1.0$) evaluating the net arrangement contribution of a production asset to a musical work, computed as the product of its active timeline duration coverage ratio and its hierarchical channel role weight ($W_{role}$).
 - **Attestation**: A cryptographically signed, self-declared statement describing human versus AI participation across the five operational production axes for an audio recording. An attestation establishes tamper-evidence of the declared record post-signing; it does not constitute third-party certification of truthfulness.
 - **Axis State**: The discrete categorical value—**`H`** (Human), **`H+A`** (Co-Creative Hybrid), or **`A`** (Autonomous AI)—assigned to one of the five production stages (*Origination*, *Performance*, *Curation*, *Sound Source*, *Post-Production*).
-- **Barker Synchronization Code**: A finite synchronization sequence with ideal mathematical autocorrelation properties (specifically the 16-bit sequence `1110001001000000`), prepended to acoustic watermark payloads for blind frame alignment.
 - **Bounce-in-Place (BIP) / Track Freeze**: A standard DAW production technique wherein processor-heavy virtual instruments, synthesizer patches, or analog modeling plugin chains are rendered into flat audio tracks to conserve CPU resources. HPS detects BIP signatures to prevent false-positive stem-dump classifications.
 - **Broadcast Wave Format (BWF)**: An extension of the Microsoft RIFF WAV format standardized by the EBU (EBU Tech 3285) incorporating a Broadcast Audio Extension (`bext`) chunk to carry originator name, software environment, and timecode references.
 - **C2PA (Coalition for Content Provenance and Authenticity)**: An international joint development foundation establishing open technical standards for content provenance and tamper-evidence. HPS aligns with the C2PA philosophy by logging user overrides against contrary evidence rather than preventing user declarations.
 - **Curation Axis ($C$)**: The third operational production stage in HPS, evaluating the auditioning, stem selection, structural editing, arrangement sequencing, and assembly of a musical work. Functions as a normative editorial gate distinguishing Tier X4 from Tier A.
 - **DDEX ERN (Electronic Release Notification)**: The digital music industry standard XML message format (specifically ERN 4.3) used by record labels, distributors, and digital aggregators to ingest release metadata, track recordings, territorial deals, and HPS classification blocks into DSP catalogs.
-- **Direct Sequence Spread Spectrum (DSSS)**: A spread-spectrum modulation technique wherein a narrowband digital message is multiplied by a high-frequency pseudo-random noise (PN) sequence, spreading energy across a broad spectrum below the host signal's psychoacoustic masking threshold.
-- **Ed25519 (RFC 8032)**: An asymmetric digital signature scheme based on Twisted Edwards curves over Curve25519, offering 128-bit security, high verification speeds, and deterministic signatures immune to side-channel attacks.
+- **Ed25519 (RFC 8032)**: An asymmetric digital signature scheme based on Twisted Edwards curves over Curve25519, offering 128-bit security, high verification speeds, and deterministic signatures that avoid per-signature random nonce failures.
 - **Edit Density per 16 Bars ($E_{16}$)**: An arrangement topology metric quantifying clip boundary transitions normalized to 16-measure musical blocks. Human multi-track arrangements typically exhibit $15 - 60+$ edits; uncurated generative AI stem dumps rarely exceed $1.0 - 2.5$.
 - **Encrypted Identity at Rest**: Client-side protection for sovereign private keys using PBKDF2 (250,000 iterations of SHA-256) to derive a 256-bit AES-GCM wrapping key, ensuring private keys are never stored as plaintext in browser storage.
 - **Human Edit Factor (HEF)**: A composite forensic index ($0 - 100\%$) weighting edit density, MIDI track presence, clip fragmentation, and in-DAW bounce bonuses to mathematically separate authentic human production from pre-rendered generative stems.
@@ -935,10 +935,10 @@ To establish unambiguous shared terminology across audio engineering, software e
 - **International Standard Name Identifier (ISNI)**: An ISO standard (ISO 27729) 16-digit identifier for disambiguating and identifying public personas, artists, and corporate entities across creative industries.
 - **International Standard Recording Code (ISRC)**: The ISO standard (ISO 3901) 12-character alphanumeric code (`CC-XXX-YY-NNNNN`) uniquely identifying a specific sound recording or music video across international distribution networks.
 - **International Standard Musical Work Code (ISWC)**: The ISO standard (ISO 15707) 11-character identifier (`T-NNNNNNNNN-C`) uniquely identifying an underlying musical composition or musical work, distinct from its recorded master renditions.
-- **JSON Canonicalization Scheme (JCS / RFC 8785)**: A deterministic formatting standard that canonicalizes JSON data structures by lexicographically sorting object keys and standardizing whitespace and numeric representations prior to cryptographic hashing or signing.
+- **JSON Canonicalization Scheme (JCS / RFC 8785)**: A deterministic formatting standard that canonicalizes JSON data structures by lexicographically sorting object keys and standardizing whitespace and numeric representations. HPS canonicalizes manifests as key-sorted UTF-8 JSON; full RFC 8785 conformance is planned.
 - **Keystore Protocol (`.hpskey`)**: A client-side JSON vault format for exporting and restoring Ed25519 keypairs, validated on import via public key derivation checks and optional passphrase-derived AES-GCM encryption.
 - **Linked Data (JSON-LD)**: A W3C standard serialization using `@context`, `@id`, and `@type` to bind metadata records to semantic web ontologies, enabling automated knowledge graph traversal.
-- **Merkle Tree Revision History**: An append-only cryptographic structure wherein sequential manifest state hashes (`revision_hash`) are parent-linked and compiled into a binary SHA-256 Merkle root (`merkle_root`) certifying that no historical metadata entries were manipulated or omitted post-signing.
+- **Merkle Tree Revision History**: An append-only cryptographic structure wherein sequential manifest state hashes (`revision_hash`) are parent-linked and compiled into a binary SHA-256 Merkle root (`merkle_root`) allowing detection of manipulated or omitted historical entries.
 - **Monolithic Continuity Ratio ($C_{mono}$)**: An arrangement topology metric calculating the percentage of audio clips in a session spanning $\ge 65\%$ of active project duration without cuts. A high $C_{mono}$ coupled with low total clip counts indicates external generative stem ingestion.
 - **Multi-Signer Co-Attestation**: A normative protocol enabling multiple stakeholders (creators, labels, publishers, co-producers) to append independently verifiable Ed25519 digital signatures to a shared canonical manifest (`signatures[]`).
 - **Origination Axis ($O$)**: The first operational production stage in HPS, evaluating the creation of melodic themes, harmonic chord progressions, lyrics, and structural compositional seeds.
@@ -949,9 +949,8 @@ To establish unambiguous shared terminology across audio engineering, software e
 - **RIFF Chunk (`hps1`)**: A dedicated four-character code (FourCC) subchunk embedded inside a master Resource Interchange File Format (RIFF) WAV container carrying the canonical HPS JSON manifest directly alongside raw PCM samples.
 - **Seal Status**: The evaluated cryptographic status of an HPS attestation (`COMPLETE`, `PARTIAL_SESSION_AUDIT`, `PARTIAL_AUDIO_ATTESTATION`, `DECLARATION_ONLY`, `LEGACY_PARTIAL`, `TAMPERED`, `INVALID`).
 - **Self-Sovereign Identity (SSI)**: A decentralized cryptographic architecture wherein creators generate, maintain, and sign with private Ed25519 keys locally without reliance on third-party certificate authorities or hosted accounts.
-- **Sound Source Axis ($S$)**: The fourth operational production stage in HPS, evaluating the physical, acoustic, analog, or synthetic provenance of raw audio waveforms and sample libraries.
+- **Sound Source Axis ($S$)**: The fourth operational production stage in HPS, evaluating the physical, analog, or synthetic provenance of raw audio waveforms and sample libraries.
 - **Stem-Dump Likelihood**: A probabilistic forensic score ($0.0 \text{ to } 1.0$) evaluating arrangement topology, clip continuity, and MIDI balance to detect unedited external AI audio generations.
-- **Theoretical Acoustic Watermarking**: An open reference specification for embedding imperceptible spread-spectrum watermark signals below the local psychoacoustic masking threshold of PCM audio, designed for future hardware/codec resilience across lossy transcodes and analog broadcasts.
 - **The 3-Point Cryptographic Seal**: The tripartite cryptographic binding between: (1) multitrack DAW session content hash, (2) raw PCM master audio essence hash, and (3) sovereign Ed25519 digital signatures.
 - **Track Discovery Provenance (`sourceMethod`)**: An attribution tag applied to tracks in forensic DAW parsers distinguishing structural table/AST extraction (`structured-table-scan`) from unverified printable string scraping (`generic-keyword-match`).
 - **Utility DSP Exemption Rule**: A normative rule exempting non-generative audio signal processing (e.g., static EQ, dynamic compression, surgical notch filtering, parametric reverb, intonation pitch correction) from AI classification, categorizing them as Human (`H`).

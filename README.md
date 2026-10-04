@@ -57,7 +57,7 @@ HPS-1.0 evaluates a track across five distinct, independent stages of creation:
 1. **Origination (`O`)**: Composition, melody, chord progressions, lyric writing, and structural design.
 2. **Performance (`P`)**: Instrumental tracking, vocal performance, MIDI execution, and expressive timing.
 3. **Curation (`C`)**: Stems selection, editorial chopping, structural editing, and arrangement sequencing.
-4. **Sound Source (`S`)**: Instrumental timbre, vocal synthesis, sound synthesis, and acoustic source provenance.
+4. **Sound Source (`S`)**: Instrumental timbre, vocal synthesis, sound synthesis, and physical source provenance.
 5. **Post-Production (`M`)**: Dynamic processing, equalization, spatial placement, mixing, and mastering.
 
 ---
