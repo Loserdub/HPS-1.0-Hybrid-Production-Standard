@@ -190,7 +190,7 @@ The illustrations and tables below demonstrate the exhaustive 243-state classifi
 | 🟧 **`Tier X4`** | **`A`** | **`A`** | **`H`** or **`H+A`** | `H` / `H+A` / `A` | `H` / `H+A` / `A` | **Rule 3**: $O=\text{A} \land P=\text{A} \land C \in \{\text{H}, \text{H+A}\}$ | **18** | 7.4% |
 | 🟥 **`Tier A`** | **`A`** | **`A`** | **`A`** | `H` / `H+A` / `A` | `H` / `H+A` / `A` | **Rule 2**: $O=\text{A} \land P=\text{A} \land C=\text{A} \land aCount \ge 4$ | **5** | 2.1% |
 | 🔘 **`Tier X3`** | *(Any)* | *(Any)* | *(Any)* | *(Any)* | *(Any)* | **Rule 6**: Default Fallthrough for remaining hybrid permutations | **75** | 30.9% |
-| **TOTAL** | — | — | — | — | — | **Exhaustive Deterministic Classification (0 collisions / 0 unassigned)** | **243** | **100.0%** |
+| **TOTAL** | - | - | - | - | - | **Exhaustive Deterministic Classification (0 collisions / 0 unassigned)** | **243** | **100.0%** |
 
 ![HPS 243-State Rating Combinations Matrix](../whitepaper/assets/hps_243_matrix_combinations.png)
 *Figure 5.2: Complete Visual Matrix of All 243 HPS Rating Combinations across 3 Curation Planes ($C=\text{H}$, $C=\text{H+A}$, $C=\text{A}$). [Vector SVG Version](../whitepaper/assets/hps_243_matrix_combinations.svg).*
@@ -251,7 +251,7 @@ The Fingerprint Engine classifies detected plugins and samples via a three-tier 
 3. **Behavioral Heuristics**: Evaluates routing topology, node capabilities, and stem generation markers to categorize tool behavior and identify potential generative systems.
 
 ### 7.2 Exemption Preservation
-Tools classified as corrective utility DSP (Melodyne, Auto-Tune, Soothe2, Pro-Q 3) MUST be tagged `axis: null` — never counted as AI evidence. Do not classify a tool as AI merely because its marketing copy uses "AI-powered."
+Tools classified as corrective utility DSP (Melodyne, Auto-Tune, Soothe2, Pro-Q 3) MUST be tagged `axis: null`, never counted as AI evidence. Do not classify a tool as AI merely because its marketing copy uses "AI-powered."
 
 ### 7.3 Sovereign Oracle Architecture
 The Fingerprint Engine SHOULD support remote fingerprint database updates (a public reference table fetch, not user data) with local cache fallback and embedded defaults. Any such remote fetch MUST be disclosed in privacy copy. Implementations SHOULD provide a complete offline mode toggle.
@@ -365,8 +365,8 @@ HPS Manifests MUST be formatted as valid UTF-8 encoded JSON. Before digital sign
 | ISNI | ISO 27729 | 16 digits | `industry_metadata.isni` |
 | IPI / CAE | CISAC | 9–11 digits | `industry_metadata.ipi` |
 | UPC / EAN | GS1 | 12–13 digits | `industry_metadata.upc` |
-| Record Label | — | Freeform string | `industry_metadata.label` |
-| Catalog # | — | Freeform string | `industry_metadata.catalog_number` |
+| Record Label | - | Freeform string | `industry_metadata.label` |
+| Catalog # | - | Freeform string | `industry_metadata.catalog_number` |
 
 ### 8.5 Linking to Publisher Authority Graph
 To establish decentralized authority binding, every HPS Manifest SHOULD include a JSON-LD `publisher` block resolving to the publisher's organization graph:
@@ -499,7 +499,7 @@ HpsStreamSDK.attachToAudioElement(player);
 // Renders a floating [HPS-X1] badge; click reveals full axis breakdown
 ```
 
-DSP badging format: `[HPS-H]`, `[HPS-X1]`, `[HPS-X2]`, `[HPS-X3]`, `[HPS-X4]`, `[HPS-A]` — badge click MUST reveal the full axis breakdown, not just the tier code.
+DSP badging format: `[HPS-H]`, `[HPS-X1]`, `[HPS-X2]`, `[HPS-X3]`, `[HPS-X4]`, `[HPS-A]`. A badge click MUST reveal the full axis breakdown, not just the tier code.
 
 ---
 
@@ -569,7 +569,7 @@ HPS-1.0 is governed by the HPS Technical Working Group under Semantic Versioning
 - **ExactID**: Binary plugin identifier matching (VST3 GUID, AU ID, CLAP ID) used by the Fingerprint Engine.
 - **ISNI**: International Standard Name Identifier (ISO 27729).
 - **ISRC**: International Standard Recording Code (ISO 3901).
-- **IPI/CAE**: Interested Parties Information — performing rights organization identifier (CISAC).
+- **IPI/CAE**: Interested Parties Information: performing rights organization identifier (CISAC).
 - **JCS**: JSON Canonicalization Scheme (RFC 8785). Manifests are canonicalized as key-sorted UTF-8 JSON; full RFC 8785 conformance is planned.
 - **JSON-LD**: JavaScript Object Notation for Linked Data (W3C Standard).
 - **Merkle Root**: Cryptographic root hash of a Merkle tree constructed over a manifest's revision history.

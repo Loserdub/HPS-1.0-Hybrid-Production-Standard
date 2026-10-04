@@ -24,7 +24,7 @@ This repository contains the official normative specification, JSON Schema & JSO
 
 ## 2. Purpose & Problem Statement
 
-Modern music production routinely integrates generative algorithms, automated processing, and neural synthesis alongside traditional performance, songwriting, and sound design. Existing metadata frameworks and regulatory compliance mandates—most notably **Article 50 of the European Union AI Act (Regulation EU 2024/1689)**—require transparent disclosure of AI-generated content.
+Modern music production routinely integrates generative algorithms, automated processing, and neural synthesis alongside traditional performance, songwriting, and sound design. Existing metadata frameworks and regulatory compliance mandates, most notably **Article 50 of the European Union AI Act (Regulation EU 2024/1689)**, require transparent disclosure of AI-generated content.
 
 Binary checkboxes fail to address contemporary workflows because:
 1. They over-flag human-centric productions that utilize utility DSP or adaptive processing.

@@ -31,7 +31,7 @@ Existing metadata systems and regulatory initiatives attempt to address this tra
 - **Fragility**: Unsigned metadata checkboxes can be stripped or modified during file processing without detection, leaving rights organizations and marketplaces with unverifiable claims.
 
 ### 1.2 Why Provenance Matters
-Provenance—the verifiable, tamper-evident record of how an audio recording was created—is essential for:
+Provenance, the verifiable, tamper-evident record of how an audio recording was created, is essential for:
 1. **Legal & Regulatory Compliance**: Supporting mandatory transparency directives such as **Article 50 of the European Union AI Act (Regulation EU 2024/1689)**.
 2. **Rights Management & Licensing**: Enabling collecting societies (BMI, ASCAP, PRS, SACEM) to calculate accurate royalty distributions based on human compositional contribution.
 3. **Marketplace Transparency**: Providing sample libraries, distributors, and streaming platforms with verifiable proof of asset origins.
@@ -82,14 +82,14 @@ To facilitate industry adoption across standards bodies (AES, DDEX, ISO), the fo
 ## 3. Background & Motivation
 
 ### 3.1 The Rise of AI-Generated Music and Workflow Hybridization
-Music technology has continually evolved through technological augmentation—from multitrack magnetic tape to MIDI sequencing and software synthesizers. Modern neural models differ fundamentally because they possess *generative autonomy*. Deep learning architectures can now synthesize full two-channel audio waveforms, generate complex MIDI arrangements, and emulate human singing voices from simple text prompts.
+Music technology has continually evolved through technological augmentation, from multitrack magnetic tape to MIDI sequencing and software synthesizers. Modern neural models differ fundamentally because they possess *generative autonomy*. Deep learning architectures can now synthesize full two-channel audio waveforms, generate complex MIDI arrangements, and emulate human singing voices from simple text prompts.
 
 However, professional music creation rarely occurs in binary isolation. Musicians infrequently rely on 100% autonomous prompt generation; instead, modern workflows are deeply hybrid:
 - A producer may generate a harmonic progression using a generative assistant, manually chop and re-pitch the MIDI, track a human lead vocal, synthesize backing harmonies via neural models, and mix the project in a traditional Digital Audio Workstation (DAW).
 - A songwriter may record live physical guitar and lead vocals, but use generative diffusion models to construct background environmental soundscapes or automated mastering engines to finalize dynamic range.
 
 ### 3.2 Lack of Provenance Standards in Audio Containers
-Standard digital audio container formats (such as WAV RIFF, MP3, FLAC, and AAC) were designed to convey uncompressed or compressed sample payloads, not production provenance. When a DAW project is rendered to a flat audio master, all structural session metadata—plugin inventories, track arrangements, MIDI parameters, and edit histories—is stripped.
+Standard digital audio container formats (such as WAV RIFF, MP3, FLAC, and AAC) were designed to convey uncompressed or compressed sample payloads, not production provenance. When a DAW project is rendered to a flat audio master, all structural session metadata (plugin inventories, track arrangements, MIDI parameters, and edit histories) is stripped.
 
 Downstream actors in the music supply chain (distributors, aggregators, streaming services, and performance rights organizations) receive flat audio files without any mechanism to verify how the content was produced.
 
@@ -202,7 +202,7 @@ graph TD
 
 The 6-rule sequential evaluation is order-dependent by design, preventing multi-tier collisions and establishing clear auditability:
 
-- **The Curation Axis as an Editorial Gate**: When both primary composition and performance are fully executed by autonomous AI ($O = \text{A} \land P = \text{A}$), human creative agency can only enter the production pipeline through **Curation ($C$)**—the conscious editorial acts of auditioning, stems chopping, re-sequencing, and arrangement assembly:
+- **The Curation Axis as an Editorial Gate**: When both primary composition and performance are fully executed by autonomous AI ($O = \text{A} \land P = \text{A}$), human creative agency can only enter the production pipeline through **Curation ($C$)**: the conscious editorial acts of auditioning, stems chopping, re-sequencing, and arrangement assembly:
   - **Rule 2 Gate ($C = \text{A}$)**: Tier A (AI Production) strictly requires that Curation is autonomous ($C = \text{A}$). This hard gate ensures that Tier A is reserved exclusively for unedited, prompt-direct outputs where no human arrangement labor took place.
   - **Rule 3 Gate ($C \in \{\text{H}, \text{H+A}\}$)**: If a human producer actively curates, chops, or re-arranges those AI stems into a structured musical composition, Rule 3 captures the track as **`Tier X4` (Curated Hybrid)**. This acts as a vital protective gate: even if 4 of the 5 axes are AI ($O=\text{A}, P=\text{A}, S=\text{A}, M=\text{A}$), the presence of human curation prevents the track from being falsely categorized as 100% synthetic spam, preserving human copyright protection and editorial attribution.
   - **Mathematical Auditability**: To ensure Curation is not merely a subjective claim, HPS specifies objective arrangement topology forensics (detailed in §6.2), quantifying the **Monolithic Continuity Ratio ($C_{mono}$)**, **Edit Density per 16 Bars ($E_{16}$)**, and **Human Edit Factor (HEF)** to mathematically distinguish authentic human micro-editing from uncurated stem dumps.
@@ -334,7 +334,7 @@ While the 243-cell matrix in §4.5 provides exhaustive cell-by-cell verification
 | 🟧 **`Tier X4`**<br>*(Curated Hybrid)* | **`A`** | **`A`** | **`H`** or **`H+A`** | `H` / `H+A` / `A` | `H` / `H+A` / `A` | **Rule 3**: $O=\text{A} \land P=\text{A} \land C \in \{\text{H}, \text{H+A}\}$<br>Generative AI core, but human producer actively curates, chops, and sequences stems. | **18** | 7.4% |
 | 🟥 **`Tier A`**<br>*(Autonomous AI)* | **`A`** | **`A`** | **`A`** | `H` / `H+A` / `A` | `H` / `H+A` / `A` | **Rule 2**: $O=\text{A} \land P=\text{A} \land C=\text{A} \land aCount \ge 4$<br>Fully autonomous AI across composition, performance, curation, and sound/mix. | **5** | 2.1% |
 | 🔘 **`Tier X3`**<br>*(AI-Led Hybrid)* | *(Any)* | *(Any)* | *(Any)* | *(Any)* | *(Any)* | **Rule 6**: Default Fallthrough for all remaining hybrid permutations:<br>• Opposing core: `H / A` or `A / H` (54 states)<br>• AI-heavy co-creation: `H+A` core with 3+ AI axes (17 states)<br>• AI core with non-AI sound/mix: `A / A / A` with human sound (4 states) | **75** | 30.9% |
-| **TOTAL** | — | — | — | — | — | **Exhaustive Deterministic Classification (Zero unassigned / Zero collisions)** | **243** | **100.0%** |
+| **TOTAL** | - | - | - | - | - | **Exhaustive Deterministic Classification (Zero unassigned / Zero collisions)** | **243** | **100.0%** |
 
 #### 9-Posture Core Mapping Table ($O \times P \implies C, S, M$)
 
@@ -920,7 +920,7 @@ To establish unambiguous shared terminology across audio engineering, software e
 
 - **Arrangement Contribution Index (ACI)**: A quantitative metric ($0.0 \text{ to } 1.0$) evaluating the net arrangement contribution of a production asset to a musical work, computed as the product of its active timeline duration coverage ratio and its hierarchical channel role weight ($W_{role}$).
 - **Attestation**: A cryptographically signed, self-declared statement describing human versus AI participation across the five operational production axes for an audio recording. An attestation establishes tamper-evidence of the declared record post-signing; it does not constitute third-party certification of truthfulness.
-- **Axis State**: The discrete categorical value—**`H`** (Human), **`H+A`** (Co-Creative Hybrid), or **`A`** (Autonomous AI)—assigned to one of the five production stages (*Origination*, *Performance*, *Curation*, *Sound Source*, *Post-Production*).
+- **Axis State**: The discrete categorical value: **`H`** (Human), **`H+A`** (Co-Creative Hybrid), or **`A`** (Autonomous AI), assigned to one of the five production stages (*Origination*, *Performance*, *Curation*, *Sound Source*, *Post-Production*).
 - **Bounce-in-Place (BIP) / Track Freeze**: A standard DAW production technique wherein processor-heavy virtual instruments, synthesizer patches, or analog modeling plugin chains are rendered into flat audio tracks to conserve CPU resources. HPS detects BIP signatures to prevent false-positive stem-dump classifications.
 - **Broadcast Wave Format (BWF)**: An extension of the Microsoft RIFF WAV format standardized by the EBU (EBU Tech 3285) incorporating a Broadcast Audio Extension (`bext`) chunk to carry originator name, software environment, and timecode references.
 - **C2PA (Coalition for Content Provenance and Authenticity)**: An international joint development foundation establishing open technical standards for content provenance and tamper-evidence. HPS aligns with the C2PA philosophy by logging user overrides against contrary evidence rather than preventing user declarations.
